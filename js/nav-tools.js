@@ -87,11 +87,11 @@ function powerPlantClicked() {
 	LayerManagement.earth.focus();
 	PowerPlant.setPowerPlantQuery();
 }
-//PowerPlant 周界视频
+//PowerPlant 周界视频 内部视频  图标出现整合
 function cameraQueryClicked() {
 	if( PowerPlant.cameraOutClick ){
 		for (var key in PowerPlant.iconObjects) {
-			if( PowerPlant.iconObjects[key].type == 'cameraout' ){
+			if( PowerPlant.iconObjects[key].type == 'cameraout' || PowerPlant.iconObjects[key].type == 'camerain'){
 				PowerPlant.iconObjects[key].label.Visibility = false;
 			}
 		}
@@ -99,7 +99,7 @@ function cameraQueryClicked() {
 		PowerPlant.setPowerPlantQuery();
 	}else{
 		for (var key in PowerPlant.iconObjects) {
-			if( PowerPlant.iconObjects[key].type == 'cameraout' ){
+			if( PowerPlant.iconObjects[key].type == 'cameraout' || PowerPlant.iconObjects[key].type == 'camerain'){
 				PowerPlant.iconObjects[key].label.Visibility = true;
 			}
 		}
@@ -121,25 +121,25 @@ function allCameraTreeClicked() {
 	PowerPlant.showPropertyTreeBallon(PowerPlant.cameraTreeNodes);
 }
 //内部视频
-function workCameraClicked() {
-	if(  PowerPlant.cameraInClick ){
-		for (var key in PowerPlant.iconObjects) {
-			if( PowerPlant.iconObjects[key].type == 'camerain' ){
-				PowerPlant.iconObjects[key].label.Visibility = false;
-			}
-		}
-        PowerPlant.cameraInClick = false;
-		PowerPlant.setPowerPlantQuery();
-	}else{
-        for (var key in PowerPlant.iconObjects) {
-            if( PowerPlant.iconObjects[key].type == 'camerain' ){
-                PowerPlant.iconObjects[key].label.Visibility = true;
-            }
-        }
-		PowerPlant.cameraInClick = true;
-		PowerPlant.closePowerPlantQuery();
-	}
-}
+// function workCameraClicked() {
+// 	if(  PowerPlant.cameraInClick ){
+// 		for (var key in PowerPlant.iconObjects) {
+// 			if( PowerPlant.iconObjects[key].type == 'camerain' ){
+// 				PowerPlant.iconObjects[key].label.Visibility = false;
+// 			}
+// 		}
+//         PowerPlant.cameraInClick = false;
+// 		PowerPlant.setPowerPlantQuery();
+// 	}else{
+//         for (var key in PowerPlant.iconObjects) {
+//             if( PowerPlant.iconObjects[key].type == 'camerain' ){
+//                 PowerPlant.iconObjects[key].label.Visibility = true;
+//             }
+//         }
+// 		PowerPlant.cameraInClick = true;
+// 		PowerPlant.closePowerPlantQuery();
+// 	}
+// }
 
 //统计信息
 function StatisticsClicked() {

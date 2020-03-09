@@ -184,7 +184,7 @@ STAMP.menuConfig = {
         {
             "id": "cameraQuery",
             "name": "监控",
-            "title": "周界监控",
+            "title": "监控设备位置",
             "src": "images/newIcon/white/sxt.png"
         },
         {
@@ -193,12 +193,12 @@ STAMP.menuConfig = {
             "title": "设备",
             "src": "images/newIcon/white/shebei.png"
         },
-        {
-            "id": "workCamera",
-            "name": "监控",
-            "title": "生产区域监控",
-            "src": "images/newIcon/white/jiankong.png"
-        },
+        // {
+        //     "id": "workCamera",
+        //     "name": "监控",
+        //     "title": "生产区域监控",
+        //     "src": "images/newIcon/white/jiankong.png"
+        // },
         {
             "name": "漫游",
             "title": "漫游",
