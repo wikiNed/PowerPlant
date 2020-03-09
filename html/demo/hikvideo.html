@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>video</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <meta http-equiv="Expires" content="0" />
+    <script>
+        document.write("<link type='text/css' href='css/demo.css?version=" + new Date().getTime() + "' rel='stylesheet' />");
+    </script>
+    <style>
+        *{
+            margin:0;
+            padding:0
+        }
+
+        .content{
+            width: 680px;
+            height: 413px;
+        }
+        .content .head{
+            width:680px;
+            height: 30px;
+            color: #fff;
+            background: #23899f;
+            position: relative;
+        }
+        .content .head i,.content .head p{
+            display: inline;
+        }
+        .content .head i{
+            position: absolute;
+            left: 10px;
+            top: 5px;
+        }
+        .content .head p.title{
+            position: absolute;
+            left: 32px;
+            top: 6px;
+            font-size: 16px;
+            letter-spacing: 3px;
+        }
+        .content .head #close{
+            position: absolute;
+            right: 25px;
+            top: -3px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .content .head #close:hover{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="head">
+            <i>
+                <img src="../../images/tools/属性查询.png" alt="">
+            </i>
+            <p class="title">
+                实时监控
+            </p>
+            <p id="close">
+                ×
+            </p>
+        </div>
+
+        <div class="video" style="width: 680px;height: 383px">
+            <div id="divPlugin" class="plugin"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../js/plugins/jquery1.9.0.min.js"></script>
+    <script type="text/javascript" src="../../js/powerPlant.js"></script>
+    <script src="jquery-1.7.1.min.js"></script>
+    <script id="videonode" src="webVideoCtrl.js"></script>
+    <script type="text/javascript">
+        var powerPlant;
+        var ip;
+        var password;
+        var port;
+        var oWndInfo;
+        function setParameters(parameter) {
+            powerPlant = parameter.pp;
+        }
+
+        $('.content').on('click','#close',function () {
+            // alert(PowerPlant.htmlBalloon != undefined);
+            WebVideoCtrl.I_Stop({
+                success: function () {
+                },
+                error: function () {
+                }
+            });
+            powerPlant.closeHtmlBalloon();
+        });
+
+        // 初始化插件
+        setTimeout(function () {
+            if( powerPlant.nowCameraIp ){
+                ip = '172.168.2.'+powerPlant.nowCameraIp;
+                password = 'abc12345';
+                port = 80;
+            }else{
+                ip = powerPlant.workCameraProperty.ip;
+                password = powerPlant.workCameraProperty.password;
+                port = 80;
+            }
+            //alert(ip+","+password);
+            var initialValue = new Object();
+            initialValue.g_iWndIndex = 0;
+            initialValue.szDeviceIdentify = '';
+            initialValue.deviceport = '';
+            initialValue.rtspport = '';
+            initialValue.channels = [];
+            initialValue.ip = ip;
+            initialValue.port = port;
+            initialValue.username = 'admin';
+            initialValue.password = password;
+            t_init(initialValue);
+            t_login(initialValue);
+        },500);
+
+        // 初始化
+        function t_init(initialValue) {
+            // 检查插件是否已经安装过
+            var iRet = WebVideoCtrl.I_CheckPluginInstall();
+            if (-1 == iRet) {
+                alert("您还未安装过插件，双击开发包目录里的WebComponentsKit.exe安装！");
+                return;
+            }
+            // 初始化插件参数及插入插件
+            WebVideoCtrl.I_InitPlugin(676, 381, {
+                bWndFull: true,
+                iPackageType: 2,
+                iWndowType: 1,
+                cbInitPluginComplete: function() {
+                    WebVideoCtrl.I_InsertOBJECTPlugin("divPlugin");
+                }
+            });
+        }
+
+        function t_login(initialValue) { //获取播放信息
+            if ("" == initialValue.ip || "" == initialValue.port) {
+                return;
+            }
+            initialValue.szDeviceIdentify = initialValue.ip + "_" + initialValue.port;
+            WebVideoCtrl.I_Login(initialValue.ip, 1, initialValue.port, initialValue.username, initialValue.password, {
+                success: function(xmlDoc) {
+                    setTimeout(function() {
+                        t_getChannelInfo(initialValue);
+                        t_getDevicePort(initialValue);
+                    }, 10);
+                    setTimeout(function() {
+                        t_StartRealPlay(initialValue);
+                    }, 500)
+                },
+                error: function(status, xmlDoc) {
+                    alert('视频登录失败,请检查视频'+initialValue.ip+'是否正常');
+                    //alert("("+status+")");
+                }
+            });
+        }
+
+        // 获取通道
+        function t_getChannelInfo(initialValue) {
+            initialValue.channels = [];
+            if (null == initialValue.szDeviceIdentify) {
+                return;
+            }
+            // 模拟通道
+            WebVideoCtrl.I_GetAnalogChannelInfo(initialValue.szDeviceIdentify, {
+                async: false,
+                success: function(xmlDoc) {
+                    var oChannels = $(xmlDoc).find("VideoInputChannel");
+                    $.each(oChannels, function(i) {
+                        var id = $(this).find("id").eq(0).text(),
+                            name = $(this).find("name").eq(0).text();
+                        if ("" == name) {
+                            name = "Camera " + (i < 9 ? "0" + (i + 1) : (i + 1));
+                        }
+                        initialValue.channels.push({
+                            id: id,
+                            name: name
+                        })
+                    });
+                },
+                error: function(status, xmlDoc) {}
+            });
+        }
+
+        // 获取端口
+        function t_getDevicePort(initialValue) {
+            if (null == initialValue.szDeviceIdentify) {
+                return;
+            }
+            var oPort = WebVideoCtrl.I_GetDevicePort(initialValue.szDeviceIdentify);
+            if (oPort != null) {
+                initialValue.deviceport = oPort.iDevicePort;
+                initialValue.rtspport = oPort.iRtspPort;
+            }
+        }
+
+        // 开始预览
+        function t_StartRealPlay(initialValue) {
+            oWndInfo = WebVideoCtrl.I_GetWindowStatus(initialValue.g_iWndIndex);
+            var iChannelID = initialValue.channels[0].value;
+
+            if (null == initialValue.szDeviceIdentify) {
+                return;
+            }
+
+            var startRealPlay = function () {
+                WebVideoCtrl.I_StartRealPlay(initialValue.szDeviceIdentify, {
+                    iRtspPort: initialValue.rtspport,
+                    iStreamType: 1,
+                    iChannelID: iChannelID,
+                    bZeroChannel: false,
+                    success: function () {
+
+                    },
+                    error: function (status, xmlDoc) {
+                        if (403 === status) {
+                        } else {
+                        }
+                    }
+                });
+            };
+
+
+            startRealPlay();
+        }
+
+    </script>
+</body>
+</html>

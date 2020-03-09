@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+<!--    <link href="./video-js.min.css" rel="stylesheet" type="text/css">-->
+    <link href="http://vjs.zencdn.net/5.20.1/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/5.20.1/videojs-ie8.min.js"></script>
+<!--    <script src="./video.min.js"></script>-->
+<!--    <script src="./videojs-ie8.min.js"></script>-->
+    <title>video</title>
+    <style>
+        *{
+            margin:0;
+            padding:0
+        }
+        .vjs-default-skin{
+            /*margin-top:-10px;*/
+            /*margin-left:20px*/
+        }
+        .content{
+            width: 680px;
+            height: 413px;
+        }
+        .content .head{
+            width:680px;
+            height: 30px;
+            color: #fff;
+            background: #0197D7;
+            position: relative;
+            /*vertical-align: center;*/
+        }
+        .content .head i,.content .head p{
+            display: inline;
+            /*line-height: 30px;*/
+        }
+        .content .head i{
+            position: absolute;
+            left: 10px;
+            top: 7px;
+        }
+        .content .head p.title{
+            position: absolute;
+            left: 32px;
+            top: 6px;
+            font-size: 18px;
+        }
+        .content .head #close{
+            position: absolute;
+            right: 8px;
+            top: -3px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .content .head #close:hover{
+            color:red;
+        }
+    </style>
+    <script src="js/powerPlant.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="head">
+            <i>
+                <img src="../../images/tools/属性查询.png" alt="">
+            </i>
+            <p class="title">
+                实时监控
+            </p>
+            <p id="close">
+                ×
+            </p>
+        </div>
+<!--        <video id="example_video_1" class="video-js vjs-default-skin"  autoplay width="680" height="480"  data-setup="{}">-->
+<!--            &lt;!&ndash; <source src="1.mp4" type="video/mp4"> &ndash;&gt;-->
+<!--            <source src="rtsp://admin:abc12345@172.168.2.30:554/Stream/Channels/101" type="rtmp/flv" style="width: 340px;">-->
+<!--        </video>-->
+
+<!--        <script src="http://vjs.zencdn.net/5.20.1/video.js"></script>-->
+<!--&lt;!&ndash;        <video id="example_video_1" class="video-js vjs-default-skin" loop autoplay width="340" height="300" data-setup="{}">&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;             <source src="../../video/road.mp4" type='video/mp4' /> hls type="application/vnd.apple.mpegurl"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;             <source src="rtmp://47.107.54.185:11935/hls/34020000002020000001_05618720001313486348_0187206348" type="rtmp/flv"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        </video>&ndash;&gt;-->
+        <!--        vlc调用rtsp案例  -->
+        <div class="video" style="width: 680px;height: 383px">
+            <object type='application/x-vlc-plugin' pluginspage="http://www.videolan.org/" id='vlc' events='false' width="680" height="383">
+                <param name='mrl' value='' />
+                <param name='volume' value='50'/>
+                <param name='autoplay' value='true'/>
+                <param name='loop' value='false'/>
+                <param name='fullscreen' value='false' />
+                <param name='controls' value='false' />
+            </object>
+        </div>
+    </div>
+            
+    <!-- <div style="width:480px;margin:20px ">
+    <video id="example_video_1"  preload="none"   style="width:100%; " autoplay="true"
+
+    data-setup="{}">  
+  <source src="http://192.168.1.168/vmearth-yanshi/images/video/shipin.mp4" type='video/mp4' />  
+
+  <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>  
+</video>
+</div> -->
+    <script type="text/javascript" src="../../js/plugins/jquery1.9.0.min.js"></script>
+    <script type="text/javascript" src="../../js/powerPlant.js"></script>
+    <script type="text/javascript">
+        var powerPlant;
+        function setParameters(parameter) {
+            powerPlant = parameter.pp;
+        };
+        setTimeout(function () {
+            var video = document.getElementById("vlc");
+            alert("rtsp://admin:abc12345@172.168.2."+powerPlant.cameraIp+":554/Stream/Channels/101");
+            var itemId = video.playlist.add("rtsp://admin:abc12345@172.168.2."+powerPlant.cameraIp+":554/Stream/Channels/101");
+            video.playlist.playItem(itemId);
+            window.resizeBy(1, 1);
+            setTimeout(function () {
+                window.resizeBy(-1, -1)
+            },50)
+        },200)
+
+
+        $('.content').on('click','#close',function () {
+            // alert(PowerPlant.htmlBalloon != undefined);
+            powerPlant.closeHtmlBalloon();
+        });
+
+
+    </script>
+</body>
+</html>

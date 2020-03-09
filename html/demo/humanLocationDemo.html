@@ -1,0 +1,279 @@
+<html>
+
+<head>
+    <title>人员定位</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="../../css/easyui/default/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/easyui/icon.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <script type="text/javascript" src="../../js/lib/jquery.js"></script>
+    <script type="text/javascript" src="../../js/lib/easyui/jquery.easyui.js"></script>
+    <script type="text/javascript" src="../../js/lib/jquery.xml2json.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <style type="text/css">
+    .sfm-btn-c{
+        text-align: center;
+    }
+    </style>
+    <script type="text/javascript">
+    $(function() {
+        var BUILDING_POLYGON_LAYER_NAME = '';
+        var buildingPolygonLayer = null;
+
+        var earth = parent.earth;
+        var elList = [];
+        var pts = [];
+        var cpts = [];
+
+        var init = function() {
+            bindEvents();
+            testGetPtsData();
+        };
+
+        var bindEvents = function() {
+            $(window).on('unload', function() {
+                clearBox();
+                clearPoint();
+            });
+            $('#btnSelectPoint').on('click', function() {
+                clearBox();
+                clearPoint();
+                testGetPointByPolygon();
+            });
+            $('#btnCreateBox').on('click', function() {
+                clearBox();
+                for(var i = 0;i < cpts.length;i++){
+                    var pi = cpts[i];
+                    showBox(pi.x, pi.y, pi.z);
+                }
+            });
+        };
+
+        var clearBox = function() {
+            if (elList) {
+                while (elList.length > 0) {
+                    var el = elList.pop();
+                    earth.DetachObject(el);
+                }
+            }
+        };
+        var clearPoint = function(){
+            cpts.splice(0, cpts.length);
+        };
+
+        var getLayerByName = function(name, layer, exact) {
+            var _getLayer = function(layer, name, exact) {
+                if ((exact === true && layer.Name == name) ||
+                    (layer.Name.toLowerCase().indexOf(name.toLowerCase()) >= 0)) {
+                    return layer;
+                } else {
+                    for (var i = 0; i < layer.GetChildCount(); i++) {
+                        var lyr = _getLayer(layer.GetChildAt(i), name);
+                        if (lyr) {
+                            return lyr;
+                        }
+                    }
+                }
+            }
+            if (layer == null) {
+                layer = earth.LayerManager.LayerList;
+            }
+            return _getLayer(layer, name, exact);
+        };
+
+        var queryGeo = function(layerId, pc, sc, pn, ps) {
+            pn = pn || 0;
+            ps = ps || 10;
+            var u = parent.STAMP_config.server.ip + '/geoserver';
+            var d = {
+                service: layerId,
+                qt: 17,
+                pc: pc || undefined,
+                sc: sc || undefined,
+                pg: pn + ',' + ps
+            };
+            if (pc) {
+                d.pc = pc;
+            }
+            if (sc) {
+                d.sc = sc;
+            }
+            return $.ajax({
+                type: 'GET',
+                dataType: 'text',
+                url: u,
+                data: d,
+                async: true,
+                cache: false
+            });
+        };
+
+        var coor2v3s = function(coor) {
+            try {
+                var vecs = coor.split(",");
+                var v3s = earth.Factory.CreateVector3s();
+                for (var j = 0; j < vecs.length; j += 3) {
+                    var v3 = earth.Factory.CreateVector3();
+                    v3.X = vecs[j];
+                    v3.Y = vecs[j + 1];
+                    v3.Z = vecs[j + 2];
+                    v3s.AddVector(v3);
+                }
+                return v3s;
+            } catch (e) {
+                return null;
+            }
+        };
+
+        var xyz2v3 = function(x, y, z) {
+            var v3 = earth.Factory.CreateVector3();
+            v3.X = x;
+            v3.Y = y;
+            v3.Z = z;
+            return v3;
+        };
+
+        var parseData = function(data) {
+            var dataDoc = loadXMLStr(data);
+            if (!dataDoc || dataDoc.xml == '') {
+                return null;
+            }
+            var data = $.xml2json(dataDoc);
+            if (!data) {
+                return null;
+            }
+
+            var geoType = data.Result.geometry;
+            var records = data.Result.Record;
+            if (records == undefined) {
+                return null;
+            }
+            if (!$.isArray(records)) {
+                records = [records];
+            }
+            var dl = [];
+            for (var i = 0; i < records.length; i++) {
+                var coor = records[i].SHAPE.Polygon.Coordinates;
+                var v3s = coor2v3s(coor);
+                if (!v3s) {
+                    continue;
+                }
+                dl.push(v3s);
+            }
+            return dl;
+        };
+
+        var v3s2Polygon = function(v3s) {
+            var polygon = earth.Factory.CreatePolygon();
+            polygon.AddRing(v3s);
+            return polygon;
+        };
+
+        var getBuffer = function(v3s, radius) {
+            if (radius == 0) {
+                return v3s;
+            }
+            return earth.GeometryAlgorithm.CreateParallelPolygon(v3s, radius, 1);
+        };
+
+        var createElementVolume = function(v3s, balt, height) {
+            var v3s2 = earth.Factory.CreateVector3s();
+            for (var i = 0; i < v3s.Count; i++) {
+                var v3 = v3s.Items(i);
+                v3s2.Add(v3.X, v3.Y, balt);
+            }
+            var id = earth.Factory.CreateGUID();
+            var el = earth.Factory.CreateElementVolume(id, '');
+            el.BeginUpdate();
+            el.Selectable = false;
+            el.Editable = false;
+            el.LineColor = 0xffff0000;
+            el.DrawFrameEnable = false;
+            el.Underground = false;
+            el.Height = height;
+            el.SphericalVectors = v3s2;
+            el.FillColor = 0xffff0000;
+            el.EndUpdate();
+            return el;
+        };
+
+        var showBox = function(lon, lat, alt) {
+            var lid = buildingPolygonLayer || (buildingPolygonLayer = getLayerByName(BUILDING_POLYGON_LAYER_NAME, null, true));
+            if (!lid) {
+                return;
+            }
+            lid = lid.Guid;
+            var sc = '(3,0,1,' + lon + ',' + lat + ')';
+            var v3 = xyz2v3(lon, lat, alt);
+            queryGeo(lid, null, sc, 0, 100).then(function(data) {
+                var dl = parseData(data);
+                if (!dl) {
+                    return;
+                }
+                for (var i = 0; i < dl.length; i++) {
+                    var v3s = dl[i];
+                    var p = v3s2Polygon(v3s);
+                    var r = earth.PolygonAlgorithm.PointPolyRelationship(v3, p, 0.000001);
+                    if (r < 2) {
+                        // v3s = getBuffer(v3s, 0.5);
+                        var el = createElementVolume(v3s, alt - 1, 3);
+                        earth.AttachObject(el);
+                        elList.push(el);
+                        return;
+                    }
+                }
+            }, function() {});
+        };
+
+
+        var testGetPointByPolygon = function() {
+            earth.Event.OnCreateGeometry = function(v3s, type) {
+                if (v3s.Count < 3) {
+                    alert('多边形顶点不能少于3个');
+                    return;
+                }
+                earth.Event.OnCreateGeometry = function() {};
+                earth.ShapeCreator.Clear();
+
+                for (var i = 0; i < pts.length; i++) {
+                    var pi = pts[i];
+                    var v3 = xyz2v3(pi.x, pi.y, pi.z);
+                    var p = v3s2Polygon(v3s);
+                    var r = earth.PolygonAlgorithm.PointPolyRelationship(v3, p, 0.000001);
+                    if (r < 2) {
+                        cpts.push(pi);
+                    }
+                }
+            };
+            earth.ShapeCreator.CreatePolygon();
+        };
+
+        var testGetPtsData = function(){
+            for(var i = 0;i < parent.userdataArr.length;i++){
+                var ei = parent.userdataArr[i];
+                if(ei.Rtti == 209){
+                    var st = ei.SphericalTransform;
+                    pts.push({
+                        x: st.Longitude,
+                        y: st.Latitude,
+                        z: st.Altitude
+                    });
+                }
+            }
+        };
+    });
+    </script>
+</head>
+
+<body oncontextmenu="return false;">
+    <div>
+        <div class="sfm-btn-c">
+            <button id="btnSelectPoint">选择人员</button>
+            <button id="btnCreateBox">生成</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="练习 加油">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $.ajax({
+                type: "GET",
+                url: "http://10.2.1.25:8081/imis/bs/getDefectListByEqCode",
+                data:{code:("20LCL71AP002").toLowerCase()},
+                // dataType: "json",
+                // contentType:"application/json",
+                success: function(data){
+                    // console.log('缺陷信息',data);
+                },
+                error:function(e){
+                    // console.log(e);
+                }
+            });
+
+            $.ajax({
+                type: "GET",
+                url: "http://10.2.1.25:8081/imis/bs/getEquipment",
+                data:{code:("10HNV20AK001").toLowerCase()},
+                // dataType: "json",
+                // contentType:"application/json",
+                success: function(data){
+                    // console.log('设备信息',data.data.equipments[0]);
+                },
+                error:function(e){
+                    // console.log(e);
+                }
+            });
+
+            $.ajax({
+                type: "GET",
+                url: "http://10.2.1.16/app/rest/mjxt?type=HYL",
+                data:"",
+                // dataType: "json",
+                // contentType:"application/json",
+                success: function(data){
+                    console.log('门禁信息',data);
+                },
+                error:function(e){
+                    console.log(e);
+                }
+            });
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="练习 加油">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            c(65,23);
+            function c(a, b) {
+                // write your code here
+                var sa = parseInt(a).toString(2);
+                var sb = parseInt(b).toString(2);
+                // var tes = parseInt(sb,2)*2;
+                // console.log(sb,tes.toString(2));
+                console.log(computed(sa, sb));
+                computed(sa,sb);
+                function computed(a,b){
+                    var x = a ^ b;
+                    var y = a & b;
+                    while(y!==0){
+                        y = (parseInt(y,2)*2).toString(2);
+                        var i = x;
+                        x = x ^ y;
+                        y = i & y;
+                    };
+                    return parseInt(x,2);
+                };
+
+            };
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

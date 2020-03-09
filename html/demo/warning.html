@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>video</title>
+
+    <style>
+    	body {
+    		background-color: #6E6E6E;
+    		/*background-color: rgba(255,255,255,0.2);*/
+    	}
+      .content{
+          width:150px;
+          height:150px;
+          display:none;
+      }
+      .inf{
+      	width:150px !important;
+        height:150px !important;
+        align: center; 
+      }
+    </style>
+</head>
+<body>
+    <div id="home" class="top content">
+        <img src="./info.png" alt="" class="inf">
+    </div>
+<script>
+	var element=document.getElementById("home");
+	function change () {
+	    element.classList.contains('content') ? element.classList.remove("content"):element.classList.add("content");
+	}
+	
+	setInterval(function(){
+	    change()
+	},100)
+</script>
+</body>
+</html>

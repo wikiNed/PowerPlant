@@ -1,0 +1,71 @@
+{
+    "defect": [
+        {
+            "id": "QX201901_0104",
+            "desc": "7号乙带式输送机D犁煤器落犁时划伤皮带",
+            "startTime": "2019-01-11 13:39",
+            "endTime": "2019-01-11 14:26",
+            "handleDept": "燃料除灰班",
+            "detectDept": "发电运行部",
+            "detectPerson": "马腾"
+        }, {
+            "id": "QX201902_0151",
+            "desc": "#7乙带D犁煤器落下时划伤皮带",
+            "startTime": "2019-02-15 15:00",
+            "endTime": "2019-02-15 17:00",
+            "handleDept": "燃料除灰班",
+            "detectDept": "发电运行部",
+            "detectPerson": "马腾"
+        }, {
+            "id": "QX201902_0152",
+            "desc": "#7乙带所有犁煤器副犁刀压力太大，与皮带摩擦严重，副犁刀磨损严重",
+            "startTime": "2019-02-15 15:00",
+            "endTime": "2019-02-15 17:00",
+            "handleDept": "燃料除灰班",
+            "detectDept": "发电运行部",
+            "detectPerson": "马腾"
+        }, {
+            "id": "QX201902_0154",
+            "desc": "#7乙带F犁煤器主犁刀与V型托辊摩擦严重",
+            "startTime": "2019-02-15 15:00",
+            "endTime": "2019-02-15 17:00",
+            "handleDept": "燃料除灰班",
+            "detectDept": "发电运行部",
+            "detectPerson": "马腾"
+        }, {
+            "id": "QX201902_0154",
+            "desc": "#7乙带所有犁煤器与落料口增加的挡煤帘摩擦严重，冒烟",
+            "startTime": "2019-02-15 15:00",
+            "endTime": "2019-02-15 17:00",
+            "handleDept": "燃料除灰班",
+            "detectDept": "发电运行部",
+            "detectPerson": "马腾"
+        }, {
+            "id": "QX201902_0154",
+            "desc": "#7号乙带B犁煤器状态反馈错误",
+            "startTime": "2019-02-26 14:52",
+            "endTime": "",
+            "handleDept": "燃料除灰班",
+            "detectDept": "发电运行部",
+            "detectPerson": "李祥"
+        }, {
+            "id": "QX201902_0154",
+            "desc": "#7号乙带E犁煤器状态反馈错误",
+            "startTime": "2019-02-26 14:53",
+            "endTime": "",
+            "handleDept": "燃料除灰班",
+            "detectDept": "发电运行部",
+            "detectPerson": "李祥"
+        }, {
+            "id": "QX201902_0154",
+            "desc": "#7号乙带D犁煤器状态反馈错误",
+            "startTime": "2019-02-26 14:53",
+            "endTime": "",
+            "handleDept": "燃料除灰班",
+            "detectDept": "发电运行部",
+            "detectPerson": "李祥"
+        }
+    ] 
+}
+
+

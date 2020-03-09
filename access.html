@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="描述">
+    <meta name="author" content="练习 加油">
+    <style>
+        body {
+            font-family: "Microsoft YaHei", serif;
+            background-color: #000000;
+        }
+
+        body, dl, dd, p, h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+        }
+
+        ol, ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        img {
+            border: none;
+        }
+
+        #wrap {
+            background-color: #03132c;
+            color: #23899f;
+            width: 258px;
+            height: 236px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            border: 1px solid rgba(35,137,159,0.5);
+        }
+
+        #wrap p {
+            display: inline-block;
+        }
+
+        #wrap .head {
+            width: 260px;
+            height: 30px;
+            color: #fff;
+            background: #23899f;
+            position: relative;
+        }
+
+        #wrap .head i, .content .head p {
+            display: inline;
+        }
+
+        #wrap .head i {
+            position: absolute;
+            left: 10px;
+            top: 7px;
+        }
+
+        #wrap .head p.title {
+            position: absolute;
+            left: 32px;
+            top: 4px;
+            font-size: 16px;
+            letter-spacing: 3px;
+        }
+
+        #wrap .head #close {
+            position: absolute;
+            right: 10px;
+            top: -6px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        #wrap .head #close:hover {
+            color: red;
+        }
+        #wrap div.title {
+            width: 258px;
+            height: 20px;
+            /*margin-top: 2px;*/
+            border: 1px solid rgba(35,137,159,0.5);
+        }
+
+        .title .name {
+            width: 29%;
+            text-align: center;
+            border-right: 1px solid rgba(35,137,159,0.5);
+        }
+
+        .title .time {
+            width: 66%;
+            text-align: center;
+        }
+
+        .hidden{
+            height: 185px;
+            overflow: hidden;
+        }
+
+        .hidden .name {
+            width: 29%;
+            text-align: center;
+            border-right: 1px solid rgba(35,137,159,0.5);
+        }
+
+        .hidden .time {
+            width: 69%;
+            text-align: center;
+        }
+        ul {
+            width: 258px;
+            /*margin-top: 2px;*/
+            border: 1px solid rgba(35,137,159,0.5);
+        }
+
+        ul li {
+            width: 100%;
+            margin-top: 1px;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(35,137,159,0.5);
+        }
+
+        ul li:hover {
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="head">
+            <i>
+                <img src="./images/tools/属性查询.png" alt="">
+            </i>
+            <p class="title">
+                门禁信息
+            </p>
+            <p id="close">
+                ×
+            </p>
+        </div>
+        <!--        <div class="total">今日刷卡总次数：<p class="total">211</p>次</div>-->
+        <div class="title">
+            <p class="name">姓名</p>
+            <p class="time">进出时间</p>
+        </div>
+        <div class="hidden">
+            <ul>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        let powerPlant;
+        let ajaxValue;
+
+        function setParameters(parameter) {
+            powerPlant = parameter.pp;
+            ajaxValue = powerPlant.accessMsg;
+        };
+
+
+        setInterval(function () {
+            var $self = $('#wrap ul');
+            var lineHeight = $self.find("li:first").height();
+            $self.animate({
+                "marginTop": -lineHeight + "px"
+            }, 2000, 'linear', function () {
+                $self.css({
+                    marginTop: 0
+                }).find("li:first").appendTo($self);
+            })
+        }, 2000);
+
+
+        $.extend({
+            updateAccess:function () {
+                let htmlStr = "";
+                $.ajax({
+                    type: "GET",
+                    url: "http://10.2.1.16/app/rest/mjxt?type="+ajaxValue,
+                    //url: "http://10.2.1.16/app/rest/mjxt?type=BGL",
+                    data: "",
+                    // dataType: "json",
+                    // contentType:"application/json",
+                    success: function (data) {
+                        //console.log(ajaxValue);
+                        console.log(data);
+                        data.list.forEach(function (item,index) {
+                            if( item.userName == null ){
+                                item.userName = "佚名";
+                            };
+                            htmlStr += '<li><p class="name">' + item.userName + '</p><p class="time">' + item.eventTime.split('.')[0] + '</p></li>'
+                        });
+                        $('#wrap ul').html(htmlStr);
+                    },
+                    error: function (e) {
+                        $('#wrap ul').html("服务器错误");
+                    }
+
+                })
+            }
+        });
+        setTimeout('$.updateAccess()',200);
+        setInterval('$.updateAccess()',20000);
+
+
+        $('#close').click(function () {
+            powerPlant.closeAccessHtmlBalloon();
+        });
+
+
+        //websocket
+        // let websocket = null;
+        // if ('WebSocket' in window) {
+        //     websocket = new WebSocket("ws://10.2.1.16/websocketService/BGL");
+        // } else if ('MozWebSocket' in window) {
+        //     websocket = new MozWebSocket("ws://10.2.1.16/websocketService/BGL");
+        // }
+        //
+        //
+        // websocket.onopen = function (event) {
+        //     websocket.send("");
+        // };
+        //
+        // websocket.onmessage = function (event) {
+        //     //websocket.send("");
+        //     console.log(event.data);
+        // };
+        //
+        // window.onbeforeunload = function () {
+        //     websocket.close();
+        // }
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

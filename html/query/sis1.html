@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>video</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <meta http-equiv="Expires" content="0" />
+    <style>
+        *{
+            margin:0;
+            padding:0
+        }
+
+        .content{
+            width: 1180px;
+            height: 780px;
+            background-color: #03132c;
+        }
+        .content .head{
+            width:1180px;
+            height: 30px;
+            color: #fff;
+            background: #23899f;
+            position: relative;
+        }
+        .content .head i,.content .head p{
+            display: inline;
+        }
+        .content .head i{
+            position: absolute;
+            left: 10px;
+            top: 5px;
+        }
+        .content .head p.title{
+            position: absolute;
+            left: 32px;
+            top: 6px;
+            font-size: 16px;
+            letter-spacing: 3px;
+        }
+        .content .head #close{
+            position: absolute;
+            right: 20px;
+            top: -3px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .content .head #close:hover{
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="head">
+            <i>
+                <img src="../../images/tools/属性查询.png" alt="">
+            </i>
+            <p class="title">
+                SIS系统信息
+            </p>
+            <p id="close">
+                ×
+            </p>
+        </div>
+
+        <div class="sis">
+            <iframe src="http://10.2.1.23/View/PlaySvg1.aspx?file=%B6%FE%BA%C5%BB%FA%D7%E9/%C6%FB%BB%FA/01_%D6%F7%D4%D9%C8%C8%D5%F4%C6%FB%CF%B5%CD%B3.svg" frameborder="0" width="1180px" height="590px"></iframe>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../js/plugins/jquery1.9.0.min.js"></script>
+    <script type="text/javascript" src="../../js/powerPlant.js"></script>
+    <script type="text/javascript">
+        var powerPlant;
+        function setParameters(parameter) {
+            powerPlant = parameter.pp;
+            parameter.updatePowerPlantDiv($('.content'));
+        };
+
+        $('.content').on('click','#close',function () {
+            // alert(PowerPlant.htmlBalloon != undefined);
+            powerPlant.closeHtmlBalloon();
+        });
+        setTimeout(function () {
+            // var url = powerPlant.link;
+            // var url;
+            // url = "http://10.2.1.23/View/PlaySvg1.aspx?file=%B8%A8%CD%F8%BA%CD%B9%AB%D3%C3%CF%B5%CD%B3/%B8%A8%CD%F8/%CA%E4%C3%BA/01_%CA%E4%C3%BA%D7%DC%C3%B2.svg";
+            // $('.sis').html('<object type="text/html" data='+url+' width="1180px" height="750px"></object>');
+        },300);
+    </script>
+</body>
+</html>
+

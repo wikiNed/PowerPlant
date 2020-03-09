@@ -1,0 +1,716 @@
+﻿<html>
+
+<head>
+    <title>消防演示</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="../../css/easyui/default/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/easyui/icon.css" />
+    <link rel="stylesheet" href="../../js/plugins/zTreeStyle/zTreeStyle.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <script type="text/javascript" src="../../js/plugins/jquery1.9.0.min.js"></script>
+    <script type="text/javascript" src="../../js/plugins/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../../js/plugins/zTreeStyle/jquery.ztree.js"></script>
+    <script type="text/javascript" src="../../js/plugins/jquery.xml2json.js"></script>
+    <script type="text/javascript" src="../../js/common/common.js"></script>
+    <script type="text/javascript" src="../../js/eventManager.js"></script>
+    <script type="text/javascript" src="../../js/balloonManager.js"></script>
+    <script type="text/javascript" src="../../js/config/config.js"></script>
+    <script type="text/javascript" src="../../js/track.js"></script>
+    <style type="text/css">
+    .sfm-s-d-none{
+        display: none;
+    }
+    .btn-container{
+        margin: 10px 0px;
+        text-align: center;
+    }
+    .btn-container button{
+        width: 120px;
+    }
+    </style>
+    <script type="text/javascript">
+    var earth = parent.earth;
+    $(function(){
+        var DEFAULT_ICON_PATH = 'icon\\icon.png';
+        var EL_XIAOFANGCHE_PATH_ARROW_NAME = '消防车路线';
+        var EL_PENSHUI_NAME = '喷水灭火';
+        var DO_XIAOFANGCHE_NAME = '汽车';
+        var TRACK_XIAOFANGCHE_NAME = '消防车路线';
+        var TIME_MIEHUO = 15000;
+        var TIME_PENSHUI = 3500;
+        var TIME_STEP_INTERVAL = 5000;
+
+        // var earth = parent.earth;
+        var xfjjData = parent.STAMP_config.demoData.xfjj;
+        var xfssData = parent.STAMP_config.demoData.xfss;
+        var elFire = [];
+        var elCircle = [];
+        var elCameraIcon = [];
+        var elCamera = null;
+        var curCameraId = null;
+        var elXiaofangIcon = [];
+        var doXfcList = [];
+        var trackXfc = [];
+        var xfcTrackTotal = 0;
+
+        var eventMgr = new SFM.EventManager({
+            earth: earth
+        });
+        var balloonMgr = new SFM.BalloonManager({
+            earth: earth,
+            eventManager: eventMgr
+        });
+        var highlightMgr = new parent.SFM.HighlightManager({
+            earth: earth
+        });
+        var trackMgr = STAMP.TrackManager(earth);
+        var showjiankong=function(){
+            var url = parent.window.location.href;
+
+            url = url.substr(0, url.lastIndexOf('/')) + "/html/demo/video4.html";
+
+            var guid = earth.Factory.CreateGuid();
+            htmlBalloons = earth.Factory.CreateHtmlBalloon(guid, "URL气泡");
+            htmlBalloons.SetRectSize(340,180);
+
+            var color = parseInt("0xffffff00");
+            htmlBalloons.SetIsAddCloseButton(false);
+            htmlBalloons.SetIsAddBackgroundImage(true);
+            htmlBalloons.SetSphericalLocation(117.18419,34.22722,47.34741);
+            htmlBalloons.SetTailColor(0xffffff00);
+            htmlBalloons.SetIsTransparence(false);
+            htmlBalloons.SetBackgroundAlpha(1);
+            htmlBalloons.SetBackgroundRGB(0x6E6E6E);
+            htmlBalloons.ShowNavigate(url);
+    }
+        var showinfo = function () {
+            if (htmlBalloons) {
+					htmlBalloons.DestroyObject();
+					htmlBalloons = null;
+				}
+				var url = parent.window.location.href;
+				url = url.substr(0, url.lastIndexOf('/')) + "/html/demo/office.html";
+
+				var guid = earth.Factory.CreateGuid();
+				htmlBalloons = earth.Factory.CreateHtmlBalloon(guid, "URL气泡");
+		
+				htmlBalloons.SetRectSize(350,290);
+
+				var color = parseInt("0xffffff00");
+				htmlBalloons.SetIsAddCloseButton(true);
+				htmlBalloons.SetIsAddBackgroundImage(true);
+				htmlBalloons.SetSphericalLocation(117.18379,34.22720,42.55155);
+				htmlBalloons.SetTailColor(0xffffff00);
+				htmlBalloons.SetIsTransparence(false);
+				htmlBalloons.SetBackgroundAlpha(255);
+				htmlBalloons.SetBackgroundRGB(0x6E6E6E);
+				// htmlBalloons.SetIsAddCloseButton(true);
+				htmlBalloons.ShowNavigate(url);
+        }
+        var init = function(){
+
+            showXfcPathArrows(false);
+            showPenshui(false);
+
+            $(window).on('unload', function(){
+                clearFires();
+                clearCircles();
+                clearCameraIcons();
+                clearXfIcons();
+                clearXfModels();
+                showXfcPathArrows(false);
+                clearTracks();
+                showPenshui(false);
+            });
+
+            $('#btn0').on('click', function(){
+                clearFires();
+                clearCircles();
+                // locateFire();
+                showFireInfo(xfjjData)
+            });
+            $('#btn1').on('click', function(){
+                clearCircles();
+                showCircles(xfjjData);
+                clearCameraIcons();
+                showCameraIcons(xfjjData);
+            });
+            $('#btn2').on('click', function(){
+                clearCircles();
+                clearXfIcons();
+                clearXfModels();
+                showXfIcons(xfssData[2].children);
+                showXfModels(xfssData[0].children);
+                showXfModels(xfssData[1].children);
+            });
+            $('#btn3').on('click', function(){
+                balloonMgr.clear();
+                clearCircles();
+                showXfcPathArrows(true);
+            });
+            $('#btn4').on('click', function(){
+                clearCircles();
+                clearTracks();
+                getXfcTracks();
+                playTracks();
+            });
+            $('#btn5').on('click', function(){
+                clearCircles();
+                showPenshui(true);
+                setTimeout(function(){
+                    clearFires();
+                    setTimeout(function(){
+                        showPenshui(false);
+                    }, TIME_PENSHUI);
+                }, TIME_MIEHUO);
+            });
+
+            $('#btn6, #btn7, #btn8').on('click', function(){
+                var i = $(this).attr('data-i');
+                play(i);
+            });
+
+            $('#btnCamera').on('click', function(){
+                $('#frmCamera').attr('src', '../view/camera.html');
+            });
+        };
+
+        var clear = function(){
+            clearFires();
+            clearCircles();
+            clearCameraIcons();
+            clearXfIcons();
+            clearXfModels();
+            showXfcPathArrows(false);
+            clearTracks();
+            showPenshui(false);
+        };
+
+        var play = function(index){
+            clear();
+
+            var dd = parent.STAMP_config['demoData' + index];
+            var dxfjj = dd.xfjj;
+            var dxfss = dd.xfss;
+
+            locateStep(index, 'v1');  //飞到视角
+            stepHzddw(dxfjj);
+            showjiankong();
+            setTimeout(function(){
+                // locateStep(index, 'v2');
+                stepXfclx(index);	//消防车路线
+                setTimeout(function(){
+                    // locateStep(index, 'v3');
+                    stepCj(index);
+                }, TIME_STEP_INTERVAL);
+            }, TIME_STEP_INTERVAL);
+        };
+        var stepHzddw = function(data){
+            showFireInfo(data);
+            
+        };
+        var stepZbsxt = function(data){
+            clearCircles();
+            showCircles(data);
+            clearCameraIcons();
+            showCameraIcons(data);
+        };
+        var stepXfss = function(data){
+            clearCircles();
+            clearXfIcons();
+            clearXfModels();
+            showXfIcons(data[2].children);
+            showXfModels(data[0].children);
+            showXfModels(data[1].children);
+        };
+        var stepXfclx = function(index){
+            balloonMgr.clear();
+            clearCircles();
+            showXfcPathArrows(true, index);
+        };
+        var stepCj = function(index){
+            clearCircles();
+            clearTracks();
+            getXfcTracks(index);
+
+            playTracks(function(){
+               stepPsmh(index); 
+            });
+        };
+
+        var stepPsmh = function(index){
+            clearCircles();
+            showPenshui(true, index);
+            setTimeout(function(){
+                clearFires();
+                setTimeout(function(){
+                    showPenshui(false);
+                    showinfo();
+		    clear();
+                }, TIME_PENSHUI);
+            }, TIME_MIEHUO);
+        };
+        var locateStep = function(index, step){
+            var vp = parent.STAMP_config['stepViewpoint' + index];
+            if(vp[step]){
+                var a = vp[step].split(',');
+                earth.GlobeObserver.GotoLookat(Number(a[0]), Number(a[1]), Number(a[2]), 
+                    Number(a[3]), Number(a[4]), Number(a[5]), Number(a[6]));
+            }
+        };
+
+        var locateFire = function(data){
+            var coor = xfjjData.coor;
+            coor = data.coor;
+            var ca = coor.split(',');
+            var lon = Number(ca[0]);
+            var lat = Number(ca[1]);
+            var alt = Number(ca[2]);
+            earth.GlobeObserver.GotoLookat(lon, lat, alt, 0, 45, 0, 200);
+        };
+        var clearFires = function(){
+            while(elFire.length > 0){
+                var el = elFire.pop();
+                if(el.fire){
+                    while(el.fire.length > 0){
+                        var e = el.fire.pop();
+                        if(e){
+                            earth.DetachObject(e);
+                        }
+                    }
+                }
+                if(el.smoke){
+                    while(el.smoke.length > 0){
+                        var e = el.smoke.pop();
+                        if(e){
+                            earth.DetachObject(e);
+                        }
+                    }
+                }
+            }
+        };
+        var showFireInfo = function(data){
+            var coor = data.coor;
+            var ca = coor.split(',');
+            var lon = Number(ca[0]);
+            var lat = Number(ca[1]);
+            var alt = Number(ca[2]);
+            var el = {};
+            if(data.fire){
+                el.fire = [];
+                for(var i = 0;i < data.fire.length;i++){
+                    var elon = lon;
+                    var elat = lat;
+                    var ealt = alt;
+                    if(data.fire[i].coor){
+                        ca = data.fire[i].coor.split(',');
+                        elon = Number(ca[0]);
+                        elat = Number(ca[1]);
+                        ealt = Number(ca[2]);
+                    }
+                    var e = parent.createParticleD3({
+                        type: 'fire',
+                        lon: elon,
+                        lat: elat,
+                        alt: ealt,
+                        scale: data.fire[i].scale,
+                        rotate: data.fire[i].rotate
+                    });
+                    if(e){
+                        earth.AttachObject(e);
+                        el.fire.push(e);
+                    }
+                }
+            }
+            if(data.smoke){
+                el.smoke = [];
+                for(var i = 0;i < data.smoke.length;i++){
+                    var elon = lon;
+                    var elat = lat;
+                    var ealt = alt;
+                    if(data.smoke[i].coor){
+                        ca = data.smoke[i].coor.split(',');
+                        elon = Number(ca[0]);
+                        elat = Number(ca[1]);
+                        ealt = Number(ca[2]);
+                    }
+                    var e = parent.createParticleD3({
+                        type: 'smoke',
+                        lon: elon,
+                        lat: elat,
+                        alt: ealt,
+                        scale: data.smoke[i].scale,
+                        rotate: data.smoke[i].rotate
+                    });
+                    if(e){
+                        earth.AttachObject(e);
+                        el.smoke.push(e);
+                    }
+                }
+            }
+            elFire.push(el);
+            // earth.GlobeObserver.GotoLookat(lon, lat, alt, 0, 45, 0, 200);
+        };
+
+        var clearCircles = function(){
+            if(elCircle){
+                while(elCircle.length > 0){
+                    var e = elCircle.pop();
+                    if(e){
+                        earth.DetachObject(e);
+                    }
+                }
+            }
+        };
+        var showCircles = function(data){
+            var coor = data.coor;
+            var ca = coor.split(',');
+            var lon = Number(ca[0]);
+            var lat = Number(ca[1]);
+            var alt = Number(ca[2]);
+            var e = parent.createCircleD3({
+                lon: lon,
+                lat: lat,
+                alt: alt,
+                radius: 500,
+                fillColor: 0x3200ff00,
+                lineColor: 0xccffff00
+            });
+            if(e){
+                earth.AttachObject(e);
+                elCircle.push(e);
+            }
+            e = parent.createCircleD3({
+                lon: lon,
+                lat: lat,
+                alt: alt,
+                radius: 150,
+                fillColor: 0x32ff9900,
+                lineColor: 0xccffff00
+            });
+            if(e){
+                earth.AttachObject(e);
+                elCircle.push(e);
+            }
+            e = parent.createCircleD3({
+                lon: lon,
+                lat: lat,
+                alt: alt,
+                radius: 50,
+                fillColor: 0x32ff0000,
+                lineColor: 0xccffff00
+            });
+            if(e){
+                earth.AttachObject(e);
+                elCircle.push(e);
+            }
+        };
+
+        var clearCameraIcons = function(){
+            if(elCameraIcon){
+                while(elCameraIcon.length > 0){
+                    var e = elCameraIcon.pop();
+                    eventMgr.off('PickObject', e.onPick, e);
+                    if(e.el){
+                        earth.DetachObject(e.el);
+                    }
+                }
+            }
+            curCameraId = null;
+        };
+        var showCameraIcons = function(data){
+            if(data.camera){
+                for(var i = 0;i < data.camera.length;i++){
+                    var ci = data.camera[i];
+                    var ca = ci.coor.split(',');
+                    var lon = Number(ca[0]);
+                    var lat = Number(ca[1]);
+                    var alt = Number(ca[2]);
+                    var iu = earth.Environment.RootPath + DEFAULT_ICON_PATH;
+                    var el = parent.createIconD3({
+                        lon: lon,
+                        lat: lat,
+                        alt: alt,
+                        text: ci.name,
+                        normalIcon: iu,
+                        highlightIcon: iu
+                    });
+                    if(el){
+                        earth.AttachObject(el);
+                        var u = ci.url || parent.STAMP_config.server.ip.replace(/^http/g, 'rtsp') + '/1.264';
+                        var onPick = function(el, v3){
+                            clearCamera();
+                            if(this.el.Guid == curCameraId){
+                                curCameraId = null;
+                                return;
+                            }
+                            showCamera({
+                                lon: lon,
+                                lat: lat,
+                                alt: alt
+                            }, u);
+                            curCameraId = this.el.Guid;
+                        };
+                        var eo = {
+                            el: el,
+                            onPick: onPick
+                        };
+                        eventMgr.on('PickObject', eo.onPick, eo, -1, function(el, v3) {
+                            return el.Guid == eo.el.Guid;
+                        });
+                        elCameraIcon.push(eo);
+                    }
+                }
+            }
+        };
+
+        var clearCamera = function(){
+            if(elCamera){
+                parent.removeCamera(elCamera);
+                elCamera = null;
+            }
+        };
+        var showCamera = function(data, url){
+            elCamera = parent.showCameraD3(data, url);
+        };
+
+        var clearXfIcons = function(){
+            if(elXiaofangIcon){
+                while(elXiaofangIcon.length > 0){
+                    var e = elXiaofangIcon.pop();
+                    earth.DetachObject(e);
+                }
+            }
+        };
+        var showXfIcons = function(data){
+            if(!data){
+                return;
+            }
+            for(var i = 0;i < data.length;i++){
+                var d = data[i];
+                var ca = d.coor.split(',');
+                var lon = ca[0];
+                var lat = ca[1];
+                var alt = ca[2];
+                var iu = earth.Environment.RootPath + DEFAULT_ICON_PATH;
+                var el = parent.createIconD3({
+                    lon: lon,
+                    lat: lat,
+                    alt: alt,
+                    text: d.name,
+                    normalIcon: iu,
+                    highlightIcon: iu
+                });
+                earth.AttachObject(el);
+                elXiaofangIcon.push(el);
+            }
+        };
+        var clearXfModels = function(){
+            highlightMgr.clearHighlight();
+            balloonMgr.clear();
+        };
+        var showXfModels = function(data){
+            if(!data){
+                return;
+            }
+            for(var i = 0;i < data.length;i++){
+                var d = data[i];
+                var rl = earth.LayerManager.GetLayerByGUID(parent.SYSTEMPARAMS.project);
+                var lyr = parent.getLayerByName2(d.layer, rl, true, d.parentLayer);
+                var r = parent.localSearchByKey(earth, lyr, d.key, true);
+                if(r && r.RecordCount > 0){
+                    var m = r.GetLocalObject(0);
+                    var st = m.SphericalTransform;
+                    var lon = st.Longitude;
+                    var lat = st.Latitude;
+                    var alt = st.Altitude;
+                    highlightMgr.showHighlight(m, false);
+                    var h = parent.getAttrHtml(d.info);
+                    balloonMgr.showBalloon({
+                        x: lon,
+                        y: lat,
+                        z: alt,
+                        width: 300,
+                        height: 180,
+                        alpha: 153,
+                        closable: true,
+                        backgroundColor: 0x424a5a,
+                        content: h
+                    });
+                }
+            }
+        };
+
+        var showXfcPathArrows = function(visible, index){
+            var ea = parent.userdataArr;
+            if(ea && ea.length > 0){
+                for(var i = 0;i < ea.length;i++){
+                    var en = EL_XIAOFANGCHE_PATH_ARROW_NAME;
+                    if(index != null){
+                        en += '' + index;
+                    }
+                    if(ea[i].Name.indexOf(en) >= 0){
+                        ea[i].Visibility = visible;
+                    }
+                }
+            }
+        };
+
+        var clearTracks = function(){
+            if(trackXfc){
+                while(trackXfc.length > 0){
+                    var to = trackXfc.pop();
+                    if(to.track){
+                        if(to.track.Status != 0){
+                            to.track.Stop();
+                        }
+                        if(to.track.BindObject){
+                            earth.DynamicSystem.UnLoadDynamicObject(to.track.BindObject);
+                        }
+                        earth.TrackControl.DeleteTrack(to.track.Guid);
+                    }
+                }
+            }
+            if(doXfcList){
+                while(doXfcList.length > 0){
+                    var did = doXfcList.pop();
+                    earth.DynamicSystem.UnLoadDynamicObject(did);
+                }
+            }
+        };
+        var getXfcTracks = function(index){
+            var tracks = trackMgr.getTracks();
+            for(var i = 0;i < tracks.length;i++){
+                var ti = tracks[i];
+                if(ti.NAME.indexOf(TRACK_XIAOFANGCHE_NAME + '' + index) >= 0){
+                    var t = trackMgr.createTrack(ti.ID, ti.NAME);
+                    trackXfc.push({
+                        track: t
+                    });
+                }
+            }
+        };
+        var playTracks = function(onAllFinished){
+            earth.Event.OnDynamicListLoaded = function(list) {
+                var dynamicObj = null;
+                for (var i = 0; i < list.Count; i++) {
+                    var di = list.Items(i);
+                    if(di.Name.indexOf(DO_XIAOFANGCHE_NAME) >= 0){
+                        dynamicObj = di;
+                        break;
+                    }
+                }
+                if(!dynamicObj){
+                    alert('未找到消防车模型');
+                    return;
+                }
+
+                if(trackXfc && trackXfc.length > 0){
+                    xfcTrackTotal = trackXfc.length;
+                    earth.Event.OnTrackFinish = function(trackId, dynamicId){
+                        xfcTrackTotal--;
+                        if(xfcTrackTotal == 0){
+                            if(typeof onAllFinished == 'function'){
+                                onAllFinished();
+                            }
+                        }
+                    };
+                    _playTracks(dynamicObj.Guid);
+                }
+            };
+            earth.DynamicSystem.ApplyDynamicList();
+        };
+        var _playTracks = function(did){
+            if(!trackXfc || trackXfc.length == 0){
+                return;
+            }
+            var i = 0;
+            if(i < trackXfc.length){
+                earth.Event.OnDocumentChanged = function(type, newGuid) {
+                    if (type == 3) {
+                        return;
+                    }
+                    if (type == 2) {
+                        if(i < trackXfc.length){
+                            var t = trackXfc[i].track;
+                            t.BindObject = newGuid;
+                            doXfcList.push(newGuid);
+                            // earth.TrackControl.SetMainTrack(trackId, 4);
+                            t.Play(false);
+                        }
+                    }
+                    i++;
+                    if(i >= trackXfc.length){
+                        earth.Event.OnDocumentChanged = function() {};
+                    }else{
+                        earth.DynamicSystem.LoadDynamicObject(did);
+                    }
+                };
+                earth.DynamicSystem.LoadDynamicObject(did);
+            }
+        };
+
+        var showPenshui = function(visible, index){
+            var ea = parent.userdataArr;
+            if(ea && ea.length > 0){
+                for(var i = 0;i < ea.length;i++){
+                    var en = EL_PENSHUI_NAME;
+                    if(index != null){
+                        en += '' + index;
+                        console.log(en);
+                    }
+                    if(ea[i].Name.indexOf(en) >= 0){
+                        ea[i].Visibility = visible;
+                    }
+                }
+            }
+        };
+
+    init();
+    });
+    </script>
+</head>
+
+<body oncontextmenu="return false;">
+    <div class="easyui-layout" fit="true">
+        <div region="north" border="false" style="height: 140px;overflow: hidden;">
+            <div class="btn-container sfm-s-d-none">
+                <button id="btn0">火灾点定位</button>
+            </div>
+            <div class="btn-container sfm-s-d-none">
+                <button id="btn1">周边摄像头</button>
+            </div>
+            <div class="btn-container sfm-s-d-none">
+                <button id="btn2">消防设施</button>
+            </div>
+            <div class="btn-container sfm-s-d-none">
+                <button id="btn3">消防车路线</button>
+            </div>
+            <div class="btn-container sfm-s-d-none">
+                <button id="btn4">出警</button>
+            </div>
+            <div class="btn-container sfm-s-d-none">
+                <button id="btn5">喷水灭火</button>
+            </div>
+            <div class="btn-container">
+                <button id="btn6" data-i="1">火灾点1</button>
+            </div>
+            <!-- <div class="btn-container">
+                <button id="btn7" data-i="2">火灾点2</button>
+            </div>
+            <div class="btn-container">
+                <button id="btn8" data-i="3">火灾点3</button>
+            </div> -->
+            <!-- <div class="btn-container">
+                <button id="btnCamera">摄像头</button>
+            </div> -->
+        </div>
+        <div region="center" border="false" style="overflow: hidden;">
+            <iframe id="frmCamera" name="frmCamera" src="" frameborder="0" style="width: 100%;height: 100%;"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>

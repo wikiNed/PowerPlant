@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style>
+	    body {
+	        margin: 0px;
+	        padding: 0px;
+	        overflow: hidden;
+	        background: #003283;
+	        /*background: #2a80c9;*/
+	        /*background: #464750;*/
+	        width: 100%;
+	        height: 100%;
+	        color: #fff;
+	    }
+
+	    .menuItemV {
+	        width: 60px;
+	        height: 66px;
+	        border-bottom: 1px solid #2fc2ff;
+	        /*border-bottom: 1px solid #2167A3;*/
+	        /*border-bottom: 1px solid #787a89;*/
+	        /*padding-bottom: 6px;*/
+	        font-size: 12px;
+	        cursor: pointer;
+	    }
+	
+	    .menuItemV img {
+	        width: 40px;
+	        height: 40px;
+	        margin: 5px 10px 0px 10px;
+	    }
+	
+	    .menuItemV span {
+	        margin: 0px 18px 11px 18px;
+	    }
+	    .menuItemV:hover {
+            /*background: url(images/earthTools/earthTool-bg.png);*/
+            /*background: #000;*/
+            background: #2fc2ff;
+        }
+        
+        .menuItemH {
+            width: 135px;
+            height: 30px;
+            border-bottom: 1px solid #2fc2ff;
+            /*border-bottom: 1px solid #2167A3;*/
+            /*border-bottom: 1px solid #787a89;
+            border-right: 1px solid #787a89;*/
+            /*padding-bottom: 6px;*/
+            font-size: 14px;
+            vertical-align:middle;
+            cursor: pointer;
+        }
+    
+        .menuItemH img {
+            width: 18px;
+            height: 18px;
+            margin: 6px 10px 6px 10px;
+            vertical-align: middle; /*此处是为了紧接的文字垂直剧中*/
+        }
+    
+        .menuItemH span {
+            /*margin: 0px 5px 0px 10px;*/
+        }
+        .menuItemH:hover {
+            /*background: url(images/earthTools/earthTool-bg.png);*/
+            /*background: #000;*/
+            background: #2fc2ff;
+        }
+	    #prevBtn,
+	    #nextBtn {
+	        position: fixed;
+	        bottom: 0px;
+	        display: none;
+	        width: 100%;
+	        height: 22px;
+	        /*background: #464750;*/
+	        /*background: #2a80c9;*/
+	        background: #003283;
+	        z-index: 100;
+	        cursor: pointer;
+	        align: center;
+	    }
+	
+	    #prevBtn:hover,
+	    #nextBtn:hover {
+	        /*background: url(images/earthTools/earthTool-bg.png);*/
+	        /*background-color:rgb(70, 71, 80);
+            opacity:0.5;
+            filter:alpha(opacity=50);*/
+            /*background: #000;*/
+            background: #2fc2ff;
+	    }
+	
+	    #prevBtn img,
+	    #nextBtn img {
+	        width: 13px;
+            height: 12px;
+	        margin: 4px 23px;
+	    }
+	
+	    #earthMenu {
+	        height: 100%;
+	        width: 100%;
+	        margin: 0px;
+	        padding: 0px;
+	    }
+	</style>
+</head>
+<body >
+    <div id="earthMenu">
+
+    </div>
+    <div id="scrollBtn">
+	    <div id="prevBtn">
+	        <img src="images/earthTools/prevBtn.png" />
+	    </div>
+	    <div id="nextBtn">
+	        <img src="images/earthTools/nextBtn.png" />
+	    </div>
+    </div>
+    <script type="text/javascript" src="js/plugins/jquery1.9.0.min.js"></script>
+    <script type="text/javascript" src="js/common/common.js"></script>
+    <script type="text/javascript">
+
+    var earthMenuHeight = 0;
+	/*
+	 * 外部传参调用
+	 */
+	function setParameters(parameter) {
+		var updateEarthMenuDiv = parameter.updateEarthMenuDiv;
+		var updateMenuZoom = parameter.updateMenuZoom;
+		earthMenuHeight = parameter.earthMenuHeight;
+		updateEarthMenuDiv($("#earthMenu"));
+		updateMenuZoom(getZoom());
+		//resizeWindow();
+    }
+
+    /*
+	 *窗口重绘
+	 */
+	function resizeWindow() {
+		var windowHeight = Math.ceil($(window).height() * getZoom());
+		if(windowHeight < earthMenuHeight) {
+			if ($("#prevBtn").is(":hidden")) {
+				$("#nextBtn").show();
+			}
+			$("#earthMenu").css("margin-bottom", "22px");
+		} else {
+			$("#nextBtn").hide();
+			$("#prevBtn").hide();
+			$("#earthMenu").css("margin-bottom", "0px");
+			document.documentElement.scrollTop = 0;
+		}
+	}
+
+	/*
+	 * 窗口大小调整事件
+	 */
+	window.onresize = function() {
+		disableZoom();
+		resizeWindow();
+	}
+
+//	function setScrollBtn(parameter) {
+		/*
+	     * 下一页
+	     */
+	    $("#nextBtn").click(function() {
+	        var scrollHeight = $(window).height() - 22;
+	        var scrollTopNow = document.documentElement.scrollTop;
+	        var scrollTopNext = scrollTopNow + scrollHeight;
+	        $("html,body").animate({
+	            scrollTop: scrollTopNext + 'px'
+	        }, 500);
+	        if(scrollTopNext + $(window).height() >= $("#earthMenu").height()) {
+	            $("#nextBtn").hide();
+	            $("#prevBtn").show();
+	        }
+	    });
+
+	    /*
+	     * 上一页
+	     */
+	    $("#prevBtn").click(function() {
+	        var scrollHeight = $(window).height() - 22;
+	        var scrollTopNow = document.documentElement.scrollTop;
+	        var scrollTopNext = scrollTopNow - scrollHeight;
+	        if(scrollTopNext <= 0) {
+	            scrollTopNext = 0;
+	            $("#prevBtn").hide();
+	            $("#nextBtn").show();
+	        }
+	        $("html,body").animate({
+	            scrollTop: scrollTopNext + 'px'
+	        }, 500);
+	    });
+
+	    /*
+		if($(window).height() < earthMenuHeight) {
+			if($("#prevBtn").is(":hidden")) {
+			    $("#nextBtn").show();
+			}
+		    $("#earthMenu").css("margin-bottom", "22px");
+		} else {
+		    $("#nextBtn").hide();
+		    $("#prevBtn").hide();
+		    $("#earthMenu").css("margin-bottom", "0px");
+		    document.documentElement.scrollTop = 0;
+		}*/
+//	}
+    
+    function disableZoom() {
+    	var zoom = getZoom();
+        $("body").css("zoom", 1 / zoom);   //禁止菜单内的缩放，如果浏览器有缩小或放大，这里则采用相反比例放大或缩小
+        //$("#earthMenu").css("zoom", 1 / zoom);
+        //$("#prevBtn").css("zoom", 1 / zoom);
+        //$("#nextBtn").css("zoom", 1 / zoom);
+    }
+    disableZoom();
+    </script>
+</body>
+</html>

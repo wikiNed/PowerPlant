@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="描述">
+    <meta name="author" content="练习 加油">
+    <style>
+        body {
+            font-family: "Microsoft YaHei", serif;
+        }
+
+        body, dl, dd, p, h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+        }
+
+        ol, ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        img {
+            border: none;
+        }
+
+        #wrap {
+            background-color: #03132c;
+            color: #23899f;
+            width: 250px;
+            height: 150px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center; /*定义body的元素垂直居中*/
+            justify-content: center; /*定义body的里的元素水平居中*/
+        }
+
+        ul li {
+            width: 230px;
+            cursor: pointer;
+            height: 40px;
+        }
+
+        ul li:hover {
+            color: #ddd;
+        }
+        ul li p{
+            display: block;
+            float: left;
+        }
+        ul li p.right{
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <ul>
+        <li><p>#1出口SO2浓度折算小时均值：</p><p class="right"><b></b>mg/Nm3</p></li>
+        <li><p>#1出口NO2浓度折算小时均值：</p><p class="right"><b></b>mg/Nm3</p></li>
+        <li><p>#1出口粉尘浓度折算小时均值：</p><p class="right"><b></b>mg/Nm3</p></li>
+    </ul>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    var name;
+    function setParameters(parameter) {
+        name = parameter.pp.name;
+    }
+    $(function () {
+        if (name == '2#'){
+            $('ul').html('<li><p>#2出口SO2浓度折算小时均值：</p><p class="right"><b>22.76</b>mg/Nm3</p></li>\n' +
+                '        <li><p>#2出口NO2浓度折算小时均值：</p><p class="right"><b>31.68</b>mg/Nm3</p></li>\n' +
+                '        <li><p>#2出口粉尘浓度折算小时均值：</p><p class="right"><b>3.66</b>mg/Nm3</p></li>')
+        }else if (name == '1#'){
+            $('ul').html('<li><p>#1出口SO2浓度折算小时均值：</p><p class="right"><b>21.94</b>mg/Nm3</p></li>\n' +
+                '        <li><p>#1出口NO2浓度折算小时均值：</p><p class="right"><b>31.73</b>mg/Nm3</p></li>\n' +
+                '        <li><p>#1出口粉尘浓度折算小时均值：</p><p class="right"><b>3.51</b>mg/Nm3</p></li>')
+        }else if (name == 'coalYard'){
+            $('ul').html(
+                '<li><p>每小时耗煤量：</p><p class="right"><b>267.97</b>t/h</p></li>\n' +
+                '        <li><p>发电标煤耗：</p><p class="right"><b>274.93</b>g/kwh</p></li>\n' +
+                '        <li><p>每日进煤量：</p><p class="right"><b>6452.14</b>t</p></li>'
+            )
+        }
+    })
+    // $.extend({
+    //     staMsg:function(name){
+    //         $.ajax({
+    //             type: "GET",
+    //             url: "http://10.2.1.16/app/rest/pi",
+    //             data:"",
+    //             dataType: "json",                   //GET接收信息为JSON
+    //             // contentType:"application/json",  //POST发送信息为JSON
+    //             success: function(data){
+    //                 var innerHtml='';
+    //                 data.list.forEach(function (item,index) {
+    //                     if( item.type == name ){
+    //                         innerHtml += '<li>'+item.name+'：'+item.value + item.dw +'</li>';
+    //                     }
+    //                 });
+    //                 if (data.list.length == 0){
+    //                     $('#wrap ul').html('无数据');
+    //                 }else{
+    //                     $('#wrap ul').html(innerHtml);
+    //                 }
+    //             },
+    //             error:function(e){
+    //                 $('#wrap ul').html('服务器错误')
+    //             }
+    //         });
+    //     }
+    // });
+    // setTimeout(function () {
+    //     setInterval('$.staMsg(name)',1000);
+    // },1000)
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

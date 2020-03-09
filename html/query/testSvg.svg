@@ -1,0 +1,1601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" viewBox="0 0 4021 1939" width="100%" fill="#000000" image-rendering="optimizeSpeed"
+	 onload="SVG_doc_loaded(evt);"
+	 PB:pid="" xlink:xid="" xmlns:svg="OSI_SVG_20090601" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:PB="urn:osisoft-com-pb" xmlns:PBI="urn:osisoft-com-interface" xmlns:PBD="urn:osisoft-com-data" xmlns:xsi="http://www.w3.org/1999/XMLSchema/instance" xmlns="http://www.w3.org/2000/svg">
+	<defs><PBD:TagUses tag="\\10.2.1.22\dcs1:crc02ai003" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value2" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\dcs1:dmnqqzk" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value15" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\dcs1:fp" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value9" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\dcs1:fw_flow" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value4" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\dcs1:lba20ct601ss" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value6" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\dcs1:load" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value1" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\dcs1:msp" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value5" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\dcs1:o2" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value13" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\dcs1:paf" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value10" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\dcs1:rh_out_te" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value8" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\dcs1:rhpres" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value7" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\dcs1:shdeg" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value12" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\dcs1:tfa" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value14" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\dcs1:tffreal" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value3" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\dcs1:wratcoal" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value11" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:dmy0ayg03gh001gh1sb" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Text44_MS" PB:Type="4" PB:Parent="Text44"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:dmy0ayg03gh001gh2sb" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Text32_MS" PB:Type="4" PB:Parent="Text32"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa01gs001ce11" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value28" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa01gs001ce12" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value29" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa01gs001ce13" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value30" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa01gs001ce21" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value31" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa01gs001ce22" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value32" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa01gs001ce23" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value16" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa01gs001ce4" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value26" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa01gs001ce5" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value27" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa01gs001gk1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Rectangle2_MS" PB:Type="2" PB:Parent="Rectangle2"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa01gs021gk1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Line169_MS" PB:Type="1" PB:Parent="Line169"/>
+			<PBI:Symbol name="Line170_MS" PB:Type="1" PB:Parent="Line170"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa01gs022gk1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Line167_MS" PB:Type="1" PB:Parent="Line167"/>
+			<PBI:Symbol name="Line168_MS" PB:Type="1" PB:Parent="Line168"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa01gs023gk1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Line22_MS" PB:Type="1" PB:Parent="Line22"/>
+			<PBI:Symbol name="Line25_MS" PB:Type="1" PB:Parent="Line25"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa01gs101gk1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Line58_MS" PB:Type="1" PB:Parent="Line58"/>
+			<PBI:Symbol name="Line59_MS" PB:Type="1" PB:Parent="Line59"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa01gs102gk1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Line56_MS" PB:Type="1" PB:Parent="Line56"/>
+			<PBI:Symbol name="Line57_MS" PB:Type="1" PB:Parent="Line57"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa01gs103gk1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Line28_MS" PB:Type="1" PB:Parent="Line28"/>
+			<PBI:Symbol name="Line55_MS" PB:Type="1" PB:Parent="Line55"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa02gs021gk1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Line171_MS" PB:Type="1" PB:Parent="Line171"/>
+			<PBI:Symbol name="Line233_MS" PB:Type="1" PB:Parent="Line233"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa02gs101gk1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Line118_MS" PB:Type="1" PB:Parent="Line118"/>
+			<PBI:Symbol name="Line60_MS" PB:Type="1" PB:Parent="Line60"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa02gt201fe3" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value25" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa04gs001ce11" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value17" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa04gs001ce12" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value18" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa04gs001ce13" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value19" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa04gs001ce21" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value20" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa04gs001ce22" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value21" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa04gs001ce23" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value22" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa04gs001ce4" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value23" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa04gs001ce5" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value24" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa04gs001gk1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Rectangle1_MS" PB:Type="2" PB:Parent="Rectangle1"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa04gs021gk1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Line165_MS" PB:Type="1" PB:Parent="Line165"/>
+			<PBI:Symbol name="Line166_MS" PB:Type="1" PB:Parent="Line166"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa04gs022gk1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Line147_MS" PB:Type="1" PB:Parent="Line147"/>
+			<PBI:Symbol name="Line159_MS" PB:Type="1" PB:Parent="Line159"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa04gs023gk1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Line191_MS" PB:Type="1" PB:Parent="Line191"/>
+			<PBI:Symbol name="Line192_MS" PB:Type="1" PB:Parent="Line192"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa04gs101gk1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Line53_MS" PB:Type="1" PB:Parent="Line53"/>
+			<PBI:Symbol name="Line54_MS" PB:Type="1" PB:Parent="Line54"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa04gs102gk1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Line51_MS" PB:Type="1" PB:Parent="Line51"/>
+			<PBI:Symbol name="Line52_MS" PB:Type="1" PB:Parent="Line52"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0afa04gs103gk1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Line49_MS" PB:Type="1" PB:Parent="Line49"/>
+			<PBI:Symbol name="Line50_MS" PB:Type="1" PB:Parent="Line50"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:j0qea10an003ap" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Value33" PB:Type="7"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:y0ayg03gh001gc1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Ellipse22_MS" PB:Type="3" PB:Parent="Ellipse22"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:y0ayg03gh001gc2" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Ellipse20_MS" PB:Type="3" PB:Parent="Ellipse20"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:y0ayg03gh001gt1" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Ellipse23_MS" PB:Type="3" PB:Parent="Ellipse23"/>
+		</PBD:TagUses><PBD:TagUses tag="\\10.2.1.22\gy:y0ayg03gh001gt2" PB:BO="PWSPIEventsBO.cBOEvents">
+			<PBI:Symbol name="Ellipse21_MS" PB:Type="3" PB:Parent="Ellipse21"/>
+		</PBD:TagUses>
+	</defs>
+	<rect x="0" y="0" width="4011" height="1929" PB:DocMajorVersionNum="3" PB:DocMinorVersionNum="26" PB:DocGroup="1" PB:wnHeight="898" PB:wnWidth="1938" PB:wnState="2" PB:Zoom="100" PB:LocalID="2052" PB:DisplayServerTimeZone="True" PB:Type="55" PB:NamedValues="MRD.IsNewDisplay,False AFDisplayBuilder.Upgraded,1">
+	</rect>
+	<PB:Dataset id="AF2_DS" PB:Type="57" PB:Context="2" PB:Description="" PB:RefreshInterval="10000" PB:Stepped="False" PB:DSType="3" PB:DSVisible="True">
+	</PB:Dataset>
+	<PB:Dataset id="E_DS_DS" PB:Type="57" PB:Context="2" PB:Description="" PB:RefreshInterval="5000" PB:Stepped="False" PB:DSType="3" PB:DSVisible="False">
+	</PB:Dataset>
+	<PB:Dataset id="MODULEDB_DS" PB:Type="57" PB:Context="2" PB:Description="" PB:RefreshInterval="5000" PB:Stepped="False" PB:DSType="3" PB:DSVisible="False">
+	</PB:Dataset>
+	<polygon id="Rectangle5" points="443,121 -1,121 -1,3 443,3" fill="#39A6A0" stroke="#008080" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+	</polygon>
+	<g id="Polyline23" PB:IsMultiState="False" PB:Type="5" PB:Visible="True">
+		<polyline id="Polyline23_Polyline" fill="none" stroke="#FFFFFF" stroke-width="3px" points="10,1929 3933,1929 3933,126 0,126" PB:LineEnds="0" PB:LineStyle="0">
+		</polyline>
+	</g>
+	<g id="Text57" fill="#000000" stroke="none" font-family="Arial" font-size="53.3333312140572" font-weight="bold" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text57_pbTextBoundingRectEl" x="126" y="3" width="171" height="57" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text57_pbTextEl" x="126" y="45.75" fill="#000000" stroke="none" font-family="Arial" font-size="53.3333312140572" font-weight="bold">#1机组</text>
+	</g>
+	<g id="Text25" fill="#000000" stroke="none" font-family="Arial" font-size="46.6666648123" font-weight="bold" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text25_pbTextBoundingRectEl" x="88" y="71" width="234" height="49" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text25_pbTextEl" x="88" y="107.75" fill="#000000" stroke="none" font-family="Arial" font-size="46.6666648123" font-weight="bold">110kV系统</text>
+	</g>
+	<g id="Line1" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line1_Line" stroke="#0000FF" stroke-width="3px" x1="661" y1="360" x2="777" y2="360" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line2" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line2_Line" stroke="#0000FF" stroke-width="3px" x1="663" y1="491" x2="777" y2="491" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line3" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line3_Line" stroke="#0000FF" stroke-width="3px" x1="890" y1="496" x2="1019" y2="496" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line4" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line4_Line" stroke="#0000FF" stroke-width="3px" x1="662" y1="633" x2="780" y2="633" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line6" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line6_Line" stroke="#0000FF" stroke-width="3px" x1="663" y1="799" x2="663" y2="892" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line7" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line7_Line" stroke="#0000FF" stroke-width="3px" x1="665" y1="852" x2="779" y2="852" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line9" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line9_Line" stroke="#0000FF" stroke-width="3px" x1="664" y1="1004" x2="664" y2="1141" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line10" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line10_Line" stroke="#0000FF" stroke-width="3px" x1="665" y1="1061" x2="783" y2="1061" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Polyline2" PB:IsMultiState="False" PB:Type="5" PB:Visible="True">
+		<polyline id="Polyline2_Polyline" fill="none" stroke="#0000FF" stroke-width="3px" points="666,1245 666,1461 2900,1461 2900,1276" PB:LineEnds="0" PB:LineStyle="0">
+		</polyline>
+	</g>
+	<g id="Line13" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line13_Line" stroke="#0000FF" stroke-width="3px" x1="2407" y1="1469" x2="2407" y2="1574" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line14" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line14_Line" stroke="#0000FF" stroke-width="3px" x1="2405" y1="1686" x2="2405" y2="1735" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line15" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line15_Line" stroke="#0000FF" stroke-width="3px" x1="2408" y1="1520" x2="2520" y2="1520" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line16" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line16_Line" stroke="#0000FF" stroke-width="3px" x1="2638" y1="1520" x2="2752" y2="1520" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line17" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line17_Line" stroke="#0000FF" stroke-width="3px" x1="2896" y1="688" x2="2896" y2="258" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line18" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line18_Line" stroke="#0000FF" stroke-width="3px" x1="2896" y1="360" x2="3015" y2="360" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line19" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line19_Line" stroke="#0000FF" stroke-width="3px" x1="2896" y1="492" x2="3023" y2="492" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line20" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line20_Line" stroke="#0000FF" stroke-width="3px" x1="3141" y1="492" x2="3238" y2="492" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line21" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line21_Line" stroke="#0000FF" stroke-width="3px" x1="2896" y1="631" x2="3023" y2="631" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line23" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line23_Line" stroke="#0000FF" stroke-width="3px" x1="2896" y1="807" x2="2896" y2="905" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line24" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line24_Line" stroke="#0000FF" stroke-width="3px" x1="2897" y1="863" x2="3031" y2="863" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line26" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line26_Line" stroke="#0000FF" stroke-width="3px" x1="2897" y1="1006" x2="2897" y2="1177" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line27" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line27_Line" stroke="#0000FF" stroke-width="3px" x1="2896" y1="1058" x2="3030" y2="1058" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<polygon id="Rectangle1" points="652,903 680,903 680,1001 652,1001" fill="#FF0000" stroke="#FF8000" stroke-width="3px" PB:FillColor="#FFFFFF" PB:IsMultiState="True" PB:Type="2" PB:LineStyle="0">
+		<PB:MultiState id="Rectangle1_MS" BlinkBadData="0" ColorBadData="none" CurrentState="1" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs001gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155995\GY:J0AFA04GS001GK1" TagName="gy:j0afa04gs001gk1" PtTagValue="true" ServerName="10.2.1.22" StateCount="2">
+			<PB:MSState id="Rectangle1_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+			<PB:MSState id="Rectangle1_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+		</PB:MultiState>
+	</polygon>
+	<polygon id="Rectangle2" points="2882,904 2910,904 2910,1003 2882,1003" fill="#FF0000" stroke="#FF8000" stroke-width="3px" PB:FillColor="#FFFFFF" PB:IsMultiState="True" PB:Type="2" PB:LineStyle="0">
+		<PB:MultiState id="Rectangle2_MS" BlinkBadData="0" ColorBadData="none" CurrentState="1" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs001gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155957\GY:J0AFA01GS001GK1" TagName="gy:j0afa01gs001gk1" PtTagValue="true" ServerName="10.2.1.22" StateCount="2">
+			<PB:MSState id="Rectangle2_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+			<PB:MSState id="Rectangle2_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+		</PB:MultiState>
+	</polygon>
+	<g id="Composite2" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<g id="Composite1" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<g id="Line29" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line29_Line" stroke="#FF8000" stroke-width="3px" x1="882" y1="357" x2="931" y2="357" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line30" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line30_Line" stroke="#FF8000" stroke-width="3px" x1="935" y1="331" x2="935" y2="380" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line31" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line31_Line" stroke="#FF8000" stroke-width="3px" x1="947" y1="340" x2="947" y2="371" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line32" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line32_Line" stroke="#FF8000" stroke-width="3px" x1="962" y1="339" x2="962" y2="371" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+		<g id="Line33" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line33_Line" stroke="#FF8000" stroke-width="3px" x1="932" y1="357" x2="894" y2="357" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+	</g>
+	<g id="Composite27" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<g id="Line111" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line111_Line" stroke="#FF8000" stroke-width="3px" x1="2404" y1="1766" x2="2282" y2="1766" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+		<g id="Line112" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line112_Line" stroke="#FF8000" stroke-width="3px" x1="2337" y1="1801" x2="2281" y2="1801" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+		<g id="Line113" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line113_Line" stroke="#FF8000" stroke-width="3px" x1="2409" y1="1833" x2="2279" y2="1833" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+		<g id="Line114" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line114_Line" stroke="#FF8000" stroke-width="3px" x1="2280" y1="1764" x2="2280" y2="1855" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+		<g id="Composite23" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<g id="Composite24" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+				<path id="Ellipse9" fill="none" stroke="#FFFF00" stroke-width="3px" d="M 2388,1799 C 2388,1785 2377,1773 2364,1773 C 2351,1773 2340,1785 2340,1799 C 2340,1814 2351,1826 2364,1826 C 2377,1826 2388,1814 2388,1799" PB:IsMultiState="False" PB:LineStyle="0" PB:Type="3" PB:Visible="True">
+				</path>
+				<g id="Line99" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line99_Line" stroke="#FFFF00" stroke-width="3px" x1="2365" y1="1777" x2="2365" y2="1798" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+				<g id="Line100" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line100_Line" stroke="#FFFF00" stroke-width="3px" x1="2363" y1="1797" x2="2384" y2="1820" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+				<g id="Line101" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line101_Line" stroke="#FFFF00" stroke-width="3px" x1="2347" y1="1815" x2="2364" y2="1797" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+			</g>
+			<g id="Composite25" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+				<path id="Ellipse10" fill="none" stroke="#FFFF00" stroke-width="3px" d="M 2432,1767 C 2432,1753 2420,1742 2407,1742 C 2394,1742 2383,1753 2383,1767 C 2383,1781 2394,1793 2407,1793 C 2420,1793 2432,1781 2432,1767" PB:IsMultiState="False" PB:LineStyle="0" PB:Type="3" PB:Visible="True">
+				</path>
+				<g id="Line102" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line102_Line" stroke="#FFFF00" stroke-width="3px" x1="2408" y1="1745" x2="2408" y2="1767" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+				<g id="Line103" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line103_Line" stroke="#FFFF00" stroke-width="3px" x1="2407" y1="1766" x2="2428" y2="1787" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+				<g id="Line104" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line104_Line" stroke="#FFFF00" stroke-width="3px" x1="2390" y1="1785" x2="2406" y2="1766" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+			</g>
+			<g id="Composite26" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+				<path id="Ellipse11" fill="none" stroke="#FFFF00" stroke-width="3px" d="M 2432,1830 C 2432,1816 2420,1804 2407,1804 C 2394,1804 2383,1816 2383,1830 C 2383,1845 2394,1857 2407,1857 C 2420,1857 2432,1845 2432,1830" PB:IsMultiState="False" PB:LineStyle="0" PB:Type="3" PB:Visible="True">
+				</path>
+				<g id="Line105" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line105_Line" stroke="#FFFF00" stroke-width="3px" x1="2408" y1="1808" x2="2408" y2="1831" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+				<g id="Line106" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line106_Line" stroke="#FFFF00" stroke-width="3px" x1="2407" y1="1828" x2="2428" y2="1851" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+				<g id="Line107" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line107_Line" stroke="#FFFF00" stroke-width="3px" x1="2390" y1="1849" x2="2406" y2="1828" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+			</g>
+			<path id="Ellipse12" fill="none" stroke="#FFFF00" stroke-width="3px" d="M 2476,1801 C 2476,1788 2465,1777 2452,1777 C 2439,1777 2428,1788 2428,1801 C 2428,1814 2439,1826 2452,1826 C 2465,1826 2476,1814 2476,1801" PB:IsMultiState="False" PB:LineStyle="0" PB:Type="3" PB:Visible="True">
+			</path>
+			<g id="Line108" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line108_Line" stroke="#FFFF00" stroke-width="3px" x1="2440" y1="1778" x2="2440" y2="1809" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line109" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line109_Line" stroke="#FFFF00" stroke-width="3px" x1="2439" y1="1784" x2="2460" y2="1795" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line110" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line110_Line" stroke="#FFFF00" stroke-width="3px" x1="2439" y1="1814" x2="2460" y2="1800" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+		<g id="Composite22" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<g id="Line115" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line115_Line" stroke="#FF8000" stroke-width="3px" x1="2234" y1="1862" x2="2325" y2="1862" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line116" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line116_Line" stroke="#FF8000" stroke-width="3px" x1="2251" y1="1879" x2="2302" y2="1879" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line117" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line117_Line" stroke="#FF8000" stroke-width="3px" x1="2251" y1="1898" x2="2293" y2="1898" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+	</g>
+	<g id="Line160" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line160_Line" stroke="#0000FF" stroke-width="3px" x1="664" y1="269" x2="664" y2="696" PB:LineEnds="2" PB:LineStyle="0">
+		</line>
+		<path id="Line160_Arrow" fill="#0000FF" stroke="#0000FF" stroke-width="3px" d="M 664 269 L 674 293 L 654 293 z">
+		</path>
+	</g>
+	<g id="Line12" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line12_Line" stroke="#0000FF" stroke-width="3px" x1="1825" y1="1468" x2="1825" y2="1744" PB:LineEnds="3" PB:LineStyle="0">
+		</line>
+		<path id="Line12_Arrow" fill="#0000FF" stroke="#0000FF" stroke-width="3px" d="M 1825 1744 L 1835 1720 L 1815 1720 z">
+		</path>
+	</g>
+	<g id="Text4" fill="#FF00FF" stroke="none" font-family="Arial" font-size="66.6666640175714" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text4_pbTextBoundingRectEl" x="1752" y="220" width="318" height="72" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text4_pbTextEl" x="1752" y="274" fill="#FF00FF" stroke="none" font-family="Arial" font-size="66.6666640175714">110kV系统</text>
+	</g>
+	<g id="Line178" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line178_Line" stroke="#0000FF" stroke-width="3px" x1="2891" y1="259" x2="2868" y2="288" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line179" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line179_Line" stroke="#0000FF" stroke-width="3px" x1="2899" y1="259" x2="2925" y2="291" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Text18" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text18_pbTextBoundingRectEl" x="475" y="204" width="358" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text18_pbTextEl" x="475" y="235.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">至110KV殿市变电所</text>
+	</g>
+	<g id="Text19" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text19_pbTextBoundingRectEl" x="2688" y="176" width="358" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text19_pbTextEl" x="2688" y="207.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">至110KV鱼河变电所</text>
+	</g>
+	<g id="Composite36" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<g id="Composite37" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<g id="Line138" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line138_Line" stroke="#FF8040" stroke-width="3px" x1="2752" y1="1520" x2="2800" y2="1520" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line139" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line139_Line" stroke="#FF8040" stroke-width="3px" x1="2804" y1="1495" x2="2804" y2="1542" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line140" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line140_Line" stroke="#FF8040" stroke-width="3px" x1="2816" y1="1504" x2="2816" y2="1534" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line141" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line141_Line" stroke="#FF8040" stroke-width="3px" x1="2831" y1="1503" x2="2831" y2="1534" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+		<g id="Line142" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line142_Line" stroke="#FF8040" stroke-width="3px" x1="2801" y1="1520" x2="2764" y2="1520" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+	</g>
+	<g id="Text20" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text20_pbTextBoundingRectEl" x="468" y="543" width="127" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text20_pbTextEl" x="468" y="574.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">庄殿线</text>
+	</g>
+	<g id="Text21" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text21_pbTextBoundingRectEl" x="2728" y="525" width="127" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text21_pbTextEl" x="2728" y="556.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">鱼庄线</text>
+	</g>
+	<g id="Text22" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text22_pbTextBoundingRectEl" x="1712" y="1766" width="210" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text22_pbTextEl" x="1712" y="1797.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">至#1启备变</text>
+	</g>
+	<path id="Ellipse20" fill="#C0C0C0" stroke="none" stroke-width="3px" PB:FillColor="#C0C0C0" d="M 1121,912 C 1121,901 1112,893 1100,893 C 1088,893 1080,901 1080,912 C 1080,924 1088,933 1100,933 C 1112,933 1121,924 1121,912" PB:IsMultiState="True" PB:LineStyle="0" PB:Type="3" PB:Visible="True">
+		<PB:MultiState id="Ellipse20_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:y0ayg03gh001gc2" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?156082\GY:Y0AYG03GH001GC2" TagName="gy:y0ayg03gh001gc2" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+			<PB:MSState id="Ellipse20_MSS1" Blink="0" Color="#C0C0C0" LowerValue="0" UpperValue="0"/>
+			<PB:MSState id="Ellipse20_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+		</PB:MultiState>
+	</path>
+	<g id="Text51" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text51_pbTextBoundingRectEl" x="1144" y="887" width="610" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text51_pbTextEl" x="1144" y="918.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">110kV庄殿线断路器1699遥合指令</text>
+	</g>
+	<path id="Ellipse21" fill="#C0C0C0" stroke="none" stroke-width="3px" PB:FillColor="#C0C0C0" d="M 1121,989 C 1121,977 1112,969 1100,969 C 1088,969 1080,977 1080,989 C 1080,1002 1088,1011 1100,1011 C 1112,1011 1121,1002 1121,989" PB:IsMultiState="True" PB:LineStyle="0" PB:Type="3" PB:Visible="True">
+		<PB:MultiState id="Ellipse21_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:y0ayg03gh001gt2" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?156083\GY:Y0AYG03GH001GT2" TagName="gy:y0ayg03gh001gt2" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+			<PB:MSState id="Ellipse21_MSS1" Blink="0" Color="#C0C0C0" LowerValue="0" UpperValue="0"/>
+			<PB:MSState id="Ellipse21_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+		</PB:MultiState>
+	</path>
+	<g id="Text52" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text52_pbTextBoundingRectEl" x="1148" y="964" width="610" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text52_pbTextEl" x="1148" y="995.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">110kV庄殿线断路器1699遥分指令</text>
+	</g>
+	<path id="Ellipse22" fill="#C0C0C0" stroke="none" stroke-width="3px" PB:FillColor="#C0C0C0" d="M 2080,912 C 2080,901 2069,893 2057,893 C 2046,893 2037,901 2037,912 C 2037,924 2046,933 2057,933 C 2069,933 2080,924 2080,912" PB:IsMultiState="True" PB:LineStyle="0" PB:Type="3" PB:Visible="True">
+		<PB:MultiState id="Ellipse22_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:y0ayg03gh001gc1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?156080\GY:Y0AYG03GH001GC1" TagName="gy:y0ayg03gh001gc1" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+			<PB:MSState id="Ellipse22_MSS1" Blink="0" Color="#C0C0C0" LowerValue="0" UpperValue="0"/>
+			<PB:MSState id="Ellipse22_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+		</PB:MultiState>
+	</path>
+	<g id="Text53" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text53_pbTextBoundingRectEl" x="2084" y="887" width="610" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text53_pbTextEl" x="2084" y="918.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">110kV庄殿线断路器1269遥合指令</text>
+	</g>
+	<path id="Ellipse23" fill="#C0C0C0" stroke="none" stroke-width="3px" PB:FillColor="#C0C0C0" d="M 2080,989 C 2080,978 2069,969 2057,969 C 2046,969 2037,978 2037,989 C 2037,1001 2046,1012 2057,1012 C 2069,1012 2080,1001 2080,989" PB:IsMultiState="True" PB:LineStyle="0" PB:Type="3" PB:Visible="True">
+		<PB:MultiState id="Ellipse23_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:y0ayg03gh001gt1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?156081\GY:Y0AYG03GH001GT1" TagName="gy:y0ayg03gh001gt1" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+			<PB:MSState id="Ellipse23_MSS1" Blink="0" Color="#C0C0C0" LowerValue="0" UpperValue="0"/>
+			<PB:MSState id="Ellipse23_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+		</PB:MultiState>
+	</path>
+	<g id="Text54" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text54_pbTextBoundingRectEl" x="2084" y="964" width="610" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text54_pbTextEl" x="2084" y="995.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">110kV庄殿线断路器1269遥分指令</text>
+	</g>
+	<g id="Composite55" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<polygon id="Rectangle3" points="780,339 879,339 879,376 780,376" fill="none" stroke="#FF0000" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+		</polygon>
+		<g id="Composite56" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<g id="Line180" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line180_Line" stroke="#FF0000" stroke-width="3px" x1="801" y1="340" x2="801" y2="376" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line181" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line181_Line" stroke="#FF0000" stroke-width="3px" x1="822" y1="339" x2="822" y2="375" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line182" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line182_Line" stroke="#FF0000" stroke-width="3px" x1="838" y1="339" x2="838" y2="375" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line183" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line183_Line" stroke="#FF0000" stroke-width="3px" x1="785" y1="339" x2="785" y2="375" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line184" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line184_Line" stroke="#FF0000" stroke-width="3px" x1="793" y1="339" x2="793" y2="375" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line185" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line185_Line" stroke="#FF0000" stroke-width="3px" x1="828" y1="339" x2="828" y2="375" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line186" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line186_Line" stroke="#FF0000" stroke-width="3px" x1="811" y1="339" x2="811" y2="375" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+		<g id="Composite57" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<g id="Line187" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line187_Line" stroke="#FF0000" stroke-width="3px" x1="864" y1="340" x2="864" y2="376" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line188" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line188_Line" stroke="#FF0000" stroke-width="3px" x1="846" y1="339" x2="846" y2="375" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line189" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line189_Line" stroke="#FF0000" stroke-width="3px" x1="852" y1="339" x2="852" y2="375" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line190" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line190_Line" stroke="#FF0000" stroke-width="3px" x1="872" y1="339" x2="872" y2="375" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+	</g>
+	<g id="Composite15" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<g id="Composite12" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<path id="Ellipse1" fill="none" stroke="#FFFF00" stroke-width="3px" d="M 1071,492 C 1071,478 1060,467 1047,467 C 1034,467 1023,478 1023,492 C 1023,505 1034,517 1047,517 C 1060,517 1071,505 1071,492" PB:IsMultiState="False" PB:LineStyle="0" PB:Type="3" PB:Visible="True">
+			</path>
+			<g id="Line61" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line61_Line" stroke="#FFFF00" stroke-width="3px" x1="1047" y1="470" x2="1047" y2="492" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line63" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line63_Line" stroke="#FFFF00" stroke-width="3px" x1="1047" y1="490" x2="1065" y2="511" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line62" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line62_Line" stroke="#FFFF00" stroke-width="3px" x1="1029" y1="507" x2="1047" y2="490" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+		<g id="Composite13" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<path id="Ellipse2" fill="none" stroke="#FFFF00" stroke-width="3px" d="M 1113,456 C 1113,443 1101,432 1088,432 C 1074,432 1063,443 1063,456 C 1063,469 1074,480 1088,480 C 1101,480 1113,469 1113,456" PB:IsMultiState="False" PB:LineStyle="0" PB:Type="3" PB:Visible="True">
+			</path>
+			<g id="Line64" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line64_Line" stroke="#FFFF00" stroke-width="3px" x1="1088" y1="435" x2="1088" y2="457" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line65" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line65_Line" stroke="#FFFF00" stroke-width="3px" x1="1088" y1="452" x2="1107" y2="474" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line66" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line66_Line" stroke="#FFFF00" stroke-width="3px" x1="1069" y1="472" x2="1086" y2="452" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+		<g id="Composite14" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<path id="Ellipse3" fill="none" stroke="#FFFF00" stroke-width="3px" d="M 1121,508 C 1121,495 1109,484 1096,484 C 1082,484 1071,495 1071,508 C 1071,521 1082,532 1096,532 C 1109,532 1121,521 1121,508" PB:IsMultiState="False" PB:LineStyle="0" PB:Type="3" PB:Visible="True">
+			</path>
+			<g id="Line67" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line67_Line" stroke="#FFFF00" stroke-width="3px" x1="1096" y1="487" x2="1096" y2="509" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line68" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line68_Line" stroke="#FFFF00" stroke-width="3px" x1="1096" y1="504" x2="1115" y2="526" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line69" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line69_Line" stroke="#FFFF00" stroke-width="3px" x1="1077" y1="524" x2="1094" y2="504" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+		<path id="Ellipse4" fill="none" stroke="#FFFF00" stroke-width="3px" d="M 1161,480 C 1161,469 1150,460 1137,460 C 1124,460 1113,469 1113,480 C 1113,492 1124,501 1137,501 C 1150,501 1161,492 1161,480" PB:IsMultiState="False" PB:LineStyle="0" PB:Type="3" PB:Visible="True">
+		</path>
+		<g id="Line70" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line70_Line" stroke="#FFFF00" stroke-width="3px" x1="1124" y1="467" x2="1123" y2="494" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+		<g id="Line71" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line71_Line" stroke="#FFFF00" stroke-width="3px" x1="1124" y1="466" x2="1142" y2="477" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+		<g id="Line72" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line72_Line" stroke="#FFFF00" stroke-width="3px" x1="1123" y1="494" x2="1146" y2="484" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+	</g>
+	<g id="Line74" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line74_Line" stroke="#FF8000" stroke-width="3px" x1="1047" y1="469" x2="1047" y2="389" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line75" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line75_Line" stroke="#FF8000" stroke-width="3px" x1="1088" y1="431" x2="1088" y2="386" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line76" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line76_Line" stroke="#FF8000" stroke-width="3px" x1="1139" y1="460" x2="1139" y2="386" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line77" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line77_Line" stroke="#FF8000" stroke-width="3px" x1="1047" y1="386" x2="1262" y2="386" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line78" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line78_Line" stroke="#FF8000" stroke-width="3px" x1="1263" y1="345" x2="1263" y2="427" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line79" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line79_Line" stroke="#FF8000" stroke-width="3px" x1="1287" y1="362" x2="1287" y2="404" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line80" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line80_Line" stroke="#FF8000" stroke-width="3px" x1="1311" y1="362" x2="1311" y2="404" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Line8" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line8_Line" stroke="#0000FF" stroke-width="3px" x1="890" y1="855" x2="1029" y2="855" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Composite9" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<g id="Composite10" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<g id="Line39" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line39_Line" stroke="#FF8000" stroke-width="3px" x1="1017" y1="855" x2="1064" y2="855" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line40" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line40_Line" stroke="#FF8000" stroke-width="3px" x1="1068" y1="830" x2="1068" y2="877" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line41" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line41_Line" stroke="#FF8000" stroke-width="3px" x1="1080" y1="839" x2="1080" y2="869" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line42" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line42_Line" stroke="#FF8000" stroke-width="3px" x1="1095" y1="838" x2="1095" y2="869" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+		<g id="Line43" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line43_Line" stroke="#FF8000" stroke-width="3px" x1="1065" y1="855" x2="1029" y2="855" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+	</g>
+	<g id="Line11" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line11_Line" stroke="#0000FF" stroke-width="3px" x1="889" y1="1065" x2="1028" y2="1065" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Composite11" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<g id="Composite16" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<g id="Line44" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line44_Line" stroke="#FF8000" stroke-width="3px" x1="1026" y1="1064" x2="1073" y2="1064" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line45" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line45_Line" stroke="#FF8000" stroke-width="3px" x1="1077" y1="1039" x2="1077" y2="1086" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line46" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line46_Line" stroke="#FF8000" stroke-width="3px" x1="1089" y1="1048" x2="1089" y2="1078" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line47" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line47_Line" stroke="#FF8000" stroke-width="3px" x1="1104" y1="1047" x2="1104" y2="1078" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+		<g id="Line48" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line48_Line" stroke="#FF8000" stroke-width="3px" x1="1074" y1="1064" x2="1038" y2="1064" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+	</g>
+	<g id="Line5" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line5_Line" stroke="#0000FF" stroke-width="3px" x1="893" y1="632" x2="1025" y2="632" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Composite32" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<g id="Composite33" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<g id="Line34" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line34_Line" stroke="#FF8000" stroke-width="3px" x1="1027" y1="635" x2="1076" y2="635" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line35" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line35_Line" stroke="#FF8000" stroke-width="3px" x1="1080" y1="610" x2="1080" y2="657" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line36" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line36_Line" stroke="#FF8000" stroke-width="3px" x1="1092" y1="619" x2="1092" y2="649" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line37" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line37_Line" stroke="#FF8000" stroke-width="3px" x1="1107" y1="618" x2="1107" y2="649" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+		<g id="Line38" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line38_Line" stroke="#FF8000" stroke-width="3px" x1="1077" y1="635" x2="1039" y2="635" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+	</g>
+	<g id="Line146" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line146_Line" stroke="#0000FF" stroke-width="3px" x1="3136" y1="632" x2="3269" y2="632" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Composite76" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<g id="Composite77" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<g id="Line211" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line211_Line" stroke="#FF8000" stroke-width="3px" x1="3272" y1="632" x2="3321" y2="632" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line212" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line212_Line" stroke="#FF8000" stroke-width="3px" x1="3325" y1="607" x2="3325" y2="654" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line213" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line213_Line" stroke="#FF8000" stroke-width="3px" x1="3337" y1="616" x2="3337" y2="646" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line214" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line214_Line" stroke="#FF8000" stroke-width="3px" x1="3352" y1="615" x2="3352" y2="646" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+		<g id="Line215" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line215_Line" stroke="#FF8000" stroke-width="3px" x1="3322" y1="632" x2="3284" y2="632" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+	</g>
+	<g id="Line135" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line135_Line" stroke="#0000FF" stroke-width="3px" x1="3136" y1="860" x2="3270" y2="860" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Composite78" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<g id="Composite79" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<g id="Line136" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line136_Line" stroke="#FF8000" stroke-width="3px" x1="3271" y1="861" x2="3319" y2="861" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line137" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line137_Line" stroke="#FF8000" stroke-width="3px" x1="3324" y1="836" x2="3324" y2="882" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line148" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line148_Line" stroke="#FF8000" stroke-width="3px" x1="3335" y1="845" x2="3335" y2="874" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line149" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line149_Line" stroke="#FF8000" stroke-width="3px" x1="3350" y1="844" x2="3350" y2="874" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+		<g id="Line150" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line150_Line" stroke="#FF8000" stroke-width="3px" x1="3321" y1="861" x2="3283" y2="861" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+	</g>
+	<g id="Line220" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+		<line id="Line220_Line" stroke="#0000FF" stroke-width="3px" x1="3137" y1="1058" x2="3271" y2="1058" PB:LineEnds="0" PB:LineStyle="0">
+		</line>
+	</g>
+	<g id="Composite86" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<g id="Composite87" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<g id="Line221" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line221_Line" stroke="#FF8000" stroke-width="3px" x1="3271" y1="1057" x2="3319" y2="1057" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line222" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line222_Line" stroke="#FF8000" stroke-width="3px" x1="3324" y1="1032" x2="3324" y2="1078" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line223" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line223_Line" stroke="#FF8000" stroke-width="3px" x1="3335" y1="1041" x2="3335" y2="1070" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line224" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line224_Line" stroke="#FF8000" stroke-width="3px" x1="3350" y1="1041" x2="3350" y2="1070" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+		<g id="Line225" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line225_Line" stroke="#FF8000" stroke-width="3px" x1="3321" y1="1057" x2="3283" y2="1057" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+	</g>
+	<g id="Composite115" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<polygon id="Rectangle4" points="3021,343 3121,343 3121,380 3021,380" fill="none" stroke="#FF0000" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+		</polygon>
+		<g id="Composite116" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<g id="Line120" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line120_Line" stroke="#FF0000" stroke-width="3px" x1="3044" y1="344" x2="3044" y2="380" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line121" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line121_Line" stroke="#FF0000" stroke-width="3px" x1="3062" y1="343" x2="3062" y2="379" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line122" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line122_Line" stroke="#FF0000" stroke-width="3px" x1="3080" y1="343" x2="3080" y2="379" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line174" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line174_Line" stroke="#FF0000" stroke-width="3px" x1="3026" y1="343" x2="3026" y2="379" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line175" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line175_Line" stroke="#FF0000" stroke-width="3px" x1="3035" y1="343" x2="3035" y2="379" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line273" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line273_Line" stroke="#FF0000" stroke-width="3px" x1="3070" y1="343" x2="3070" y2="379" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line274" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line274_Line" stroke="#FF0000" stroke-width="3px" x1="3052" y1="343" x2="3052" y2="379" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+		<g id="Composite117" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<g id="Line275" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line275_Line" stroke="#FF0000" stroke-width="3px" x1="3106" y1="344" x2="3106" y2="380" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line276" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line276_Line" stroke="#FF0000" stroke-width="3px" x1="3088" y1="343" x2="3088" y2="379" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line277" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line277_Line" stroke="#FF0000" stroke-width="3px" x1="3094" y1="343" x2="3094" y2="379" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line278" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line278_Line" stroke="#FF0000" stroke-width="3px" x1="3114" y1="343" x2="3114" y2="379" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+	</g>
+	<g id="Composite118" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<g id="Composite119" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<g id="Line279" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line279_Line" stroke="#FF8000" stroke-width="3px" x1="3124" y1="359" x2="3171" y2="359" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line280" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line280_Line" stroke="#FF8000" stroke-width="3px" x1="3175" y1="333" x2="3175" y2="381" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line281" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line281_Line" stroke="#FF8000" stroke-width="3px" x1="3187" y1="344" x2="3187" y2="373" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line282" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line282_Line" stroke="#FF8000" stroke-width="3px" x1="3202" y1="342" x2="3202" y2="373" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+		<g id="Line283" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line283_Line" stroke="#FF8000" stroke-width="3px" x1="3172" y1="359" x2="3136" y2="359" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+	</g>
+	<g id="Text23" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text23_pbTextBoundingRectEl" x="470" y="732" width="106" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text23_pbTextEl" x="470" y="763.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">16996</text>
+	</g>
+	<g id="Text24" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text24_pbTextBoundingRectEl" x="495" y="925" width="85" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text24_pbTextEl" x="495" y="956.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">1699</text>
+	</g>
+	<g id="Text26" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text26_pbTextBoundingRectEl" x="470" y="1146" width="106" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text26_pbTextEl" x="470" y="1177.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">16991</text>
+	</g>
+	<g id="Text27" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text27_pbTextBoundingRectEl" x="764" y="411" width="106" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text27_pbTextEl" x="764" y="442.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">16189</text>
+	</g>
+	<g id="Text28" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text28_pbTextBoundingRectEl" x="764" y="548" width="127" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text28_pbTextEl" x="764" y="579.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">169967</text>
+	</g>
+	<g id="Text29" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text29_pbTextBoundingRectEl" x="764" y="757" width="127" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text29_pbTextEl" x="764" y="788.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">169977</text>
+	</g>
+	<g id="Text30" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text30_pbTextBoundingRectEl" x="764" y="968" width="127" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text30_pbTextEl" x="764" y="999.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">169917</text>
+	</g>
+	<g id="Text34" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text34_pbTextBoundingRectEl" x="3009" y="411" width="106" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text34_pbTextEl" x="3009" y="442.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">12189</text>
+	</g>
+	<g id="Text35" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text35_pbTextBoundingRectEl" x="3009" y="548" width="127" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text35_pbTextEl" x="3009" y="579.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">126967</text>
+	</g>
+	<g id="Text36" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text36_pbTextBoundingRectEl" x="2937" y="704" width="106" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text36_pbTextEl" x="2937" y="735.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">12696</text>
+	</g>
+	<g id="Text37" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text37_pbTextBoundingRectEl" x="3009" y="788" width="127" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text37_pbTextEl" x="3009" y="819.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">126977</text>
+	</g>
+	<g id="Text38" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text38_pbTextBoundingRectEl" x="3004" y="981" width="127" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text38_pbTextEl" x="3004" y="1012.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">126917</text>
+	</g>
+	<g id="Text39" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text39_pbTextBoundingRectEl" x="2937" y="931" width="85" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text39_pbTextEl" x="2937" y="962.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">1269</text>
+	</g>
+	<g id="Text40" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text40_pbTextBoundingRectEl" x="2937" y="1217" width="106" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text40_pbTextEl" x="2937" y="1248.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">12691</text>
+	</g>
+	<g id="Text41" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text41_pbTextBoundingRectEl" x="2443" y="1658" width="106" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text41_pbTextEl" x="2443" y="1689.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">11189</text>
+	</g>
+	<g id="Text42" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text42_pbTextBoundingRectEl" x="2511" y="1564" width="106" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text42_pbTextEl" x="2511" y="1595.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">11117</text>
+	</g>
+	<g id="Composite17" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<g id="Composite18" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+			<g id="Composite19" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+				<path id="Ellipse5" fill="none" stroke="#FFFF00" stroke-width="3px" d="M 3288,487 C 3288,474 3277,463 3264,463 C 3251,463 3240,474 3240,487 C 3240,500 3251,512 3264,512 C 3277,512 3288,500 3288,487" PB:IsMultiState="False" PB:LineStyle="0" PB:Type="3" PB:Visible="True">
+				</path>
+				<g id="Line73" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line73_Line" stroke="#FFFF00" stroke-width="3px" x1="3264" y1="466" x2="3264" y2="486" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+				<g id="Line81" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line81_Line" stroke="#FFFF00" stroke-width="3px" x1="3264" y1="486" x2="3282" y2="506" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+				<g id="Line82" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line82_Line" stroke="#FFFF00" stroke-width="3px" x1="3246" y1="502" x2="3264" y2="486" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+			</g>
+			<g id="Composite20" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+				<path id="Ellipse6" fill="none" stroke="#FFFF00" stroke-width="3px" d="M 3329,451 C 3329,439 3317,428 3304,428 C 3291,428 3280,439 3280,451 C 3280,464 3291,475 3304,475 C 3317,475 3329,464 3329,451" PB:IsMultiState="False" PB:LineStyle="0" PB:Type="3" PB:Visible="True">
+				</path>
+				<g id="Line83" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line83_Line" stroke="#FFFF00" stroke-width="3px" x1="3305" y1="431" x2="3305" y2="452" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+				<g id="Line84" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line84_Line" stroke="#FFFF00" stroke-width="3px" x1="3304" y1="448" x2="3323" y2="469" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+				<g id="Line85" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line85_Line" stroke="#FFFF00" stroke-width="3px" x1="3286" y1="467" x2="3303" y2="448" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+			</g>
+			<g id="Composite21" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+				<path id="Ellipse7" fill="none" stroke="#FFFF00" stroke-width="3px" d="M 3337,503 C 3337,491 3325,480 3312,480 C 3299,480 3288,491 3288,503 C 3288,516 3299,527 3312,527 C 3325,527 3337,516 3337,503" PB:IsMultiState="False" PB:LineStyle="0" PB:Type="3" PB:Visible="True">
+				</path>
+				<g id="Line86" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line86_Line" stroke="#FFFF00" stroke-width="3px" x1="3313" y1="483" x2="3313" y2="504" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+				<g id="Line87" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line87_Line" stroke="#FFFF00" stroke-width="3px" x1="3312" y1="500" x2="3331" y2="521" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+				<g id="Line88" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+					<line id="Line88_Line" stroke="#FFFF00" stroke-width="3px" x1="3294" y1="519" x2="3311" y2="500" PB:LineEnds="0" PB:LineStyle="0">
+					</line>
+				</g>
+			</g>
+			<path id="Ellipse8" fill="none" stroke="#FFFF00" stroke-width="3px" d="M 3377,476 C 3377,464 3366,455 3353,455 C 3340,455 3329,464 3329,476 C 3329,489 3340,498 3353,498 C 3366,498 3377,489 3377,476" PB:IsMultiState="False" PB:LineStyle="0" PB:Type="3" PB:Visible="True">
+			</path>
+			<g id="Line89" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line89_Line" stroke="#FFFF00" stroke-width="3px" x1="3340" y1="463" x2="3338" y2="489" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line90" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line90_Line" stroke="#FFFF00" stroke-width="3px" x1="3340" y1="462" x2="3358" y2="473" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+			<g id="Line91" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+				<line id="Line91_Line" stroke="#FFFF00" stroke-width="3px" x1="3339" y1="489" x2="3362" y2="482" PB:LineEnds="0" PB:LineStyle="0">
+				</line>
+			</g>
+		</g>
+		<g id="Line92" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line92_Line" stroke="#FF8000" stroke-width="3px" x1="3265" y1="461" x2="3265" y2="386" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+		<g id="Line93" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line93_Line" stroke="#FF8000" stroke-width="3px" x1="3304" y1="426" x2="3304" y2="386" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+		<g id="Line94" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line94_Line" stroke="#FF8000" stroke-width="3px" x1="3356" y1="455" x2="3356" y2="388" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+		<g id="Line95" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line95_Line" stroke="#FF8000" stroke-width="3px" x1="3263" y1="381" x2="3478" y2="381" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+		<g id="Line96" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line96_Line" stroke="#FF8000" stroke-width="3px" x1="3480" y1="339" x2="3480" y2="422" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+		<g id="Line97" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line97_Line" stroke="#FF8000" stroke-width="3px" x1="3504" y1="358" x2="3504" y2="397" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+		<g id="Line98" PB:IsMultiState="False" PB:Type="1" PB:Visible="True">
+			<line id="Line98_Line" stroke="#FF8000" stroke-width="3px" x1="3528" y1="358" x2="3528" y2="397" PB:LineEnds="0" PB:LineStyle="0">
+			</line>
+		</g>
+	</g>
+	<g id="Value17" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs001ce11" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2272 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152741\GY:J0AFA04GS001CE11" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:42:48" PB:PtTagValue="3.05 A" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value17_pbTextBoundingRectEl" x="180" y="375" width="148" height="42" fill="#000000" stroke-width="0">
+		</rect>
+		<text id="Value17_pbTextEl" x="328" y="406" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">3.05 A</text>
+	</g>
+	<g id="Value18" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs001ce12" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2272 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152749\GY:J0AFA04GS001CE12" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:41:38" PB:PtTagValue="3.17 A" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value18_pbTextBoundingRectEl" x="180" y="424" width="148" height="42" fill="#000000" stroke-width="0">
+		</rect>
+		<text id="Value18_pbTextEl" x="328" y="456" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">3.17 A</text>
+	</g>
+	<g id="Value19" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs001ce13" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2272 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152757\GY:J0AFA04GS001CE13" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:42:38" PB:PtTagValue="2.97 A" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value19_pbTextBoundingRectEl" x="180" y="472" width="148" height="42" fill="#000000" stroke-width="0">
+		</rect>
+		<text id="Value19_pbTextEl" x="328" y="504" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">2.97 A</text>
+	</g>
+	<g id="Value20" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs001ce21" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2272 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152742\GY:J0AFA04GS001CE21" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:41:09" PB:PtTagValue="120.15 kV" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value20_pbTextBoundingRectEl" x="135" y="605" width="211" height="42" fill="#000000" stroke-width="0">
+		</rect>
+		<text id="Value20_pbTextEl" x="346" y="636" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">120.15 kV</text>
+	</g>
+	<g id="Value21" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs001ce22" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2272 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152750\GY:J0AFA04GS001CE22" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:41:09" PB:PtTagValue="120.17 kV" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value21_pbTextBoundingRectEl" x="135" y="655" width="211" height="42" fill="#000000" stroke-width="0">
+		</rect>
+		<text id="Value21_pbTextEl" x="346" y="686" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">120.17 kV</text>
+	</g>
+	<g id="Value22" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs001ce23" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2272 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152780\GY:J0AFA04GS001CE23" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:41:09" PB:PtTagValue="120.11 kV" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value22_pbTextBoundingRectEl" x="135" y="703" width="211" height="42" fill="#000000" stroke-width="0">
+		</rect>
+		<text id="Value22_pbTextEl" x="346" y="734" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">120.11 kV</text>
+	</g>
+	<g id="Value23" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="1" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs001ce4" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152765\GY:J0AFA04GS001CE4" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:41:09" PB:PtTagValue="0.01 MW" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value23_pbTextBoundingRectEl" x="1269" y="434" width="169" height="42" fill="#000000" stroke-width="0">
+		</rect>
+		<text id="Value23_pbTextEl" x="1269" y="466" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="start" PBD:Property="value">0.01 MW</text>
+	</g>
+	<g id="Value24" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="1" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs001ce5" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152773\GY:J0AFA04GS001CE5" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:34:59" PB:PtTagValue="0.02 Mvar" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value24_pbTextBoundingRectEl" x="1269" y="481" width="211" height="42" fill="#000000" stroke-width="0">
+		</rect>
+		<text id="Value24_pbTextEl" x="1269" y="512" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="start" PBD:Property="value">0.02 Mvar</text>
+	</g>
+	<g id="Value25" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="0" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa02gt201fe3" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152781\GY:J0AFA02GT201FE3" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:36:17" PB:PtTagValue="49.96 HZ" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value25_pbTextBoundingRectEl" x="1727" y="1386" width="190" height="42" fill="#000000" stroke-width="0">
+		</rect>
+		<text id="Value25_pbTextEl" x="1822" y="1418" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="middle" PBD:Property="value">49.96 HZ</text>
+	</g>
+	<g id="Value26" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs001ce4" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152764\GY:J0AFA01GS001CE4" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:36:17" PB:PtTagValue="0.02 MW" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value26_pbTextBoundingRectEl" x="2493" y="439" width="169" height="42" fill="#000000" stroke-width="0">
+		</rect>
+		<text id="Value26_pbTextEl" x="2662" y="470" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">0.02 MW</text>
+	</g>
+	<g id="Value27" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs001ce5" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152772\GY:J0AFA01GS001CE5" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:41:09" PB:PtTagValue="0.04 Mvar" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value27_pbTextBoundingRectEl" x="2451" y="496" width="211" height="42" fill="#000000" stroke-width="0">
+		</rect>
+		<text id="Value27_pbTextEl" x="2662" y="528" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">0.04 Mvar</text>
+	</g>
+	<g id="Value28" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs001ce11" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2272 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152739\GY:J0AFA01GS001CE11" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:41:09" PB:PtTagValue="3.20 A" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value28_pbTextBoundingRectEl" x="3533" y="475" width="148" height="42" fill="#000000" stroke-width="0">
+		</rect>
+		<text id="Value28_pbTextEl" x="3681" y="506" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">3.20 A</text>
+	</g>
+	<g id="Value29" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs001ce12" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2272 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152747\GY:J0AFA01GS001CE12" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:42:48" PB:PtTagValue="3.96 A" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value29_pbTextBoundingRectEl" x="3533" y="524" width="148" height="42" fill="#000000" stroke-width="0">
+		</rect>
+		<text id="Value29_pbTextEl" x="3681" y="556" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">3.96 A</text>
+	</g>
+	<g id="Value30" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs001ce13" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2272 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152755\GY:J0AFA01GS001CE13" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:39:39" PB:PtTagValue="3.51 A" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value30_pbTextBoundingRectEl" x="3533" y="572" width="148" height="42" fill="#000000" stroke-width="0">
+		</rect>
+		<text id="Value30_pbTextEl" x="3681" y="604" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">3.51 A</text>
+	</g>
+	<g id="Value31" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs001ce21" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2272 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152740\GY:J0AFA01GS001CE21" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:41:09" PB:PtTagValue="120.17 kV" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value31_pbTextBoundingRectEl" x="3488" y="705" width="211" height="42" fill="#000000" stroke-width="0">
+		</rect>
+		<text id="Value31_pbTextEl" x="3699" y="736" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">120.17 kV</text>
+	</g>
+	<g id="Value32" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs001ce22" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2272 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152748\GY:J0AFA01GS001CE22" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:41:09" PB:PtTagValue="120.14 kV" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value32_pbTextBoundingRectEl" x="3488" y="755" width="211" height="42" fill="#000000" stroke-width="0">
+		</rect>
+		<text id="Value32_pbTextEl" x="3699" y="786" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">120.14 kV</text>
+	</g>
+	<g id="Value16" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs001ce23" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2272 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152756\GY:J0AFA01GS001CE23" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:41:09" PB:PtTagValue="120.14 kV" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value16_pbTextBoundingRectEl" x="3488" y="803" width="211" height="42" fill="#000000" stroke-width="0">
+		</rect>
+		<text id="Value16_pbTextEl" x="3699" y="834" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">120.14 kV</text>
+	</g>
+	<g id="Line147" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line147_Line" stroke="#FF0000" stroke-width="3px" x1="666" y1="800" x2="666" y2="696" PB:LineColor="#FF0000" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line147_MS" BlinkBadData="0" ColorBadData="none" CurrentState="1" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs022gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?156001\GY:J0AFA04GS022GK1" TagName="gy:j0afa04gs022gk1" PtTagValue="true" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line147_MSS1" Blink="0" Color="none" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line147_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line159" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line159_Line" stroke="none" stroke-width="3px" x1="661" y1="801" x2="638" y2="715" PB:LineColor="#00FF00" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line159_MS" BlinkBadData="0" ColorBadData="none" CurrentState="1" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs022gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?156001\GY:J0AFA04GS022GK1" TagName="gy:j0afa04gs022gk1" PtTagValue="true" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line159_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line159_MSS2" Blink="0" Color="none" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line165" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line165_Line" stroke="#FF0000" stroke-width="3px" x1="666" y1="1249" x2="666" y2="1145" PB:LineColor="#FF0000" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line165_MS" BlinkBadData="0" ColorBadData="none" CurrentState="1" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs021gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155997\GY:J0AFA04GS021GK1" TagName="gy:j0afa04gs021gk1" PtTagValue="true" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line165_MSS1" Blink="0" Color="none" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line165_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line166" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line166_Line" stroke="none" stroke-width="3px" x1="661" y1="1246" x2="638" y2="1160" PB:LineColor="#00FF00" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line166_MS" BlinkBadData="0" ColorBadData="none" CurrentState="1" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs021gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155997\GY:J0AFA04GS021GK1" TagName="gy:j0afa04gs021gk1" PtTagValue="true" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line166_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line166_MSS2" Blink="0" Color="none" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line167" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line167_Line" stroke="#FF0000" stroke-width="3px" x1="2897" y1="800" x2="2897" y2="696" PB:LineColor="#FF0000" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line167_MS" BlinkBadData="0" ColorBadData="none" CurrentState="1" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs022gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155963\GY:J0AFA01GS022GK1" TagName="gy:j0afa01gs022gk1" PtTagValue="true" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line167_MSS1" Blink="0" Color="none" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line167_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line168" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line168_Line" stroke="none" stroke-width="3px" x1="2893" y1="801" x2="2869" y2="715" PB:LineColor="#00FF00" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line168_MS" BlinkBadData="0" ColorBadData="none" CurrentState="1" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs022gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155963\GY:J0AFA01GS022GK1" TagName="gy:j0afa01gs022gk1" PtTagValue="true" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line168_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line168_MSS2" Blink="0" Color="none" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line169" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line169_Line" stroke="#FF0000" stroke-width="3px" x1="2898" y1="1278" x2="2898" y2="1175" PB:LineColor="#FF0000" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line169_MS" BlinkBadData="0" ColorBadData="none" CurrentState="1" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs021gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155959\GY:J0AFA01GS021GK1" TagName="gy:j0afa01gs021gk1" PtTagValue="true" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line169_MSS1" Blink="0" Color="none" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line169_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line170" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line170_Line" stroke="none" stroke-width="3px" x1="2894" y1="1279" x2="2871" y2="1193" PB:LineColor="#00FF00" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line170_MS" BlinkBadData="0" ColorBadData="none" CurrentState="1" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs021gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155959\GY:J0AFA01GS021GK1" TagName="gy:j0afa01gs021gk1" PtTagValue="true" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line170_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line170_MSS2" Blink="0" Color="none" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line171" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line171_Line" stroke="#FF0000" stroke-width="3px" x1="2405" y1="1682" x2="2405" y2="1579" PB:LineColor="#FF0000" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line171_MS" BlinkBadData="0" ColorBadData="none" CurrentState="1" PBD:PtTagName="\\10.2.1.22\gy:j0afa02gs021gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?156025\GY:J0AFA02GS021GK1" TagName="gy:j0afa02gs021gk1" PtTagValue="true" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line171_MSS1" Blink="0" Color="none" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line171_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line233" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line233_Line" stroke="none" stroke-width="3px" x1="2401" y1="1683" x2="2378" y2="1597" PB:LineColor="#00FF00" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line233_MS" BlinkBadData="0" ColorBadData="none" CurrentState="1" PBD:PtTagName="\\10.2.1.22\gy:j0afa02gs021gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?156025\GY:J0AFA02GS021GK1" TagName="gy:j0afa02gs021gk1" PtTagValue="true" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line233_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line233_MSS2" Blink="0" Color="none" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line191" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line191_Line" stroke="#FF0000" stroke-width="3px" x1="892" y1="493" x2="783" y2="493" PB:LineColor="#FF0000" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line191_MS" BlinkBadData="0" ColorBadData="none" CurrentState="1" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs023gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?156009\GY:J0AFA04GS023GK1" TagName="gy:j0afa04gs023gk1" PtTagValue="true" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line191_MSS1" Blink="0" Color="none" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line191_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line192" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line192_Line" stroke="none" stroke-width="3px" x1="889" y1="498" x2="801" y2="532" PB:LineColor="#00FF00" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line192_MS" BlinkBadData="0" ColorBadData="none" CurrentState="1" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs023gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?156009\GY:J0AFA04GS023GK1" TagName="gy:j0afa04gs023gk1" PtTagValue="true" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line192_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line192_MSS2" Blink="0" Color="none" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line49" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line49_Line" stroke="none" stroke-width="3px" x1="892" y1="632" x2="783" y2="632" PB:LineColor="#FF0000" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line49_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs103gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?156007\GY:J0AFA04GS103GK1" TagName="gy:j0afa04gs103gk1" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line49_MSS1" Blink="0" Color="none" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line49_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line50" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line50_Line" stroke="#00FF00" stroke-width="3px" x1="889" y1="636" x2="801" y2="670" PB:LineColor="#00FF00" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line50_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs103gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?156007\GY:J0AFA04GS103GK1" TagName="gy:j0afa04gs103gk1" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line50_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line50_MSS2" Blink="0" Color="none" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line51" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line51_Line" stroke="none" stroke-width="3px" x1="888" y1="855" x2="779" y2="855" PB:LineColor="#FF0000" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line51_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs102gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?156005\GY:J0AFA04GS102GK1" TagName="gy:j0afa04gs102gk1" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line51_MSS1" Blink="0" Color="none" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line51_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line52" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line52_Line" stroke="#00FF00" stroke-width="3px" x1="885" y1="859" x2="797" y2="893" PB:LineColor="#00FF00" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line52_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs102gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?156005\GY:J0AFA04GS102GK1" TagName="gy:j0afa04gs102gk1" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line52_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line52_MSS2" Blink="0" Color="none" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line53" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line53_Line" stroke="none" stroke-width="3px" x1="895" y1="1060" x2="786" y2="1060" PB:LineColor="#FF0000" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line53_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs101gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155999\GY:J0AFA04GS101GK1" TagName="gy:j0afa04gs101gk1" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line53_MSS1" Blink="0" Color="none" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line53_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line54" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line54_Line" stroke="#00FF00" stroke-width="3px" x1="892" y1="1064" x2="803" y2="1098" PB:LineColor="#00FF00" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line54_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa04gs101gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155999\GY:J0AFA04GS101GK1" TagName="gy:j0afa04gs101gk1" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line54_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line54_MSS2" Blink="0" Color="none" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line22" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line22_Line" stroke="#FF0000" stroke-width="3px" x1="3138" y1="492" x2="3029" y2="492" PB:LineColor="#FF0000" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line22_MS" BlinkBadData="0" ColorBadData="none" CurrentState="1" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs023gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155969\GY:J0AFA01GS023GK1" TagName="gy:j0afa01gs023gk1" PtTagValue="true" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line22_MSS1" Blink="0" Color="none" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line22_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line25" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line25_Line" stroke="none" stroke-width="3px" x1="3135" y1="496" x2="3047" y2="530" PB:LineColor="#00FF00" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line25_MS" BlinkBadData="0" ColorBadData="none" CurrentState="1" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs023gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155969\GY:J0AFA01GS023GK1" TagName="gy:j0afa01gs023gk1" PtTagValue="true" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line25_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line25_MSS2" Blink="0" Color="none" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line28" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line28_Line" stroke="none" stroke-width="3px" x1="3137" y1="632" x2="3028" y2="632" PB:LineColor="#FF0000" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line28_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs103gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155967\GY:J0AFA01GS103GK1" TagName="gy:j0afa01gs103gk1" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line28_MSS1" Blink="0" Color="none" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line28_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line55" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line55_Line" stroke="#00FF00" stroke-width="3px" x1="3134" y1="636" x2="3045" y2="670" PB:LineColor="#00FF00" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line55_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs103gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155967\GY:J0AFA01GS103GK1" TagName="gy:j0afa01gs103gk1" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line55_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line55_MSS2" Blink="0" Color="none" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line56" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line56_Line" stroke="none" stroke-width="3px" x1="3143" y1="861" x2="3035" y2="861" PB:LineColor="#FF0000" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line56_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs102gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155965\GY:J0AFA01GS102GK1" TagName="gy:j0afa01gs102gk1" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line56_MSS1" Blink="0" Color="none" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line56_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line57" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line57_Line" stroke="#00FF00" stroke-width="3px" x1="3141" y1="866" x2="3052" y2="900" PB:LineColor="#00FF00" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line57_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs102gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155965\GY:J0AFA01GS102GK1" TagName="gy:j0afa01gs102gk1" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line57_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line57_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line58" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line58_Line" stroke="none" stroke-width="3px" x1="3143" y1="1057" x2="3035" y2="1057" PB:LineColor="#FF0000" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line58_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs101gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155961\GY:J0AFA01GS101GK1" TagName="gy:j0afa01gs101gk1" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line58_MSS1" Blink="0" Color="none" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line58_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line59" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line59_Line" stroke="#00FF00" stroke-width="3px" x1="3141" y1="1061" x2="3052" y2="1095" PB:LineColor="#00FF00" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line59_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa01gs101gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155961\GY:J0AFA01GS101GK1" TagName="gy:j0afa01gs101gk1" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line59_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line59_MSS2" Blink="0" Color="none" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line60" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line60_Line" stroke="none" stroke-width="3px" x1="2634" y1="1520" x2="2526" y2="1520" PB:LineColor="#FF0000" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line60_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa02gs101gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?156027\GY:J0AFA02GS101GK1" TagName="gy:j0afa02gs101gk1" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line60_MSS1" Blink="0" Color="none" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line60_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Line118" PB:IsMultiState="True" PB:Type="1" PB:Visible="True">
+		<line id="Line118_Line" stroke="#00FF00" stroke-width="3px" x1="2632" y1="1524" x2="2543" y2="1558" PB:LineColor="#00FF00" PB:LineEnds="0" PB:LineStyle="0">
+			<PB:MultiState id="Line118_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:j0afa02gs101gk1" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2271 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?156027\GY:J0AFA02GS101GK1" TagName="gy:j0afa02gs101gk1" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Line118_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Line118_MSS2" Blink="0" Color="none" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</line>
+	</g>
+	<g id="Composite61" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<polygon id="Rectangle9" points="1357,5 1773,5 1773,59 1357,59" fill="none" stroke="#008080" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+		</polygon>
+		<polygon id="Rectangle10" points="1357,64 1773,64 1773,118 1357,118" fill="none" stroke="#008080" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+		</polygon>
+	</g>
+	<g id="Composite62" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<polygon id="Rectangle11" points="1786,5 2210,5 2210,59 1786,59" fill="none" stroke="#008080" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+		</polygon>
+		<polygon id="Rectangle12" points="1786,64 2210,64 2210,118 1786,118" fill="none" stroke="#008080" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+		</polygon>
+	</g>
+	<g id="Composite63" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<polygon id="Rectangle13" points="2230,5 2659,5 2659,59 2230,59" fill="none" stroke="#008080" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+		</polygon>
+		<polygon id="Rectangle15" points="2230,64 2659,64 2659,118 2230,118" fill="none" stroke="#008080" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+		</polygon>
+	</g>
+	<g id="Composite64" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<polygon id="Rectangle16" points="2679,5 3060,5 3060,59 2679,59" fill="none" stroke="#008080" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+		</polygon>
+		<polygon id="Rectangle17" points="2679,64 3060,64 3060,118 2679,118" fill="none" stroke="#008080" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+		</polygon>
+	</g>
+	<g id="Composite65" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<polygon id="Rectangle18" points="3083,9 3473,9 3473,62 3083,62" fill="none" stroke="#008080" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+		</polygon>
+		<polygon id="Rectangle19" points="3083,68 3473,68 3473,121 3083,121" fill="none" stroke="#008080" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+		</polygon>
+	</g>
+	<g id="Composite66" PB:IsMultiState="False" PB:Type="0" PB:Visible="True">
+		<polygon id="Rectangle20" points="3486,5 3929,5 3929,58 3486,58" fill="none" stroke="#008080" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+		</polygon>
+		<polygon id="Rectangle21" points="3486,65 3929,65 3929,118 3486,118" fill="none" stroke="#008080" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+		</polygon>
+	</g>
+	<g id="Text1" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text1_pbTextBoundingRectEl" x="462" y="7" width="167" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text1_pbTextEl" x="462" y="38.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">机组负荷</text>
+	</g>
+	<g id="Text2" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text2_pbTextBoundingRectEl" x="462" y="64" width="167" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text2_pbTextEl" x="462" y="95.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">汽机转速</text>
+	</g>
+	<g id="Text3" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text3_pbTextBoundingRectEl" x="930" y="9" width="167" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text3_pbTextEl" x="930" y="40.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">总燃料量</text>
+	</g>
+	<g id="Text5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text5_pbTextBoundingRectEl" x="1370" y="9" width="167" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text5_pbTextEl" x="1370" y="40.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">主汽压力</text>
+	</g>
+	<g id="Text6" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text6_pbTextBoundingRectEl" x="1370" y="66" width="167" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text6_pbTextEl" x="1370" y="97.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">主汽温度</text>
+	</g>
+	<g id="Text7" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text7_pbTextBoundingRectEl" x="1793" y="9" width="167" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text7_pbTextEl" x="1793" y="40.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">再热气压</text>
+	</g>
+	<g id="Text8" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text8_pbTextBoundingRectEl" x="1793" y="68" width="167" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text8_pbTextEl" x="1793" y="99.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">再热汽温</text>
+	</g>
+	<g id="Text9" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text9_pbTextBoundingRectEl" x="2236" y="9" width="167" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text9_pbTextEl" x="2236" y="40.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">炉膛负压</text>
+	</g>
+	<g id="Text10" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text10_pbTextBoundingRectEl" x="2236" y="65" width="167" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text10_pbTextEl" x="2236" y="96.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">一次风压</text>
+	</g>
+	<g id="Text11" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text11_pbTextBoundingRectEl" x="2693" y="8" width="127" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text11_pbTextEl" x="2693" y="39.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">水煤比</text>
+	</g>
+	<g id="Text12" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text12_pbTextBoundingRectEl" x="2693" y="67" width="127" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text12_pbTextEl" x="2693" y="98.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">过热度</text>
+	</g>
+	<g id="Text13" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text13_pbTextBoundingRectEl" x="3089" y="11" width="85" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text13_pbTextEl" x="3089" y="42.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">氧量</text>
+	</g>
+	<g id="Text14" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text14_pbTextBoundingRectEl" x="3089" y="67" width="127" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text14_pbTextEl" x="3089" y="98.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">总风量</text>
+	</g>
+	<g id="Text15" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text15_pbTextBoundingRectEl" x="3498" y="9" width="85" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text15_pbTextEl" x="3498" y="40.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">真空</text>
+	</g>
+	<g id="Text16" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text16_pbTextBoundingRectEl" x="3496" y="68" width="167" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text16_pbTextEl" x="3496" y="99.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">仪用气压</text>
+	</g>
+	<g id="Value1" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\dcs1:load" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2262 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?125228\DCS1:LOAD" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:42:38" PB:PtTagValue="548.45 MW" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value1_pbTextBoundingRectEl" x="685" y="11" width="211" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Value1_pbTextEl" x="896" y="42" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">548.45 MW</text>
+	</g>
+	<g id="Value2" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\dcs1:crc02ai003" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2268 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?127747\DCS1:CRC02AI003" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:42:38" PB:PtTagValue="2999.39 rpm" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value2_pbTextBoundingRectEl" x="642" y="69" width="254" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Value2_pbTextEl" x="896" y="100" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">2999.39 rpm</text>
+	</g>
+	<g id="Value3" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\dcs1:tffreal" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2265 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?125282\DCS1:TFFREAL" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:42:23" PB:PtTagValue="213.55 t/h" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value3_pbTextBoundingRectEl" x="1100" y="8" width="233" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Value3_pbTextEl" x="1333" y="40" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">213.55 t/h</text>
+	</g>
+	<g id="Value4" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\dcs1:fw_flow" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2265 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?125327\DCS1:FW_FLOW" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:42:38" PB:PtTagValue="1581.83 t/h" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value4_pbTextBoundingRectEl" x="1079" y="64" width="254" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Value4_pbTextEl" x="1333" y="96" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">1581.83 t/h</text>
+	</g>
+	<g id="Value5" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\dcs1:msp" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2261 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?125850\DCS1:MSP" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:36:07" PB:PtTagValue="18.77 MPa" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value5_pbTextBoundingRectEl" x="1556" y="11" width="211" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Value5_pbTextEl" x="1767" y="42" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">18.77 MPa</text>
+	</g>
+	<g id="Value6" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\dcs1:lba20ct601ss" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2270 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?125889\DCS1:LBA20CT601SS" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:42:29" PB:PtTagValue="594.70 ℃" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value6_pbTextBoundingRectEl" x="1556" y="70" width="211" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Value6_pbTextEl" x="1767" y="102" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">594.70 ℃</text>
+	</g>
+	<g id="Value7" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\dcs1:rhpres" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2264 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?125254\DCS1:RHPRES" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:33:59" PB:PtTagValue="3.00 MPa" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value7_pbTextBoundingRectEl" x="2015" y="8" width="190" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Value7_pbTextEl" x="2205" y="40" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">3.00 MPa</text>
+	</g>
+	<g id="Value8" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\dcs1:rh_out_te" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2267 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?125370\DCS1:RH_OUT_TE" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:42:38" PB:PtTagValue="599.80 ℃" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value8_pbTextBoundingRectEl" x="1994" y="67" width="211" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Value8_pbTextEl" x="2205" y="98" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">599.80 ℃</text>
+	</g>
+	<g id="Value9" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\dcs1:fp" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2260 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?125586\DCS1:FP" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:42:38" PB:PtTagValue="-165.71 Pa" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value9_pbTextBoundingRectEl" x="2415" y="8" width="233" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Value9_pbTextEl" x="2648" y="40" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">-165.71 Pa</text>
+	</g>
+	<g id="Value10" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\dcs1:paf" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2261 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?125626\DCS1:PAF" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:41:03" PB:PtTagValue="9.41 kPa" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value10_pbTextBoundingRectEl" x="2458" y="67" width="190" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Value10_pbTextEl" x="2648" y="98" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">9.41 kPa</text>
+	</g>
+	<g id="Value11" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="False" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\dcs1:wratcoal" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2266 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?126153\DCS1:WRATCOAL" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:41:28" PB:PtTagValue="7.29" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value11_pbTextBoundingRectEl" x="2939" y="8" width="106" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Value11_pbTextEl" x="3045" y="40" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">7.29</text>
+	</g>
+	<g id="Value12" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="False" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\dcs1:shdeg" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2263 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?125711\DCS1:SHDEG" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:42:38" PB:PtTagValue="31.05" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value12_pbTextBoundingRectEl" x="2918" y="67" width="127" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Value12_pbTextEl" x="3045" y="98" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">31.05</text>
+	</g>
+	<g id="Value13" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\dcs1:o2" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2260 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?125574\DCS1:O2" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:42:38" PB:PtTagValue="4.34 %" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value13_pbTextBoundingRectEl" x="3319" y="13" width="148" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Value13_pbTextEl" x="3467" y="44" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">4.34 %</text>
+	</g>
+	<g id="Value14" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\dcs1:tfa" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2261 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?125436\DCS1:TFA" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:42:38" PB:PtTagValue="1975.05 t/h" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value14_pbTextBoundingRectEl" x="3213" y="72" width="254" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Value14_pbTextEl" x="3467" y="104" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">1975.05 t/h</text>
+	</g>
+	<g id="Value15" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\dcs1:dmnqqzk" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2265 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?125847\DCS1:DMNQQZK" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:41:09" PB:PtTagValue="-76.27 kPa" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value15_pbTextBoundingRectEl" x="3687" y="8" width="233" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Value15_pbTextEl" x="3920" y="40" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">-76.27 kPa</text>
+	</g>
+	<g id="Text17" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text17_pbTextBoundingRectEl" x="930" y="66" width="167" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text17_pbTextEl" x="930" y="97.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">总给水量</text>
+	</g>
+	<g id="Value33" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="2" PB:ShowUOM="True" PB:IsMultiState="False" PB:NumberFormat="0.00" PB:CanonicalNumberFormat="0.00" PB:TagInfoType="0" PBD:PtTagName="\\10.2.1.22\gy:j0qea10an003ap" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2270 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?152644\GY:J0QEA10AN003AP" PB:PtTagStatus="0" PB:PtTagTime="2019/7/26 9:41:09" PB:PtTagValue="0.74 MPa" PB:Type="7" PB:Visible="True" PB:Scripting="True">
+		<rect id="Value33_pbTextBoundingRectEl" x="3730" y="68" width="190" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Value33_pbTextEl" x="3920" y="100" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" text-anchor="end" PBD:Property="value">0.74 MPa</text>
+	</g>
+	<polygon id="Rectangle7" points="914,5 1340,5 1340,59 914,59" fill="none" stroke="#008080" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+	</polygon>
+	<polygon id="Rectangle8" points="913,65 1339,65 1339,118 913,118" fill="none" stroke="#008080" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+	</polygon>
+	<polygon id="Rectangle6" points="450,5 896,5 896,59 450,59" fill="none" stroke="#008080" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+	</polygon>
+	<polygon id="Rectangle14" points="450,64 897,64 897,118 450,118" fill="none" stroke="#008080" stroke-width="3px" PB:IsMultiState="False" PB:Type="2" PB:LineStyle="0">
+	</polygon>
+	<g id="Text32" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="True" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text32_pbTextBoundingRectEl" x="1207" y="717" width="379" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text32_pbTextEl" x="1207" y="748.5" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:FillColor="#00FF00">断路器1699允许遥控<PB:MultiState id="Text32_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:dmy0ayg03gh001gh2sb" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2275 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155002\GY:DMY0AYG03GH001GH2SB" TagName="gy:dmy0ayg03gh001gh2sb" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Text32_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Text32_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</text>
+	</g>
+	<g id="Text33" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="False" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text33_pbTextBoundingRectEl" x="1868" y="1266" width="318" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text33_pbTextEl" x="1868" y="1297.5" fill="#FFFFFF" stroke="none" font-family="Arial" font-size="39.9999984105429">110kv母线PT报警</text>
+	</g>
+	<g id="Text44" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:IsMultiState="True" PB:StrikethroughAndUnderline="False" PB:Type="4" PB:Visible="True">
+		<rect id="Text44_pbTextBoundingRectEl" x="2317" y="717" width="379" height="42" fill="none" stroke-width="0">
+		</rect>
+		<text id="Text44_pbTextEl" x="2317" y="748.5" fill="#00FF00" stroke="none" font-family="Arial" font-size="39.9999984105429" PB:FillColor="#00FF00">断路器1269允许遥控<PB:MultiState id="Text44_MS" BlinkBadData="0" ColorBadData="none" CurrentState="0" PBD:PtTagName="\\10.2.1.22\gy:dmy0ayg03gh001gh1sb" PB:PersistString="92 {4572DB6F-FB4B-4BA4-92E2-1811DAA61D7B} \1\?3efe9de4-303a-437c-adc5-f31b6be3818d\10.2.1.2275 {2CA6C7D5-025B-4EF6-9E5E-CCE1AB741C69} \1\?155001\GY:DMY0AYG03GH001GH1SB" TagName="gy:dmy0ayg03gh001gh1sb" PtTagValue="false" ServerName="10.2.1.22" StateCount="2">
+				<PB:MSState id="Text44_MSS1" Blink="0" Color="#00FF00" LowerValue="0" UpperValue="0"/>
+				<PB:MSState id="Text44_MSS2" Blink="0" Color="#FF0000" LowerValue="1" UpperValue="1"/>
+			</PB:MultiState>
+		</text>
+	</g>
+	<script language="JavaScript" type="text/javascript">
+    function SVG_doc_loaded(evt)
+	{
+		if(evt.getTarget){
+		var parentDoc = evt.getTarget().getOwnerDocument();
+		var elem = parentDoc.createElement("Ready");
+		evt.getTarget().appendChild(elem);
+		}
+    }
+	</script>
+</svg>

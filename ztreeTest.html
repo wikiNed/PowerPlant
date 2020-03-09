@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="练习 加油">
+        <link rel="stylesheet" type="text/css" href="js/plugins/zTreeStyle/zTreeStyle.css" type="text/css">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            *{
+                margin:0;
+                padding:0
+            }
+
+            .content{
+                width: 320px;
+                height: 700px;
+                background-color: #03132c;
+                overflow-y: auto;
+            }
+            .content .head{
+                width:320px;
+                height: 30px;
+                color: #fff;
+                background: #23899f;
+                position: relative;
+            }
+            .content .head i,.content .head p{
+                display: inline;
+            }
+            .content .head i{
+                position: absolute;
+                left: 10px;
+                top: 8px;
+            }
+            .content .head p.title{
+                position: absolute;
+                left: 32px;
+                top: 6px;
+                font-size: 16px;
+                letter-spacing: 3px;
+            }
+            .content .head #close{
+                position: absolute;
+                right: 10px;
+                top: -6px;
+                font-size: 30px;
+                cursor: pointer;
+            }
+            .content .head #close:hover{
+                color:red;
+            }
+            .content #menuTreeDiv{
+                height: 670px;
+                overflow:auto;
+                background-color:#03132c;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="head">
+                <i>
+                    <img src="./images/tools/属性查询.png" alt="">
+                </i>
+                <p class="title">
+<!--                    设备信息-->
+<!--                        设备总览-->
+                </p>
+                <p id="close">
+                    ×
+                </p>
+            </div>
+            <div border="false" id="id_menu_body" style="background-color:#E7F1FB;">
+                <div id="menuTreeDiv">
+                    <ul id="menuTree" class="ztree" style="border:0px;background-color:#03132c">
+                        <!-- 基础图层 -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- jquery脚本1.9.0 -->
+        <script type="text/javascript" src="js/plugins/jquery1.9.0.min.js"></script>
+
+        <!-- easyui脚本 -->
+        <script type="text/javascript" src="js/plugins/jquery.easyui.min.js"></script>
+
+        <!-- ztree脚本 -->
+        <script type="text/javascript" src="js/plugins/zTreeStyle/jquery.ztree.js"></script>
+        <script>
+            var powerPlant;
+            function setParameters(parameter) {
+                powerPlant = parameter.pp;
+                // parameter.updatePowerPlantDiv($('.content'));
+            };
+
+            $('.content').on('click','#close',function () {
+                // alert(PowerPlant.htmlBalloon != undefined);
+                powerPlant.closeDeviceBallon();
+            });
+            setTimeout(function () {
+                var nodes = powerPlant.treeNodes["nodes"];
+                $('.title').html(powerPlant.treeNodes["name"]);
+                var tree = $.fn.zTree.init($("#menuTree"), powerPlant.treeSetting, nodes);
+            },200);
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

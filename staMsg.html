@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="练习 加油">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        #wrap{
+            background-color: #03132c;
+            color: #23899f;
+            width: 250px;
+            height: 150px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center; /*定义body的元素垂直居中*/
+            justify-content: center; /*定义body的里的元素水平居中*/
+        }
+        ul li{
+            cursor: pointer;
+        }
+        ul li:hover{
+            color: #ddd;
+        }
+
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <ul>
+<!--                <li>机组有功功率：978MW</li>-->
+            </ul>
+        </div>
+
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            var name;
+            function setParameters(parameter) {
+                name = parameter.pp.name;
+            };
+            $.extend({
+                staMsg:function(name){
+                    $.ajax({
+                        type: "GET",
+                        url: "http://10.2.1.16/app/rest/pi",
+                        data:"",
+                        dataType: "json",                   //GET接收信息为JSON
+                        // contentType:"application/json",  //POST发送信息为JSON
+                        success: function(data){
+                            var innerHtml='';
+                            data.list.forEach(function (item,index) {
+                                if( item.type == name ){
+                                    innerHtml += '<li>'+item.name+'：'+item.value + item.dw +'</li>';
+                                }
+                            });
+                            if (data.list.length == 0){
+                                $('#wrap ul').html('无数据');
+                            }else{
+                                $('#wrap ul').html(innerHtml);
+                            }
+                        },
+                        error:function(e){
+                            $('#wrap ul').html('服务器错误')
+                        }
+                    });
+                }
+            });
+            setTimeout(function () {
+                setInterval('$.staMsg(name)',1000);
+            },1000)
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

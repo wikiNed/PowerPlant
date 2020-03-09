@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="练习 加油">
+        <link rel="stylesheet" href="./css/icon/iconfont.css">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;background-color: #03132c}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap ul{
+                position: relative;
+            }
+            #wrap ul li{
+                float: left;
+            }
+            #wrap ul li>div{
+                position: relative;
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+                /*border: 1px solid white;*/
+            }
+            #wrap ul li>div img{
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                left: 10px;
+                top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <ul>
+<!--                <li id="view" title="场景"><div><img src="images/icon/场景.png" alt=""></div></li>-->
+<!--                <li id="shebei" title="场景"><div><img src="images/icon/设备.png" alt=""></div></li>-->
+<!--                <li id="shexiang" title="场景"><div><img src="images/icon/监控.png" alt=""></div></li>-->
+            </ul>
+        </div>
+
+        <script src="./js/plugins/jquery1.9.0.min.js"></script>
+        <script>
+            // $('ul li').on("click",function () {
+            //     var src = $(this).find('img').attr('src',"images/icon/设备.png");
+            // })
+            function setParameters(parameter) {
+                parameter.updateEarthMenuDiv($("#wrap"));
+                //resizeWindow();
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

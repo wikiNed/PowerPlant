@@ -1,0 +1,65 @@
+{
+    "devices": [
+        {
+            "id": "1",
+            "name": "1-#1机组",
+            "status": "运行",
+            "level": "一类设备",
+            "pic": "",
+            "picDept": "",
+            "parent": ""
+        }, {
+            "id": "10A",
+            "name": "#1机组电网系统",
+            "status": "运行",
+            "level": "一类设备",
+            "pic": "",
+            "picDept": "设备维护部",
+            "parent": "1"
+        }, {
+            "id": "J",
+            "name": "J-#1、2机组",
+            "status": "运行",
+            "level": "一类设备",
+            "pic": "",
+            "picDept": "",
+            "parent": ""
+        }, {
+            "id": "J0E",
+            "name": "常规燃料供给",
+            "status": "运行",
+            "level": "一类设备",
+            "pic": "",
+            "picDept": "设备维护部",
+            "parent": "J"
+        }, {
+            "id": "J0EC",
+            "name": "煤分配与供应系统",
+            "status": "运行",
+            "level": "一类设备",
+            "pic": "",
+            "picDept": "设备维护部",
+            "parent": "J0E"
+        }, {
+            "id": "J0ECA",
+            "name": "配煤系统带式输送机",
+            "status": "运行",
+            "level": "一类设备",
+            "pic": "",
+            "picDept": "设备维护部",
+            "parent": "J0EC"
+        }, {
+            "id": "J0ECA72",
+            "type": "device",
+            "name": "7号乙带式输送机系统",
+            "status": "运行",
+            "level": "一类设备",
+            "pic": "吴坤",
+            "picDept": "设备维护部",
+            "lng": 109.41521815264691,
+            "lat": 38.03227348506431,
+            "alt": 1108.38,
+            "parent": "J0ECA"
+        }
+    ]
+}

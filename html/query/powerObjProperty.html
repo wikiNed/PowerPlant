@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>属性查看</title>
+	<link rel="stylesheet" type="text/css" href="../../css/easyui/default/easyui.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+			font-size: 14px;
+            overflow: hidden;
+            /*background: #2a80c9;*/
+            /*background: #464750;*/
+            background: #03132c;
+            /*background: #E7F1FB;*/
+            width: 1082px;
+            height: 100%;
+            color: #fff;
+            font-family:"Microsoft YaHei";
+		}
+
+		#container {
+            height: 100%;
+            width: 100%;
+        }
+		#detailBtn {
+            position:absolute;
+            width: 36px;
+            height: 22px;
+            background: #225E9F;
+            /*background: #003283;*/
+            z-index: 100;
+            cursor: pointer;
+            top: 0px;
+            right: 0px;
+            font-weight: bold;
+            color: #6fb6ff;
+            cursor: pointer;
+            display: none;
+        }
+
+        #detailBtn:hover {
+            /*background: url(images/earthTools/earthTool-bg.png);
+            background-color:rgb(70, 71, 80);
+            opacity:0.5;
+            filter:alpha(opacity=50);*/
+            /*background: #000;*/
+            background: #1a81c7;
+        }
+
+        #propertyDiv {
+            width: 1082px;
+	        height: 600px;
+			background: #03132c;
+	        overflow: auto;
+	        /*background-color: rgba(0, 0, 0, 0.34);*/
+			border-radius: 5px;
+        }
+		#propertyDiv .device{
+
+		}
+		#propertyDiv .device .head{
+			height: 40px;
+			color: #fff;
+			background: #23899f;
+		}
+		#propertyDiv .device .head i,#propertyDiv .device .head p{
+			display: inline;
+			line-height: 40px;
+		}
+		#propertyDiv .device .head i{
+			margin: 4px 10px 0 20px;
+		}
+		#propertyDiv .device .head p.title{
+			font-size: 18px;
+			margin-right: 220px;
+		}
+		#propertyDiv .device .head #close{
+			font-size: 30px;
+			cursor: pointer;
+			line-height: 40px;
+		}
+		#propertyDiv table{
+			margin: 15px 0 0 15px;
+			border: 1px solid rgba(255,255,255,0.8);
+			border-collapse: collapse;
+		}
+		#propertyDiv td{
+			height: 30px;
+			width: 170px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+    <div id="srcollDiv">
+        <div id="detailBtn">
+            <span>详情</span>
+        </div>
+        <div id="propertyDiv">
+			<table>
+
+			</table>
+       </div>
+    </div>
+	<script type="text/javascript" src="../../js/plugins/jquery1.9.0.min.js"></script>
+	<script type="text/javascript" src="../../js/common/common.js"></script>
+	<script type="text/javascript" src="../../js/plugins/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="../../js/plugins/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="../../js/powerPlant.js"></script>
+	<script type="text/javascript">
+		/*
+	     * 外部传参调用
+	     */
+		// alert(PowerPlant);不能获取
+		var powerPlant;
+		// import PowerPlant from '../../js/powerPlant.js';
+		function setParameters(parameter) {
+			var updatePowerPlantDiv = parameter.updatePowerPlantDiv;
+			updatePowerPlantDiv($("#srcollDiv"));
+			powerPlant = parameter.pp;
+		};
+
+		$('#propertyDiv').on('click','#close',function () {
+			// alert(PowerPlant.htmlBalloon != undefined);
+			powerPlant.closeHtmlBalloon();
+		});
+
+	    function disableZoom() {
+	        var zoom = getZoom();
+	        $("body").css("zoom", 1 / zoom);   //禁止菜单内的缩放，如果浏览器有缩小或放大，这里则采用相反比例放大或缩小
+	    };
+	    disableZoom();
+	    $("#srcollDiv").mCustomScrollbar({});
+	</script>
+</body>
+</html>
