@@ -7,103 +7,109 @@
 	<link rel="stylesheet" type="text/css" href="../../css/easyui/default/easyui.css"/>
 	<link rel="stylesheet" type="text/css" href="../../css/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
 	<style>
-		body {
+		body,p {
 			margin: 0px;
 			padding: 0px;
 			font-size: 14px;
             overflow: hidden;
             /*background: #2a80c9;*/
             /*background: #464750;*/
-            background: #03132c;
             /*background: #E7F1FB;*/
-            width: 1082px;
-            height: 100%;
             color: #fff;
             font-family:"Microsoft YaHei";
 		}
-
-		#container {
-            height: 100%;
-            width: 100%;
-        }
-		#detailBtn {
-            position:absolute;
-            width: 36px;
-            height: 22px;
-            background: #225E9F;
-            /*background: #003283;*/
-            z-index: 100;
-            cursor: pointer;
-            top: 0px;
-            right: 0px;
-            font-weight: bold;
-            color: #6fb6ff;
-            cursor: pointer;
-            display: none;
-        }
-
-        #detailBtn:hover {
-            /*background: url(images/earthTools/earthTool-bg.png);
-            background-color:rgb(70, 71, 80);
-            opacity:0.5;
-            filter:alpha(opacity=50);*/
-            /*background: #000;*/
-            background: #1a81c7;
-        }
+		p{
+			display: inline-block;
+		}
+		ul{
+			list-style: none;
+		}
 
         #propertyDiv {
-            width: 1082px;
-	        height: 600px;
-			background: #03132c;
-	        overflow: auto;
-	        /*background-color: rgba(0, 0, 0, 0.34);*/
-			border-radius: 5px;
+            width: 379px;
+	        height: 242px;
+			/*background: #03132c;*/
+			background: url("../../images/newUI/property.jpg") no-repeat;
         }
-		#propertyDiv .device{
-
+		.head{
+			height: 38px;
+			line-height: 38px;
+			position: relative;
 		}
-		#propertyDiv .device .head{
-			height: 40px;
-			color: #fff;
-			background: #23899f;
+		.head i{
+			position: absolute;
+			left: 16px;
+			top: 4px;
 		}
-		#propertyDiv .device .head i,#propertyDiv .device .head p{
-			display: inline;
-			line-height: 40px;
+		.head .title{
+			padding-left: 40px;
 		}
-		#propertyDiv .device .head i{
-			margin: 4px 10px 0 20px;
-		}
-		#propertyDiv .device .head p.title{
+		.head #close{
+			position: absolute;
+			right: 16px;
 			font-size: 18px;
-			margin-right: 220px;
-		}
-		#propertyDiv .device .head #close{
-			font-size: 30px;
 			cursor: pointer;
-			line-height: 40px;
 		}
-		#propertyDiv table{
-			margin: 15px 0 0 15px;
-			border: 1px solid rgba(255,255,255,0.8);
-			border-collapse: collapse;
+		.head #close:hover{
+			color: red;
 		}
-		#propertyDiv td{
+		.device ul{
+			padding-left: 55px;
+		}
+		.device ul li{
 			height: 30px;
-			width: 170px;
+			width: 250px;
+		}
+		.device ul li p{
 			text-align: center;
+			line-height: 30px;
+		}
+		.device ul li p.name{
+			width: 50%;
+		}
+		.device ul li p.value{
+			width: 50%;
 		}
 	</style>
 </head>
 <body>
     <div id="srcollDiv">
-        <div id="detailBtn">
-            <span>详情</span>
-        </div>
         <div id="propertyDiv">
-			<table>
-
-			</table>
+<!--			<div class="device">-->
+<!--				<div class="head">-->
+<!--					<i>-->
+<!--						<img src="../../images/tools/属性查询.png" alt="">-->
+<!--					</i>-->
+<!--					<p class="title">-->
+<!--						SIS系统信息-->
+<!--					</p>-->
+<!--					<p id="close">-->
+<!--						×-->
+<!--					</p>-->
+<!--				</div>-->
+<!--				<ul>-->
+<!--					<li>-->
+<!--						<p class="name" >设备编码</p>-->
+<!--						<p class="value" >1566132465</p>-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<p class="name" >设备编码</p>-->
+<!--						<p class="value" >1566132465</p>-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<p class="name" >设备编码</p>-->
+<!--						<p class="value" >1566132465</p>-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<p class="name" >设备编码</p>-->
+<!--						<p class="value" >1566132465</p>-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<p class="name" >设备编码</p>-->
+<!--						<p class="value" >1566132465</p>-->
+<!--					</li>-->
+<!--				</ul>-->
+<!--			</div>-->
        </div>
     </div>
 	<script type="text/javascript" src="../../js/plugins/jquery1.9.0.min.js"></script>
@@ -134,7 +140,7 @@
 	        $("body").css("zoom", 1 / zoom);   //禁止菜单内的缩放，如果浏览器有缩小或放大，这里则采用相反比例放大或缩小
 	    };
 	    disableZoom();
-	    $("#srcollDiv").mCustomScrollbar({});
+	    // $("#srcollDiv").mCustomScrollbar({});
 	</script>
 </body>
 </html>
