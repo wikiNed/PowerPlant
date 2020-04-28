@@ -450,18 +450,17 @@ PowerPlant.createHtmlBalloon = function (guid, name) {
 PowerPlant.setDetailContents = function (data) {
     //alert("setDetailContents");
     var propertyHtml = "";
-    // alert(data.length);
+    alert(JSON.stringify(data));
     if (data.length < 1) {
         propertyHtml += "无缺陷信息";
     } else {
         propertyHtml = "<table>";
-        propertyHtml += "<tr>"
+        propertyHtml += "<tr>";
         var detailKey = PowerPlant.keyNameMap["defect"];
         for (var key in detailKey) {
             propertyHtml += '<th class="col w220p" >' + detailKey[key] + '</th>';
         }
-        ;
-        propertyHtml += "</tr>"
+        propertyHtml += "</tr>";
         data.forEach(function (item) {
             propertyHtml += '<tr>';
             propertyHtml += '<td class="col w220p" >' + item.sqxbh + '</td>';
@@ -1227,39 +1226,39 @@ PowerPlant.setBalloonContents = function (objProperties, data) {
     //alert("setBalloonContents");
     var propertyHtml = '<div class="device">';
     propertyHtml += "<div class='head'><i><img src='" + PowerPlant.getFullUrl('') + "/images/tools/属性查询.png' alt=''></i><p class='title'>属性信息</p><p id='close'>×</p></div>"
-    propertyHtml += "<table border='1'>";
+    propertyHtml += "<ul>";
     for (var key in data) {
         switch (key) {
             case "ssbbm":
-                propertyHtml += '<tr>';
-                propertyHtml += '<td class="col w245p" >设备编码</td>';
-                propertyHtml += '<td class="col w75p" >' + data[key] + '</td>';
-                propertyHtml += '</tr>';
-                propertyHtml += '<tr>';
-                propertyHtml += '<td class="col w245p" >运行状态</td>';
-                propertyHtml += '<td class="col w75p" >运行</td>';
-                propertyHtml += '</tr>';
-                propertyHtml += '<tr>';
-                propertyHtml += '<td class="col w245p" >设备等级</td>';
-                propertyHtml += '<td class="col w75p" >一类设备</td>';
-                propertyHtml += '</tr>';
+                propertyHtml += '<li>';
+                propertyHtml += '<p class="name" >设备编码</p>';
+                propertyHtml += '<p class="value" >' + data[key] + '</p>';
+                propertyHtml += '</li>';
+                propertyHtml += '<li>';
+                propertyHtml += '<p class="name" >运行状态</p>';
+                propertyHtml += '<p class="value" >运行</p>';
+                propertyHtml += '</li>';
+                propertyHtml += '<li>';
+                propertyHtml += '<p class="name" >设备等级</p>';
+                propertyHtml += '<p class="value" >一类设备</p>';
+                propertyHtml += '</li>';
                 break;
             case "sdyzrrName":
-                propertyHtml += '<tr>';
-                propertyHtml += '<td class="col w245p" >第一责任人</td>';
-                propertyHtml += '<td class="col w75p" >' + data[key] + '</td>';
-                propertyHtml += '</tr>';
+                propertyHtml += '<li>';
+                propertyHtml += '<p class="name" >第一责任人</p>';
+                propertyHtml += '<p class="value" >' + data[key] + '</p>';
+                propertyHtml += '</li>';
                 break;
             case "sdyzrrbmName":
-                propertyHtml += '<tr>';
-                propertyHtml += '<td class="col w245p" >第一责任部门</td>';
-                propertyHtml += '<td class="col w75p" >' + data[key] + '</td>';
-                propertyHtml += '</tr>';
+                propertyHtml += '<li>';
+                propertyHtml += '<p class="name" >第一责任部门</p>';
+                propertyHtml += '<p class="value" >' + data[key] + '</p>';
+                propertyHtml += '</li>';
                 break;
         }
     }
 
-    propertyHtml += '</table></div>';
+    propertyHtml += '</ul></div>';
     PowerPlant.propertyHtml = propertyHtml;
     var propertyDiv = PowerPlant.propertyDiv.find("#propertyDiv");
     propertyDiv.html(propertyHtml);
