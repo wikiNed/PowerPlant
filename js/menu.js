@@ -11,7 +11,8 @@ var menu = {
     fListBallon:null,
     sListBallon:null,
     clickId:null,
-    staClicked:false
+    staClicked:false,
+    layerClick:false
 };
 var menuNode = [];
 var data = STAMP.menuConfig.menu; //数据来源
@@ -28,6 +29,7 @@ function addNode(data,level,parent){ //todo
         }else{
             item.hasChildren = false;
             menuNode[item.id] = item;
+            // menuNode.push(menuNode[item.id]);
         }
     })
 }
@@ -61,41 +63,39 @@ function showMenu(direction,p_id){
     //         }
     // });
     if( direction == "hori" ){ //hori横向 verti纵向 并控制气泡宽高
-            width = width*arr.length;
-            height = height;
-        };
+        width = width*arr.length;
+        height = height;
+    };
     var balloon = LayerManagement.earth.Factory.CreateHtmlBalloon(LayerManagement.earth.Factory.CreateGuid(), this.title);
-    balloon.SetRectSize(width+25, height+20);
+    balloon.SetRectSize(800, 62);
     var wW = window.innerWidth;
     var wH = window.innerHeight;
-        if( p_id == "0" ){
-            menu.fListBallon = balloon;
-            balloon.SetScreenLocation(wW/2, wH-80); //950 850
-        }else{
-            menuClose();
-            menu.sListBallon = balloon;
-            balloon.SetScreenLocation(wW/2, wH-135); //880 780
-        };
-
-
-        balloon.SetIsAddCloseButton(false);
-        balloon.SetIsAddMargin(false);
-        balloon.SetIsAddBackgroundImage(true);
-        balloon.SetIsTransparence(false);
-        balloon.SetBackgroundAlpha(0);
-        //balloon.SetBackgroundRGB(0x2167A3);
-        var windowUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
-        var url = windowUrl + '/menu.html';
-        // var url = '../menu.html';
-        LayerManagement.earth.Event.OnDocumentReadyCompleted = function(guid) {
-            if (guid == balloon.guid) {
-                //resizeEarthToolWindow();
-                //refreshEarthMenu();
-                setBalloonParameters(balloon,p_id);
-                setBalloonContents(balloon,arr,p_id);
-            }
-        };
-        balloon.ShowNavigate(url);
+    if( p_id == "0" ){
+        menu.fListBallon = balloon;
+        balloon.SetScreenLocation(wW/2, wH-80); //950 850
+    }else{
+        menuClose();
+        menu.sListBallon = balloon;
+        balloon.SetScreenLocation(wW/2, wH-135); //880 780
+    };
+    balloon.SetIsAddCloseButton(false);
+    balloon.SetIsAddMargin(false);
+    balloon.SetIsAddBackgroundImage(true);
+    balloon.SetIsTransparence(false);
+    balloon.SetBackgroundAlpha(0);
+    //balloon.SetBackgroundRGB(0x2167A3);
+    var windowUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
+    var url = windowUrl + '/menu.html';
+    // var url = '../menu.html';
+    LayerManagement.earth.Event.OnDocumentReadyCompleted = function(guid) {
+        if (guid == balloon.guid) {
+            //resizeEarthToolWindow();
+            //refreshEarthMenu();
+            setBalloonParameters(balloon,p_id);
+            setBalloonContents(balloon,arr,p_id);
+        }
+    };
+    balloon.ShowNavigate(url);
 }
 
 function setBalloonParameters(balloon,p_id) {
@@ -123,12 +123,9 @@ function setBalloonContents(balloon,arr,p_id) {
             //         "name": "场景",
             //         "title": "场景",
             //         "src": "images/icon/场景.png",
-            if( item.id == 'Statistics' && menu.staClicked == true ){
-                innerHtml += "<li id="+item.id+" title="+item.title+"><div><img src='images/newIcon/cyan/tongji.png' alt=></div></li>"
-            }else{
-                innerHtml += "<li id="+item.id+" title="+item.title+"><div><img src="+item.src+" alt=></div></li>"
-            }
+            innerHtml += "<li id="+item.id+ " title="+item.title+"><div><span class='iconfont "+item.icon+"'></span></div></li>";
         });
+
         div.find("ul").html(innerHtml);
         //this.innerHtml = innerHtml;
         //var parameter = {};
@@ -149,55 +146,22 @@ function setClickCallback (balloon,p_id) {
         var div = menu["div" + p_id];
         div.find("ul li").on("click",function () {
             var id = $(this).attr("id");
-            var src = $(this).find('img').attr('src');
-            src = src.replace('white','cyan');
-            //选中切换
-            $(this).find('img').attr('src',src);
-            var length = $(this).siblings().length;
-            //同级切换
-            for (var i = 0; i < length; i++) {
-                var item = $(this).siblings()[i];
-                var src = $(item).find('img').attr('src');
-                if( src.indexOf('cyan') ){
-                    src = src.replace('cyan','white');
-                }
-                $(item).find('img').attr('src',src);
-            }
+            if ( id !== 'newPartol'){
+                $(this).toggleClass('on');
+            }else{
 
-            //统计 特殊情况
-            if( id == "Statistics" ){
-              if( menu.staClicked ){
-                  var src = $(this).find('img').attr('src');
-                  src = src.replace('cyan','white');
-                  $(this).find('img').attr('src',src);
-              }
             }
-
-            if( menuNode[id].hasChildren && menuNode[id].level < 2 ){
-                menuClose();
-                if( id != menu.clickId ){//切换菜单
-                    showMenu("hori",id);
-                    menu.clickId = id;
-                    // alert("div"+p_id+";"+menu["div" + p_id].isClicked);
-                }else{
-                    var src = $(this).find('img').attr('src');
-                    src = src.replace('cyan','white');
-                    $(this).find('img').attr('src',src);//重选关闭
-                    menu.clickId = null;
+            try {
+                if (typeof window[id + "Clicked"] == "function") {
+                    // EarthMenu.earthMenuRoot.hideChildrenMenu();	//菜单点击后收起子菜单
+                    window[id + "Clicked"](id);	//这里需要注意，一定要先设置状态，再调用相应功能处理函数，功能处理中会判断菜单状态
+                } else {
+                    alert("请先定义" + id + "Clicked方法");
                 }
-            }else if( !menuNode[id].hasChildren ){
-                try {
-                    if (typeof window[id + "Clicked"] == "function") {
-                        // EarthMenu.earthMenuRoot.hideChildrenMenu();	//菜单点击后收起子菜单
-                        window[id + "Clicked"](id);	//这里需要注意，一定要先设置状态，再调用相应功能处理函数，功能处理中会判断菜单状态
-                    } else {
-                        alert("请先定义" + id + "Clicked方法");
-                    }
-                } catch (e) {
-                    alert(e);
-                    alert(id + "Clicked方法异常！");
-                }
-            }
+            } catch (e) {
+                alert(e);
+                alert(id + "Clicked方法异常！");
+            };
         })
     }
 }

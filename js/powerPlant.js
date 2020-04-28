@@ -32,6 +32,7 @@ var PowerPlant = {
     widthcamera: 438,
     heightcamera: 360,
     imgPosition: {},
+    //1.属性 2.视频监控
     cameraIp: [
         70,
         69,
@@ -1874,7 +1875,8 @@ PowerPlant.createIconLabel = function (type, iconPath, pos, obj, index, ipIndex)
             "label": iconObject,
             "obj": obj,
             "index": index,
-            "ip": PowerPlant.cameraIp[ipIndex]
+            "ip": PowerPlant.cameraIp[ipIndex],
+            "pos":pos
         };
     } else {//内部摄像头
         //iconObject.Visibility = false;
@@ -1882,7 +1884,8 @@ PowerPlant.createIconLabel = function (type, iconPath, pos, obj, index, ipIndex)
             "type": type,
             "label": iconObject,
             "obj": obj,
-            "index": obj.cameraIndex  //控制显示
+            "index": obj.cameraIndex,  //控制显示
+            "pos":pos
         };
     }
 
@@ -2892,6 +2895,9 @@ PowerPlant.hashCreat = function (hash) {
     var arr1 = hash.split('&');
     var ip = arr1[0].split('#')[1];
     var password = arr1[1];
+    var cameraType = arr1[2];
+    var testIp;
+    alert(cameraType+","+testIp);
     PowerPlant.closeHtmlBalloon();
 
     earth.Event.OnDocumentReadyCompleted = function (guid) {//气泡加载完成事件
@@ -2904,11 +2910,40 @@ PowerPlant.hashCreat = function (hash) {
     var htmlBalloon = PowerPlant.createHtmlBalloon(guid, "URL气泡");
     var wW = window.innerWidth;
     var wH = window.innerHeight;
-    PowerPlant.workCameraProperty = {};
-    PowerPlant.workCameraProperty.ip = ip;
-    PowerPlant.workCameraProperty.password = password;
-    htmlBalloon.SetRectSize(700, 435);
-    htmlBalloon.SetScreenLocation (wW/2,wH/2+200);
-    PowerPlant.htmlBalloon = htmlBalloon;
-    htmlBalloon.ShowNavigate(url);
+    if ( cameraType == 'cameraout'){
+        testIp = Number(ip.split('.')[3]);
+        if ( PowerPlant.cameraIp.indexOf(testIp) != -1){
+            for (var key in PowerPlant.iconObjects){
+                if ( PowerPlant.iconObjects[key].ip == testIp){
+                    PowerPlant.iconObjects[key].label.Visibility = true;
+                    var nowPos = PowerPlant.iconObjects[key].pos;
+                    earth.GlobeObserver.FlytoLookat(nowPos.lng, nowPos.lat, nowPos.alt,
+                        0.0,  //朝向
+                        30,  //俯仰
+                        0.0,      //旋转角
+                        40,		//相机距离
+                     3);
+                    setTimeout(function () {
+                        PowerPlant.workCameraProperty = {};
+                        PowerPlant.workCameraProperty.ip = ip;
+                        PowerPlant.workCameraProperty.password = password;
+                        htmlBalloon.SetRectSize(700, 435);
+                        htmlBalloon.SetSphericalLocation(nowPos.lng, nowPos.lat, nowPos.alt);
+                        htmlBalloon.SetTailColor(0xff000000);
+                        PowerPlant.htmlBalloon = htmlBalloon;
+                        htmlBalloon.ShowNavigate(url);
+                    },3000)
+                }
+            }
+        }
+        else{
+            PowerPlant.workCameraProperty = {};
+            PowerPlant.workCameraProperty.ip = ip;
+            PowerPlant.workCameraProperty.password = password;
+            htmlBalloon.SetRectSize(700, 435);
+            htmlBalloon.SetScreenLocation (wW/2,wH/2+200);
+            PowerPlant.htmlBalloon = htmlBalloon;
+            htmlBalloon.ShowNavigate(url);
+        }
+    }
 };

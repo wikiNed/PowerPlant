@@ -1,61 +1,147 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
-        <meta name="keywords" content="关键词">
-        <meta name="description" content="描述">
-        <meta name="author" content="练习 加油">
-        <link rel="stylesheet" href="./css/icon/iconfont.css">
-        <style>
-            body{font-family: "Microsoft YaHei",serif;background-color: #03132c}
-            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
-            ol,ul,li{margin:0;padding:0;list-style:none;}
-            img{border:none;}
-            #wrap ul{
-                position: relative;
-            }
-            #wrap ul li{
-                float: left;
-            }
-            #wrap ul li>div{
-                position: relative;
-                display: inline-block;
-                width: 50px;
-                height: 50px;
-                cursor: pointer;
-                /*border: 1px solid white;*/
-            }
-            #wrap ul li>div img{
-                width: 30px;
-                height: 30px;
-                position: absolute;
-                left: 10px;
-                top: 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="wrap">
-            <ul>
-<!--                <li id="view" title="场景"><div><img src="images/icon/场景.png" alt=""></div></li>-->
-<!--                <li id="shebei" title="场景"><div><img src="images/icon/设备.png" alt=""></div></li>-->
-<!--                <li id="shexiang" title="场景"><div><img src="images/icon/监控.png" alt=""></div></li>-->
-            </ul>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="描述">
+    <meta name="author" content="练习 加油">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <style>
+        body {
+            font-family: "Microsoft YaHei", serif;
 
-        <script src="./js/plugins/jquery1.9.0.min.js"></script>
-        <script>
-            // $('ul li').on("click",function () {
-            //     var src = $(this).find('img').attr('src',"images/icon/设备.png");
-            // })
-            function setParameters(parameter) {
-                parameter.updateEarthMenuDiv($("#wrap"));
-                //resizeWindow();
-            }
-        </script>
-    </body>
+        }
+
+        body, dl, dd, p, h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+        }
+
+        ol, ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        img {
+            border: none;
+        }
+
+        #wrap {
+            position: relative;
+            width: 780px;
+            height: 42px;
+            background-image: url("./images/newUI/func.jpg");
+        }
+
+        #wrap ul {
+            position: relative;
+            padding-left: 125px;
+        }
+
+        #wrap ul li {
+            float: left;
+            width: 60px;
+            margin-right: 36px;
+        }
+
+        #wrap ul li:nth-child(1) {
+            margin-right: 30px;
+        }
+
+        #wrap ul li:nth-child(2) {
+            margin-right: 34px;
+        }
+
+        #wrap ul li:nth-child(3) {
+            margin-right: 38px;
+        }
+
+        #wrap ul li:nth-child(4) {
+            margin-right: 35px;
+        }
+
+        #wrap ul li:nth-child(5) {
+            margin-right: 45px;
+        }
+
+        #wrap ul li:last-child {
+            margin-right: 0;
+        }
+
+        #wrap ul li > div {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 40px;
+            cursor: pointer;
+            /*border: 1px solid white;*/
+        }
+
+        #wrap ul li.on > div {
+            border-bottom: 2px solid rgba(51, 237, 245, 0.8);
+        }
+
+        #wrap ul li.on > div span, #wrap ul li.on > div span:hover {
+            color: rgba(51, 237, 245, 1);
+        }
+
+        #wrap ul li > div span {
+            cursor: pointer;
+            font-size: 30px;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 10px;
+            top: 7px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <ul>
+<!--        <li id="view" title="场景" class="on">-->
+<!--            <div>-->
+<!--                <span class="iconfont icon-gongzuotai"></span>-->
+<!--            </div>-->
+<!--        </li>-->
+<!--        <li id="shebei" title="场景">-->
+<!--            <div>-->
+<!--                <span class="iconfont icon-shexiangtou"></span>-->
+<!--            </div>-->
+<!--        </li>-->
+<!--        <li id="shexiang" title="场景">-->
+<!--            <div>-->
+<!--                <span class="iconfont icon-ic_camera"></span>-->
+<!--            </div>-->
+<!--        </li>-->
+<!--        <li id="viewPoint" title="场景">-->
+<!--            <div>-->
+<!--                <span class="iconfont icon-shebei"></span>-->
+<!--            </div>-->
+<!--        </li>-->
+<!--        <li id="sds" title="场景">-->
+<!--            <div>-->
+<!--                <span class="iconfont icon-sport"></span>-->
+<!--            </div>-->
+<!--        </li>-->
+<!--        <li id="sdsfas" title="场景">-->
+<!--            <div>-->
+<!--                <span class="iconfont icon-icon-test"></span>-->
+<!--            </div>-->
+<!--        </li>-->
+    </ul>
+</div>
+
+<script src="./js/plugins/jquery1.9.0.min.js"></script>
+<script>
+
+</script>
+</body>
 </html>
+
+
 
 
 

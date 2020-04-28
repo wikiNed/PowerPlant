@@ -15,7 +15,7 @@ STAMP.menuConfig = {
             "id": "view",
             "name": "场景",
             "title": "场景",
-            "src": "images/newIcon/white/changjing.png",
+            "icon": "images/newIcon/white/changjing.png",
             "item": [
                 // {
                 // 	"name": "飞行路径",
