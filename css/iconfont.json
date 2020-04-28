@@ -1,0 +1,79 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2378220",
+      "name": "sport",
+      "font_class": "sport",
+      "unicode": "e6a6",
+      "unicode_decimal": 59046
+    },
+    {
+      "icon_id": "6151223",
+      "name": "layer-group",
+      "font_class": "layer-group",
+      "unicode": "e7f7",
+      "unicode_decimal": 59383
+    },
+    {
+      "icon_id": "6151280",
+      "name": "info-circle",
+      "font_class": "info-circle",
+      "unicode": "e81e",
+      "unicode_decimal": 59422
+    },
+    {
+      "icon_id": "6151386",
+      "name": "caret-left",
+      "font_class": "caret-left",
+      "unicode": "e846",
+      "unicode_decimal": 59462
+    },
+    {
+      "icon_id": "6151395",
+      "name": "angle-up",
+      "font_class": "angle-up",
+      "unicode": "e84d",
+      "unicode_decimal": 59469
+    },
+    {
+      "icon_id": "6735234",
+      "name": "摄像头",
+      "font_class": "shexiangtou",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "8777370",
+      "name": "list",
+      "font_class": "icon-test",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
+    },
+    {
+      "icon_id": "12886752",
+      "name": "ic_camera",
+      "font_class": "ic_camera",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "13614853",
+      "name": "设备",
+      "font_class": "shebei",
+      "unicode": "e692",
+      "unicode_decimal": 59026
+    },
+    {
+      "icon_id": "13769960",
+      "name": "工作台",
+      "font_class": "gongzuotai",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    }
+  ]
+}
