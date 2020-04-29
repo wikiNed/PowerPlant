@@ -8,26 +8,36 @@
         <meta name="author" content="练习 加油">
         <link rel="stylesheet" type="text/css" href="js/plugins/zTreeStyle/zTreeStyle.css" type="text/css">
         <style>
-            body{font-family: "Microsoft YaHei",serif;}
-            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
-            ol,ul,li{margin:0;padding:0;list-style:none;}
-            img{border:none;}
-            *{
-                margin:0;
-                padding:0
-            }
-
+            html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+            header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+            table{border-collapse:collapse;border-spacing:0;}
+            caption,th{text-align:left;font-weight:normal;}
+            html,body,fieldset,img,iframe,abbr{border:0;}
+            i,cite,em,var,address,dfn{font-style:normal;}
+            [hidefocus],summary{outline:0;}
+            li{list-style:none;}
+            h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+            sup,sub{font-size:83%;}
+            pre,code,kbd,samp{font-family:inherit;}
+            q:before,q:after{content:none;}
+            textarea{overflow:auto;resize:none;}
+            label,summary{cursor:default;}
+            a,button{cursor:pointer;}
+            h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+            del,ins,u,s,a,a:hover{text-decoration:none;}
+            body,textarea,input,button,select,keygen,legend{font:12px/1.14 arial,\5b8b\4f53;color:#333;outline:0;}
+            body{background:#fff;}
+            a,a:hover{color:#333;}
             .content{
                 width: 320px;
-                height: 700px;
-                background-color: #03132c;
-                overflow-y: auto;
+                height: 1028px;
+                background-image: url('./images/newUI/left.jpg');
+                background-attachment: fixed;
             }
             .content .head{
                 width:320px;
-                height: 30px;
+                height: 50px;
                 color: #fff;
-                background: #23899f;
                 position: relative;
             }
             .content .head i,.content .head p{
@@ -36,34 +46,29 @@
             .content .head i{
                 position: absolute;
                 left: 10px;
-                top: 8px;
+                top: 12px;
             }
             .content .head p.title{
                 position: absolute;
                 left: 32px;
-                top: 6px;
+                top: 12px;
                 font-size: 16px;
                 letter-spacing: 3px;
             }
             .content .head #close{
                 position: absolute;
                 right: 10px;
-                top: -6px;
+                top: 4px;
                 font-size: 30px;
                 cursor: pointer;
             }
             .content .head #close:hover{
                 color:red;
             }
-            .content #menuTreeDiv{
-                height: 670px;
-                overflow:auto;
-                background-color:#03132c;
-            }
         </style>
     </head>
     <body>
-        <div class="content">
+        <div class="content" style=";min-height: 1000px">
             <div class="head">
                 <i>
                     <img src="./images/tools/属性查询.png" alt="">
@@ -76,10 +81,14 @@
                     ×
                 </p>
             </div>
-            <div border="false" id="id_menu_body" style="background-color:#E7F1FB;">
-                <div id="menuTreeDiv">
-                    <ul id="menuTree" class="ztree" style="border:0px;background-color:#03132c">
-                        <!-- 基础图层 -->
+            <div style="height: 998px;width: 320px;margin-top: 10px">
+                <div id="tree" style="padding-left: 10px;">
+                    <ul id="ztree" class="ztree" style="border:0px;">
+<!--                        <li>sdasd</li>-->
+<!--                        <li>sdasd</li>-->
+<!--                        <li>sdasd</li>-->
+<!--                        <li>sdasd</li>-->
+<!--                        <li>sdasd</li>-->
                     </ul>
                 </div>
             </div>
@@ -98,7 +107,7 @@
             function setParameters(parameter) {
                 powerPlant = parameter.pp;
                 // parameter.updatePowerPlantDiv($('.content'));
-            };
+            }
 
             $('.content').on('click','#close',function () {
                 // alert(PowerPlant.htmlBalloon != undefined);
@@ -107,7 +116,7 @@
             setTimeout(function () {
                 var nodes = powerPlant.treeNodes["nodes"];
                 $('.title').html(powerPlant.treeNodes["name"]);
-                var tree = $.fn.zTree.init($("#menuTree"), powerPlant.treeSetting, nodes);
+                var tree = $.fn.zTree.init($("#ztree"), powerPlant.treeSetting, nodes);
             },200);
         </script>
     </body>

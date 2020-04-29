@@ -15,6 +15,8 @@ var PowerPlant = {
     //气泡弹窗
     pickObjParent: null,
     htmlBalloon: undefined,
+    //tree气泡
+    treeBalloon:null,
     propertyDiv: undefined,
     highLightObjects: [],
     cameraLayer: null,
@@ -1824,15 +1826,16 @@ PowerPlant.showPropertyTreeBallon = function (treeNodes) {
     PowerPlant.treeNodes = treeNodes;
     var balloon = LayerManagement.earth.Factory.CreateHtmlBalloon(LayerManagement.earth.Factory.CreateGuid(), PowerPlant.treeNodes.name);
     PowerPlant.deviceBalloon = balloon;
-    balloon.SetRectSize(340, 720);
+    balloon.SetRectSize(340, 1048);
     var wW = window.innerWidth;
     var wH = window.innerHeight;
-    balloon.SetScreenLocation(0, wH / 2 + 40);
+    balloon.SetScreenLocation(0,40);
     balloon.SetIsAddCloseButton(false);
     balloon.SetIsAddMargin(false);
     balloon.SetIsAddBackgroundImage(true);
     balloon.SetIsTransparence(false);
     balloon.SetBackgroundAlpha(0);
+    PowerPlant.treeBalloon = balloon;
     //balloon.SetBackgroundRGB(0x2167A3);
     var windowUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
     var url = windowUrl + '/ztreeTest.html';
@@ -1847,7 +1850,6 @@ PowerPlant.showPropertyTreeBallon = function (treeNodes) {
         }
     }
     balloon.ShowNavigate(url);
-
 };
 
 //传递数据用

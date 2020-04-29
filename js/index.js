@@ -179,6 +179,10 @@ window.onresize = function() {
 
 window.onbeforeunload = function(){
 	menu.closeAllHtmlBalloon();
+	if (PowerPlant.treeBalloon !== null){
+		PowerPlant.treeBalloon.DestroyObject();
+		PowerPlant.treeBalloon = null;
+	}
 };
 
 
