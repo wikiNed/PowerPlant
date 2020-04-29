@@ -13,46 +13,53 @@
       "unicode_decimal": 59046
     },
     {
-      "icon_id": "6151223",
-      "name": "layer-group",
-      "font_class": "layer-group",
-      "unicode": "e7f7",
-      "unicode_decimal": 59383
+      "icon_id": "7009834",
+      "name": "俯视",
+      "font_class": "fushi",
+      "unicode": "ea22",
+      "unicode_decimal": 59938
     },
     {
-      "icon_id": "6151280",
-      "name": "info-circle",
-      "font_class": "info-circle",
-      "unicode": "e81e",
-      "unicode_decimal": 59422
-    },
-    {
-      "icon_id": "6151386",
-      "name": "caret-left",
-      "font_class": "caret-left",
-      "unicode": "e846",
-      "unicode_decimal": 59462
-    },
-    {
-      "icon_id": "6151395",
+      "icon_id": "7739318",
       "name": "angle-up",
       "font_class": "angle-up",
-      "unicode": "e84d",
-      "unicode_decimal": 59469
+      "unicode": "e640",
+      "unicode_decimal": 58944
     },
     {
-      "icon_id": "6735234",
+      "icon_id": "7838902",
+      "name": "layer-group",
+      "font_class": "layer-group",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "8284789",
+      "name": "指北针",
+      "font_class": "zhibeizhen",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "10161529",
       "name": "摄像头",
       "font_class": "shexiangtou",
-      "unicode": "e633",
-      "unicode_decimal": 58931
+      "unicode": "e725",
+      "unicode_decimal": 59173
     },
     {
-      "icon_id": "8777370",
-      "name": "list",
-      "font_class": "icon-test",
-      "unicode": "e64f",
-      "unicode_decimal": 58959
+      "icon_id": "11229062",
+      "name": "gongzuotai 副本 18",
+      "font_class": "gongzuotaifuben",
+      "unicode": "e66b",
+      "unicode_decimal": 58987
+    },
+    {
+      "icon_id": "12225746",
+      "name": "icon-test_16",
+      "font_class": "icon-test_",
+      "unicode": "e505",
+      "unicode_decimal": 58629
     },
     {
       "icon_id": "12886752",
@@ -62,18 +69,32 @@
       "unicode_decimal": 58884
     },
     {
-      "icon_id": "13614853",
-      "name": "设备",
-      "font_class": "shebei",
-      "unicode": "e692",
-      "unicode_decimal": 59026
+      "icon_id": "13000513",
+      "name": "旋转",
+      "font_class": "xuanzhuan",
+      "unicode": "e625",
+      "unicode_decimal": 58917
     },
     {
-      "icon_id": "13769960",
-      "name": "工作台",
-      "font_class": "gongzuotai",
-      "unicode": "e60b",
-      "unicode_decimal": 58891
+      "icon_id": "13345386",
+      "name": "info-circle",
+      "font_class": "info-circle",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "13624117",
+      "name": "caret-left",
+      "font_class": "caret-left",
+      "unicode": "e503",
+      "unicode_decimal": 58627
+    },
+    {
+      "icon_id": "14332568",
+      "name": "shebei-2",
+      "font_class": "shebei-2",
+      "unicode": "e647",
+      "unicode_decimal": 58951
     }
   ]
 }

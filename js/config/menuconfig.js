@@ -15,7 +15,8 @@ STAMP.menuConfig = {
             "id": "view",
             "name": "场景",
             "title": "场景",
-            "icon": "images/newIcon/white/changjing.png",
+            "icon": "icon-gongzuotaifuben",
+            "close":"able",
             "item": [
                 // {
                 // 	"name": "飞行路径",
@@ -32,31 +33,22 @@ STAMP.menuConfig = {
                     "id": "surround",
                     "name": "环绕浏览",
                     "title": "环绕浏览",
-                    "src": "images/newIcon/white/huanraoliulan.png"
+                    "icon": "icon-xuanzhuan",
+                    "close":"enable",
                 },
                 {
                     "id": "ViewRefersToNorth",
                     "name": "场景正北",
                     "title": "场景正北",
-                    "src": "images/newIcon/white/changjingzhengbei.png"
+                    "icon": "icon-zhibeizhen",
+                    "close":"enable",
                 },
                 {
                     "id": "topView",
                     "name": "场景俯视",
                     "title": "场景俯视",
-                    "src": "images/newIcon/white/changjingfushi.png"
-                },
-                {
-                    "name": "视点管理",
-                    "title": "视点管理",
-                    "id": "ViewPointManagement",
-                    "src": "images/newIcon/white/shidianguanli.png"
-                },
-                {
-                    "name": "统计",
-                    "title": "统计信息",
-                    "id": "Statistics",
-                    "src": "images/newIcon/white/tongji.png"
+                    "icon": "icon-fushi",
+                    "close":"enable",
                 },
                 // {
                 //     "id": "coordSearch",
@@ -185,13 +177,22 @@ STAMP.menuConfig = {
             "id": "cameraQuery",
             "name": "监控",
             "title": "监控设备位置",
-            "src": "images/newIcon/white/sxt.png"
+            "icon": "icon-shexiangtou",
+            "close":"able",
+        },
+        {
+            "id": "allCameraTree",
+            "name": "监控设备树",
+            "title": "监控设备树",
+            "icon": "icon-ic_camera",
+            "close":"enable",
         },
         {
             "id": "ndeviceQuery",
             "name": "设备",
             "title": "设备",
-            "src": "images/newIcon/white/shebei.png"
+            "icon": "icon-shebei-2",
+            "close":"enable",
         },
         // {
         //     "id": "workCamera",
@@ -203,25 +204,21 @@ STAMP.menuConfig = {
             "name": "漫游",
             "title": "漫游",
             "id": "wander",
-            "src": "images/newIcon/white/manyou.png"
+            "icon": "icon-sport",
+            "close":"able",
         },
-        {
-            "name": "一键巡查",
-            "title": "一键巡查",
-            "id": "partol",
-            "src": "images/newIcon/white/donghua.png"
-        },
+        // {
+        //     "name": "一键巡查",
+        //     "title": "一键巡查",
+        //     "id": "partol",
+        //     "icon": "icon-gongzuotaifuben",
+        // },
         {
             "name": "总览",
             "title": "总览",
             "id": "pandect",
-            "src": "images/newIcon/white/pandect.png"
-        },
-        {
-            "id": "allCameraTree",
-            "name": "监控设备树",
-            "title": "监控设备树",
-            "src": "images/newIcon/white/jiankong.png"
+            "icon": "icon-icon-test_",
+            "close":"enable",
         },
         // {
         //     "id": "closeBallon",

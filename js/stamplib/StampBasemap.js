@@ -83,6 +83,10 @@ function unloadEarth() {
 	if (EarthMenu != undefined && EarthMenu != null) {
 		EarthMenu.closeAllMenu();
 	}
+
+	if ( menu.fListBallon !== null || menu.sListBallon !== null){
+		menu.closeAllHtmlBalloon();
+	}
 	/*if(earthToolsBalloon != null) {	// EarthMenu Modify
 		earthToolsBalloon.DestroyObject();
 		earthToolsBalloon = null;

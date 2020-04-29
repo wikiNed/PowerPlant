@@ -172,9 +172,14 @@ function resizeLeftPanel() {
 window.onresize = function() {
 	//resizeLeftPanel();
 	//setToolsIconStatus();
-	//resizeEarthToolWindow();	// EarthMenu Modify
-	EarthMenu.resizeMenu();
-}
+	// resizeEarthToolWindow();	// EarthMenu Modify
+	// EarthMenu.resizeMenu();
+	menu.resizeMenu();
+};
+
+window.onbeforeunload = function(){
+	menu.closeAllHtmlBalloon();
+};
 
 
 //resizeLeftPanel(); //重绘左侧面板	// EarthMenu Modify
