@@ -174,6 +174,7 @@ window.onresize = function() {
 	//setToolsIconStatus();
 	// resizeEarthToolWindow();	// EarthMenu Modify
 	// EarthMenu.resizeMenu();
+	PowerPlant.treeBalloon.SetRectSize(340, 1248);
 	menu.resizeMenu();
 };
 

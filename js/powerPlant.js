@@ -271,6 +271,35 @@ var PowerPlant = {
 };
 
 
+PowerPlant.keyNameMap = {
+    "defect": {
+        "id": "缺陷编码",
+        "desc": "缺陷描述",
+        "startTime": "开始时间",
+        "endTime": "结束时间",
+        "handleDept": "第一责任部门",
+        "detectDept": "发现部门",
+        "detectPerson": "缺陷发现人员"
+    },
+    "device": {
+        "id": "设备编码",
+        "name": "设备名称",
+        "status": "运行状态",
+        "level": "设备等级",
+        "pic": "第一责任人",
+        "picDept": "第一责任部门"
+    },
+    "access": {
+        "status": "门禁状态",
+        "addr": "门禁位置",
+        "count": "刷卡人数"
+    },
+    "accessDetail": {
+        "name": "姓名",
+        "time": "时间"
+    }
+};
+
 PowerPlant.getKeyName = function (type, key) {
     var typeKey = PowerPlant.keyNameMap[type];
     if (typeKey == undefined) return undefined;
@@ -453,7 +482,6 @@ PowerPlant.createHtmlBalloon = function (guid, name) {
 PowerPlant.setDetailContents = function (data) {
     //alert("setDetailContents");
     var propertyHtml = "";
-    alert(JSON.stringify(data));
     if (data.length < 1) {
         propertyHtml += "无缺陷信息";
     } else {
@@ -568,7 +596,7 @@ PowerPlant.showDetailBalloon = function (data, rect, pos) {
     var url = PowerPlant.getFullUrl('/html/query/mis.html');
     PowerPlant.htmlBalloon = htmlBalloon;
     htmlBalloon.ShowNavigate(url);
-}
+};
 
 //图片弹窗
 PowerPlant.showSisInfo = function (node) {
@@ -1029,7 +1057,7 @@ PowerPlant.showDeviceInfo = function (pickedObject, objProperties) {
             PowerPlant.showDeviceCard(objProperties, deviceData);
             //显示SIS MIS系统点选设备数
             PowerPlant.getDeviceInfoNodes(pickedObject, objProperties, deviceData);
-            setTimeout(function () {
+            setTimeout(function () {//todo 将设备详情移至右端显示
                 PowerPlant.showPropertyTreeBallon(PowerPlant.sisTreeNodes);
             }, 200);
         },
@@ -1826,7 +1854,7 @@ PowerPlant.showPropertyTreeBallon = function (treeNodes) {
     PowerPlant.treeNodes = treeNodes;
     var balloon = LayerManagement.earth.Factory.CreateHtmlBalloon(LayerManagement.earth.Factory.CreateGuid(), PowerPlant.treeNodes.name);
     PowerPlant.deviceBalloon = balloon;
-    balloon.SetRectSize(340, 1048);
+    balloon.SetRectSize(340, 1248);
     var wW = window.innerWidth;
     var wH = window.innerHeight;
     balloon.SetScreenLocation(0,40);
@@ -1848,7 +1876,7 @@ PowerPlant.showPropertyTreeBallon = function (treeNodes) {
             // alert(PowerPlant.treeNodes.nodes.length);
             PowerPlant.setDeviceBalloonParameters();
         }
-    }
+    };
     balloon.ShowNavigate(url);
 };
 
