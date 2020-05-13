@@ -484,50 +484,31 @@ PowerPlant.setDetailContents = function (data) {
     //alert("setDetailContents");
     var propertyHtml = "";
     if (data.length < 1) {
-        propertyHtml += "无缺陷信息";
+        propertyHtml += '<p class="noInfo">无缺陷信息</p>';
     } else {
-        propertyHtml = "<table>";
-        propertyHtml += "<tr>";
-        var detailKey = PowerPlant.keyNameMap["defect"];
-        for (var key in detailKey) {
-            propertyHtml += '<th class="col w220p" >' + detailKey[key] + '</th>';
-        }
-        propertyHtml += "</tr>";
+        propertyHtml = "<ul>";
+        propertyHtml += " <li class=\"detailTitle\">\n" +
+            "                        <p class=\"number\">缺陷编码</p>\n" +
+            "                        <p class=\"detail\">缺陷描述</p>\n" +
+            "                        <p class=\"start\">开始时间</p>\n" +
+            "                        <p class=\"end\">结束时间</p>\n" +
+            "                        <p class=\"department\">第一责任部门</p>\n" +
+            "                        <p class=\"find\">发现部门</p>\n" +
+            "                        <p class=\"people\">缺陷发现人员</p>\n" +
+            "                    </li>";
         data.forEach(function (item) {
-            propertyHtml += '<tr>';
-            propertyHtml += '<td class="col w220p" >' + item.sqxbh + '</td>';
-            propertyHtml += '<td class="col w220p" >' + item.sgzxxsm + '</td>';
-            propertyHtml += '<td class="col w220p" >' + item.ssjkssj + '</td>';
-            propertyHtml += '<td class="col w220p" >' + item.ssjjssj + '</td>';
-            propertyHtml += '<td class="col w220p" >' + item.ssbzzrbm + '</td>';
-            propertyHtml += '<td class="col w220p" >' + item.sfxrssbmName + '</td>';
-            propertyHtml += '<td class="col w220p" >' + item.sfxr + '</td>';
-            propertyHtml += '<tr>';
+            propertyHtml += '<li class="detailContent">';
+            propertyHtml += '<p class="number">' + item.sqxbh + '</p>';
+            propertyHtml += '<p class="detail">' + item.sgzxxsm + '</p>';
+            propertyHtml += '<p class="start">' + item.ssjkssj + '</p>';
+            propertyHtml += '<p class="end">' + item.ssjjssj + '</p>';
+            propertyHtml += '<p class="department">' + item.ssbzzrbm + '</p>';
+            propertyHtml += '<p class="find">' + item.sfxrssbmName + '</p>';
+            propertyHtml += '<p class="people">' + item.sfxr + '</p>';
+            propertyHtml += '</li>';
         });
-        propertyHtml += '</table>';
+        propertyHtml += '</ul>';
     }
-
-
-    // var detailKey = PowerPlant.keyNameMap[detailInfo.infoType];
-    // for (var key in detailKey) {
-    // 	propertyHtml += '<td class="col w240p" >' + detailKey[key] + '</td>';
-    // }
-    // propertyHtml += '</tr>';
-    // var details = detailInfo[detailInfo.infoType];
-    // for (var i = 0, l = details.length; i < l; i++) {
-    // 	var detail = details[i];
-    // 	propertyHtml += '<tr>';
-    // 	for (var key in detail) {
-    // 		var keyName = detailKey[key];
-    // 		if (keyName === undefined) {
-    // 			continue;
-    // 		}
-    // 		propertyHtml += '<td class="col w240p" >' + detail[key] + '</td>';
-    // 	}
-    // 	propertyHtml += '</tr>';
-    // }
-
-    // alert(propertyHtml);
     PowerPlant.propertyHtml = propertyHtml;
     var propertyDiv = PowerPlant.propertyDiv.find(".mis");
     propertyDiv.html(propertyHtml);

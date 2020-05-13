@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>video</title>
+    <title>mis</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
@@ -19,16 +19,20 @@
         .content{
             width: 1230px;
             height: 270px;
-            background-color: #03132c;
             overflow-y: auto;
             overflow-x: hidden;
+            background: url("../../images/newUI/mis.png") no-repeat;
             /*-ms-overflow-y: scroll;*/
         }
+
+        .misDetail{
+            background: url("../../images/newUI/mis.png") no-repeat;
+        }
+
         .content .head{
             width:1230px;
             height: 30px;
             color: #fff;
-            background: url("../../images/newUI/mis.jpg") no-repeat;
             position: relative;
         }
         .content .head i,.content .head p{
@@ -56,180 +60,131 @@
         .content .head #close:hover{
             color:red;
         }
-        .mis{
-
-            color: #fff;
-        }
-        .mis table{
-            margin: 15px 0 0 15px;
-            border: 1px solid rgba(255,255,255,0.8);
-            border-collapse: collapse;
-        }
-        .mis td,.mis th{
-            height: 40px;
-            width: 170px;
+        .noInfo{
             text-align: center;
-            border-collapse: collapse;
-            border: 1px solid rgba(255,255,255,0.8);
+            vertical-align:middle;
+            font-size: 25px;
+        }
+        .mis{
+            color: #fff;
+            width: 100%;
+        }
+        .mis ul{
+            width: 100%;
+            list-style: none;
+        }
+        .mis ul li{
+            width: 100%;
+            padding-left: 20px;
+        }
+        .mis ul li p{
+            display: inline-block;
+            padding: 0 5px 0 5px;
+            width: 11%;
+            text-align: center;
+            height: auto;
+            word-break: break-all;
+            vertical-align:middle;
+        }
+        .mis ul li p.detail{
+            width: 22%;
+        }
+        .mis ul li.detailTitle{
+            height: 40px;
+            border-bottom: 2px solid rgb(30,138,166);
+        }
+        .mis ul li.detailContent{
+            padding: 10px 0 10px 20px;
+            border-bottom: 1px solid rgb(30,138,166);
+        }
+        .mis ul li.detailTitle p{
+            line-height: 40px;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
     <div class="content">
-        <div class="head">
-            <i>
-                <img src="../../images/tools/属性查询.png" alt="">
-            </i>
-            <p class="title">
-                缺陷信息
-            </p>
-            <p id="close">
-                ×
-            </p>
-        </div>
+        <div class="misDetail">
+            <div class="head">
+                <i>
+                    <img src="../../images/tools/属性查询.png" alt="">
+                </i>
+                <p class="title">
+                    缺陷信息
+                </p>
+                <p id="close">
+                    ×
+                </p>
+            </div>
 
-        <div class="mis">
-<!--            <table>-->
-<!--                <tr>-->
-<!--                    <th class="col w220p">-->
-<!--                        1-->
-<!--                    </th>-->
-<!--                    <th class="col w220p">-->
-<!--                        1-->
-<!--                    </th>-->
-<!--                    <th class="col w220p">-->
-<!--                        1-->
-<!--                    </th>-->
-<!--                    <th class="col w220p">-->
-<!--                        1-->
-<!--                    </th>-->
-<!--                    <th class="col w220p">-->
-<!--                        1-->
-<!--                    </th>-->
-<!--                    <th class="col w220p">-->
-<!--                        1-->
-<!--                    </th>-->
-<!--                    <th class="col w220p">-->
-<!--                        1-->
-<!--                    </th>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                    <td class="col w220p">-->
-<!--                        1-->
-<!--                    </td>-->
-<!--                </tr>-->
-<!--            </table>-->
-
+            <div class="mis">
+<!--                <ul>-->
+<!--                    <li class="detailTitle">-->
+<!--                        <p class="number">缺陷编码</p>-->
+<!--                        <p class="detail">缺陷描述</p>-->
+<!--                        <p class="start">开始时间</p>-->
+<!--                        <p class="end">结束时间</p>-->
+<!--                        <p class="department">第一责任部门</p>-->
+<!--                        <p class="find">发现部门</p>-->
+<!--                        <p class="people">缺陷发现人员</p>-->
+<!--                    </li>-->
+<!--                    <li class="detailContent">-->
+<!--                        <p class="number">sadsadasdsadsad</p>-->
+<!--                        <p class="detail">sdsasadsadasdsadsadsahdgsadgsakjdgksadhkjsadsakdhksahdksahdkjsahdkjsahdksahdk</p>-->
+<!--                        <p class="start">2019-10-12 08:34</p>-->
+<!--                        <p class="end">2019-10-12 08:34</p>-->
+<!--                        <p class="department">105000160</p>-->
+<!--                        <p class="find">发电运行部</p>-->
+<!--                        <p class="people">高庆</p>-->
+<!--                    </li>-->
+<!--                    <li class="detailContent">-->
+<!--                        <p class="number">sadsadasdsadsad</p>-->
+<!--                        <p class="detail">sdsasadsadasdsadsadsahdgsadgsakjdgksadhkjsadsakdhksahdksahdkjsahdkjsahdksahdk</p>-->
+<!--                        <p class="start">2019-10-12 08:34</p>-->
+<!--                        <p class="end">2019-10-12 08:34</p>-->
+<!--                        <p class="department">105000160</p>-->
+<!--                        <p class="find">发电运行部</p>-->
+<!--                        <p class="people">高庆</p>-->
+<!--                    </li>-->
+<!--                    <li class="detailContent">-->
+<!--                        <p class="number">sadsadasdsadsad</p>-->
+<!--                        <p class="detail">sdsasadsadasdsadsadsahdgsadgsakjdgksadhkjsadsakdhksahdksahdkjsahdkjsahdksahdk</p>-->
+<!--                        <p class="start">2019-10-12 08:34</p>-->
+<!--                        <p class="end">2019-10-12 08:34</p>-->
+<!--                        <p class="department">105000160</p>-->
+<!--                        <p class="find">发电运行部</p>-->
+<!--                        <p class="people">高庆</p>-->
+<!--                    </li>-->
+<!--                    <li class="detailContent">-->
+<!--                        <p class="number">sadsadasdsadsad</p>-->
+<!--                        <p class="detail">sdsasadsadasdsadsadsahdgsadgsakjdgksadhkjsadsakdhksahdksahdkjsahdkjsahdksahdk</p>-->
+<!--                        <p class="start">2019-10-12 08:34</p>-->
+<!--                        <p class="end">2019-10-12 08:34</p>-->
+<!--                        <p class="department">105000160</p>-->
+<!--                        <p class="find">发电运行部</p>-->
+<!--                        <p class="people">高庆</p>-->
+<!--                    </li>-->
+<!--                    <li class="detailContent">-->
+<!--                        <p class="number">sadsadasdsadsad</p>-->
+<!--                        <p class="detail">sdsasadsadasdsadsadsahdgsadgsakjdgksadhkjsadsakdhksahdksahdkjsahdkjsahdksahdk</p>-->
+<!--                        <p class="start">2019-10-12 08:34</p>-->
+<!--                        <p class="end">2019-10-12 08:34</p>-->
+<!--                        <p class="department">105000160</p>-->
+<!--                        <p class="find">发电运行部</p>-->
+<!--                        <p class="people">高庆</p>-->
+<!--                    </li>-->
+<!--                    <li class="detailContent">-->
+<!--                        <p class="number">sadsadasdsadsad</p>-->
+<!--                        <p class="detail">sdsasadsadasdsadsadsahdgsadgsakjdgksadhkjsadsakdhksahdksahdkjsahdkjsahdksahdk</p>-->
+<!--                        <p class="start">2019-10-12 08:34</p>-->
+<!--                        <p class="end">2019-10-12 08:34</p>-->
+<!--                        <p class="department">105000160</p>-->
+<!--                        <p class="find">发电运行部</p>-->
+<!--                        <p class="people">高庆</p>-->
+<!--                    </li>-->
+<!--                </ul>-->
+            </div>
         </div>
     </div>
 

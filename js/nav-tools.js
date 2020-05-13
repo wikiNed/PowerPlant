@@ -146,8 +146,15 @@ function StatisticsClicked() {
 	if( menu.staClicked ){//已点击 删除
 		PowerPlant.staBalloons.forEach(function (item) {
 			item.DestroyObject();
-		})
+		});
+		PowerPlant.staBalloons = [];
 	}else{
+		earth.GlobeObserver.FlytoLookat(109.413044, 38.033439, 1093.99,
+			243.355,  //朝向
+			45.584,  //俯仰
+			0,      //旋转角
+			328,		//相机距离
+			5);  		//时间
 		PowerPlant.showStatisicMsg();
 	}
 	menu.staClicked = !menu.staClicked;

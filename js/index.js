@@ -187,6 +187,12 @@ window.onresize = function() {
 window.onbeforeunload = function(){
 	menu.closeAllHtmlBalloon();
 	PowerPlant.closeHtmlBalloon();
+	if ( PowerPlant.staBalloons.length > 0 ){
+        PowerPlant.staBalloons.forEach(function (item,index) {
+            item.DestroyObject();
+        });
+        PowerPlant.staBalloons = [];
+    }
 	if (PowerPlant.treeBalloon !== null){
 		PowerPlant.treeBalloon.DestroyObject();
 		PowerPlant.treeBalloon = null;

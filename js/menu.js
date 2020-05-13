@@ -80,7 +80,7 @@ function showMenu(direction, p_id) {
         url = windowUrl + '/menu.html';
     } else {
         menuClose();
-        balloon.SetRectSize(367, 68);
+        balloon.SetRectSize(493, 68);
         menu.sListBallon = balloon;
         balloon.SetScreenLocation(wW / 2, wH - 135); //880 780
         url = windowUrl + '/menu1.html';

@@ -50,6 +50,13 @@ STAMP.menuConfig = {
                     "icon": "icon-fushi",
                     "close":"enable",
                 },
+                {
+                    "name": "统计",
+                    "title": "统计信息",
+                    "id": "Statistics",
+                    "icon": "icon-shujutongji",
+                    "close":"able",
+                }
                 // {
                 //     "id": "coordSearch",
                 //     "name": "坐标查询",
