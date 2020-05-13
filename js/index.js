@@ -174,16 +174,32 @@ window.onresize = function() {
 	//setToolsIconStatus();
 	// resizeEarthToolWindow();	// EarthMenu Modify
 	// EarthMenu.resizeMenu();
-	PowerPlant.treeBalloon.SetRectSize(340, 1248);
 	menu.resizeMenu();
+	if (PowerPlant.treeBalloon !== null){
+		PowerPlant.treeBalloon.SetRectSize(340, 1248);
+	}
 };
 
+
+/*
+* 浏览器刷新时卸载气泡
+* */
 window.onbeforeunload = function(){
 	menu.closeAllHtmlBalloon();
+	PowerPlant.closeHtmlBalloon();
 	if (PowerPlant.treeBalloon !== null){
 		PowerPlant.treeBalloon.DestroyObject();
 		PowerPlant.treeBalloon = null;
 	}
+	if (PowerPlant.treeDetailBalloon !== null){
+		PowerPlant.treeDetailBalloon.DestroyObject();
+		PowerPlant.treeDetailBalloon = null;
+	}
+	if (PowerPlant.accessHtmlBallon !== null){
+		PowerPlant.accessHtmlBallon.DestroyObject();
+		PowerPlant.accessHtmlBallon = null;
+	}
+
 };
 
 

@@ -1,0 +1,465 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="描述">
+    <meta name="author" content="练习 加油">
+    <link rel="stylesheet" type="text/css" href="js/plugins/zTreeStyle/zTreeStyle.css" type="text/css">
+    <style>
+        html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer, section, article, aside, nav, hgroup, address, figure, figcaption, menu, details {
+            display: block;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        caption, th {
+            text-align: left;
+            font-weight: normal;
+        }
+
+        html, body, fieldset, img, iframe, abbr {
+            border: 0;
+        }
+
+        i, cite, em, var, address, dfn {
+            font-style: normal;
+        }
+
+        [hidefocus], summary {
+            outline: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        h1, h2, h3, h4, h5, h6, small {
+            font-size: 100%;
+        }
+
+        sup, sub {
+            font-size: 83%;
+        }
+
+        pre, code, kbd, samp {
+            font-family: inherit;
+        }
+
+        q:before, q:after {
+            content: none;
+        }
+
+        textarea {
+            overflow: auto;
+            resize: none;
+        }
+
+        label, summary {
+            cursor: default;
+        }
+
+        a, button {
+            cursor: pointer;
+        }
+
+        h1, h2, h3, h4, h5, h6, em, strong, b {
+            font-weight: bold;
+        }
+
+        del, ins, u, s, a, a:hover {
+            text-decoration: none;
+        }
+
+        body, textarea, input, button, select, keygen, legend {
+            font: 12px/1.14 arial, \5b8b\4f53;
+            color: #333;
+            outline: 0;
+        }
+
+        body {
+            background: #fff;
+            height: 1028px;
+            overflow: hidden;
+        }
+
+        a, a:hover {
+            color: #333;
+        }
+
+        .content {
+            width: 320px;
+            height: 1028px;
+            background-image: url('./images/newUI/right.jpg');
+            background-attachment: fixed;
+        }
+
+        .content .head {
+            width: 320px;
+            height: 50px;
+            color: #fff;
+            position: relative;
+        }
+
+        .content .head i, .content .head p {
+            display: inline;
+        }
+
+        .content .head i {
+            position: absolute;
+            left: 10px;
+            top: 12px;
+        }
+
+        .content .head p.title {
+            position: absolute;
+            left: 32px;
+            top: 12px;
+            font-size: 16px;
+            letter-spacing: 3px;
+        }
+
+        .content .head #close {
+            position: absolute;
+            right: 10px;
+            top: 4px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .content .head #close:hover {
+            color: red;
+        }
+
+        #tree {
+            overflow-y: hidden;
+            overflow-x: visible;
+            position: relative;
+        }
+
+        #ztree{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #ztree li span{
+
+        }
+
+        #scrollBar {
+            position: absolute;
+            right: 18px;
+            top: 10px;
+            width: 4px;
+            height: 900px;
+            border-radius: 4px;
+            background: #eee;
+            display: none;
+        }
+
+        #scrollBar .bar {
+            width: 100%;
+            border-radius: 4px;
+            background: #4c82ff;
+            position: absolute;
+            left: 0;
+            top: -1px;
+        }
+    </style>
+</head>
+<body>
+<div class="content" style=";min-height: 1000px">
+    <div class="head">
+        <i>
+            <img src="./images/tools/属性查询.png" alt="">
+        </i>
+        <p class="title">
+            <!--                    设备信息-->
+            <!--                        设备总览-->
+        </p>
+        <p id="close">
+            ×
+        </p>
+    </div>
+    <div style="height: 998px;width: 320px;margin-top: 10px">
+        <div id="tree" style="padding-left: 10px;height: 910px">
+            <ul id="ztree" class="ztree" style="border:0px;">
+
+            </ul>
+            <div id="scrollBar">
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jquery脚本1.9.0 -->
+<script type="text/javascript" src="js/plugins/jquery1.9.0.min.js"></script>
+
+<!-- jqueryScroll -->
+<script type="text/javascript" src="js/plugins/mousewheel.js"></script>
+
+<!-- easyui脚本 -->
+<script type="text/javascript" src="js/plugins/jquery.easyui.min.js"></script>
+
+<!-- ztree脚本 -->
+<script type="text/javascript" src="js/plugins/zTreeStyle/jquery.ztree.js"></script>
+
+
+<script type="text/javascript" src="js/deviceResults.js"></script>
+
+<script>
+    var powerPlant = {};
+
+    function setParameters(parameter) {
+        powerPlant = parameter.pp;
+        // parameter.updatePowerPlantDiv($('.content'));
+    }
+
+    $('.content').on('click', '#close', function () {
+        // alert(PowerPlant.htmlBalloon != undefined);
+        powerPlant.closeTreeDetailBallon();
+    });
+    setTimeout(function () {
+        var nodes = powerPlant.treeNodes["nodes"];
+        $('.title').html(powerPlant.treeNodes["name"]);
+        var tree = $.fn.zTree.init($("#ztree"), powerPlant.treeSetting, nodes);
+    },200);
+
+    // powerPlant.showAllDeviceTree = function (data) {
+    //     var treeNodes = {
+    //         "name": "设备总览",
+    //         "nodes": []
+    //     };
+    //     var treeRoot = {
+    //         "id": "device",
+    //         "name": "设备",
+    //         "desc": "dev1",
+    //         "children": []
+    //     };
+    //     treeNodes.nodes.push(treeRoot);
+    //     var nodeMap = {};
+    //     data.forEach(function (item) {
+    //         nodeMap[item.id] = item;
+    //     });
+    //     var deviceData = data;
+    //     if (deviceData != undefined && deviceData != null) {
+    //         for (var i = 0, l = deviceData.length; i < l; i++) {
+    //             var devInfo = deviceData[i];
+    //             var parentID = devInfo.p_id;
+    //
+    //             if (parentID != undefined && parentID != "") {
+    //                 var parentNode = nodeMap[parentID];
+    //                 if (parentNode == undefined || parentNode == null) {
+    //                     alert("设备 " + parentID + " 的父设备不存在");
+    //                 } else {
+    //                     if (parentNode.children == undefined) {
+    //                         parentNode.children = [];
+    //                     }
+    //                     parentNode.children.push(devInfo);
+    //                 }
+    //             } else {
+    //                 treeRoot.children.push(devInfo);
+    //             }
+    //         }
+    //     }
+    //     powerPlant.deviceTreeNodes = treeNodes;
+    // };
+    // setTimeout(function () {
+    //     // var nodes = powerPlant.treeNodes["nodes"];
+    //     // $('.title').html(powerPlant.treeNodes["name"]);
+    //     // var tree = $.fn.zTree.init($("#ztree"), powerPlant.treeSetting, nodes);
+    //     powerPlant.showAllDeviceTree(deviceList);
+    //     $('.title').html(powerPlant.deviceTreeNodes ["name"]);
+    //     var setting = {
+    //         check: {
+    //             enable: false, //是否显示checkbox或radio
+    //             chkStyle: "checkbox" //显示类型,可设置(checbox,radio)
+    //         },
+    //         view: {
+    //             dblClickExpand: true, //双击节点时，是否自动展开父节点的标识
+    //             expandSpeed: "", //节点展开、折叠时的动画速度, 可设置("","slow", "normal", or "fast")
+    //             selectedMulti: false, //设置是否允许同时选中多个节点
+    //             showIcon: false
+    //         },
+    //     };
+    //     console.log(powerPlant.deviceTreeNodes);
+    //     var tree = $.fn.zTree.init($("#ztree"), setting, powerPlant.deviceTreeNodes["nodes"]);
+    // }, 100);
+
+
+    (function($, h, c) {
+        var a = $([]),
+            e = $.resize = $.extend($.resize, {}),
+            i,
+            k = "setTimeout",
+            j = "resize",
+            d = j + "-special-event",
+            b = "delay",
+            f = "throttleWindow";
+        e[b] = 250;
+        e[f] = true;
+        $.event.special[j] = {
+            setup: function() {
+                if (!e[f] && this[k]) {
+                    return false;
+                }
+                var l = $(this);
+                a = a.add(l);
+                $.data(this, d, {
+                    w: l.width(),
+                    h: l.height()
+                });
+                if (a.length === 1) {
+                    g();
+                }
+            },
+            teardown: function() {
+                if (!e[f] && this[k]) {
+                    return false;
+                }
+                var l = $(this);
+                a = a.not(l);
+                l.removeData(d);
+                if (!a.length) {
+                    clearTimeout(i);
+                }
+            },
+            add: function(l) {
+                if (!e[f] && this[k]) {
+                    return false;
+                }
+                var n;
+                function m(s, o, p) {
+                    var q = $(this),
+                        r = $.data(this, d);
+                    r.w = o !== c ? o: q.width();
+                    r.h = p !== c ? p: q.height();
+                    n.apply(this, arguments);
+                }
+                if ($.isFunction(l)) {
+                    n = l;
+                    return m;
+                } else {
+                    n = l.handler;
+                    l.handler = m;
+                }
+            }
+        };
+        function g() {
+            i = h[k](function() {
+                    a.each(function() {
+                        var n = $(this),
+                            m = n.width(),
+                            l = n.height(),
+                            o = $.data(this, d);
+                        if (m !== o.w || l !== o.h) {
+                            n.trigger(j, [o.w = m, o.h = l]);
+                        }
+                    });
+                    g();
+                },
+                e[b]);
+        }
+    })(jQuery, this);
+
+    //自定义滚动条
+    $(document).ready(function () {
+        // var date = new Date().getTime();
+        // console.log(date);
+        var $wrap = $('#tree');
+        var $menu = $('#ztree');
+        var $scrollBar = $('#scrollBar');
+        var $bar = $('#scrollBar .bar');
+
+        $menu.resize(function () {
+            var wH = $wrap.height();
+            var mH = $menu.height();
+            var sH = $scrollBar.height();
+            var bH = $bar.height();
+
+            if (mH > wH) {
+                // console.log($bar.offset().top + ($menu.offset().top - 60) * ($scrollBar.height() / $menu.height()));
+                var barHeight = wH / mH * sH;
+                $scrollBar.css({
+                    display: 'inline-block'
+                });
+                $bar.height(
+                    barHeight
+                )
+                    .css({
+                        top:-1 -  ($menu.position().top)*(sH / mH),
+                    });
+
+                $wrap.mousewheel(function (event, delta) {
+                    var mPosition = $menu.position();
+                    var bPosition = $bar.position();
+                    wH = $wrap.height();
+                    mH = $menu.height();
+                    sH = $scrollBar.height();
+                    bH = $bar.height();
+                    // console.log(mPosition.top,-(mH-wH));
+                    if (mPosition.top >= -(mH-wH) && mPosition.top <= -1){
+                        $menu.css({
+                            top: mPosition.top + 10 * delta
+                        });
+                        $bar.css({
+                            top: bPosition.top - 10 * delta *(sH/mH)
+                        })
+                    }else if (mPosition.top < -(mH-wH)){
+                        $menu.css({
+                            top: -(mH-wH)
+                        });
+                        $bar.css({
+                            top: (sH-bH)
+                        });
+                    }else if(mPosition.top > -1){
+                        $menu.css({
+                            top: -1
+                        });
+                        $bar.css({
+                            top: -1
+                        });
+                    }
+                })
+            }else{
+                $scrollBar.css({
+                    display: 'none'
+                });
+                // $bar.height(
+                //     0
+                // ).offset({
+                //     top:69,
+                //     left: $bar.offset().left
+                // })
+            }
+        });
+    });
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -14,9 +14,10 @@
 var PowerPlant = {
     //气泡弹窗
     pickObjParent: null,
-    htmlBalloon: undefined,
+    htmlBalloon: null,
     //tree气泡
     treeBalloon:null,
+    treeDetailBalloon:null,
     propertyDiv: undefined,
     highLightObjects: [],
     cameraLayer: null,
@@ -1058,7 +1059,7 @@ PowerPlant.showDeviceInfo = function (pickedObject, objProperties) {
             //显示SIS MIS系统点选设备数
             PowerPlant.getDeviceInfoNodes(pickedObject, objProperties, deviceData);
             setTimeout(function () {//todo 将设备详情移至右端显示
-                PowerPlant.showPropertyTreeBallon(PowerPlant.sisTreeNodes);
+                PowerPlant.showDetailTreeBallon(PowerPlant.sisTreeNodes);
             }, 200);
         },
         error: function (e) {
@@ -1839,16 +1840,24 @@ PowerPlant.detailBtnClicked = function (objProperties) {
     PowerPlant.showDetailBalloon(detailInfo, rect, pos);
 };
 
-//关闭设备气泡
+//关闭设备总览及摄像总览树
 PowerPlant.closeDeviceBallon = function () {
-    if (PowerPlant.deviceBalloon != null) {
-        PowerPlant.deviceBalloon.DestroyObject();
-        PowerPlant.deviceBalloon = null;
+    if (PowerPlant.treeBalloon != null) {
+        PowerPlant.treeBalloon.DestroyObject();
+        PowerPlant.treeBalloon = null;
     }
-    ;
+
 };
 
-//显示设备树
+//关闭设备详情
+PowerPlant.closeTreeDetailBallon = function () {
+    if (PowerPlant.treeDetailBalloon != null) {
+        PowerPlant.treeDetailBalloon.DestroyObject();
+        PowerPlant.treeDetailBalloon = null;
+    }
+};
+
+//显示设备总览及摄像总览树
 PowerPlant.showPropertyTreeBallon = function (treeNodes) {
     PowerPlant.closeDeviceBallon();
     PowerPlant.treeNodes = treeNodes;
@@ -1867,6 +1876,38 @@ PowerPlant.showPropertyTreeBallon = function (treeNodes) {
     //balloon.SetBackgroundRGB(0x2167A3);
     var windowUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
     var url = windowUrl + '/ztreeTest.html';
+    LayerManagement.earth.Event.OnDocumentReadyCompleted = function (guid) {
+        if (guid == balloon.guid) {
+            //resizeEarthToolWindow();
+            //refreshEarthMenu();
+            // alert("completed");
+
+            // alert(PowerPlant.treeNodes.nodes.length);
+            PowerPlant.setDeviceBalloonParameters();
+        }
+    };
+    balloon.ShowNavigate(url);
+};
+
+//显示设备详情
+PowerPlant.showDetailTreeBallon = function (treeNodes) {
+    PowerPlant.closeTreeDetailBallon();
+    PowerPlant.treeNodes = treeNodes;
+    var balloon = LayerManagement.earth.Factory.CreateHtmlBalloon(LayerManagement.earth.Factory.CreateGuid(), PowerPlant.treeNodes.name);
+    PowerPlant.deviceBalloon = balloon;
+    balloon.SetRectSize(340, 1248);
+    var wW = window.innerWidth;
+    var wH = window.innerHeight;
+    balloon.SetScreenLocation(wW,40);
+    balloon.SetIsAddCloseButton(false);
+    balloon.SetIsAddMargin(false);
+    balloon.SetIsAddBackgroundImage(true);
+    balloon.SetIsTransparence(false);
+    balloon.SetBackgroundAlpha(0);
+    PowerPlant.treeDetailBalloon = balloon;
+    //balloon.SetBackgroundRGB(0x2167A3);
+    var windowUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
+    var url = windowUrl + '/ztreeTest1.html';
     LayerManagement.earth.Event.OnDocumentReadyCompleted = function (guid) {
         if (guid == balloon.guid) {
             //resizeEarthToolWindow();
