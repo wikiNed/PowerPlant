@@ -507,7 +507,7 @@ PowerPlant.setDetailContents = function (data) {
             propertyHtml += '<p class="detail">' + item.sgzxxsm + '</p>';
             propertyHtml += '<p class="start">' + item.ssjkssj + '</p>';
             propertyHtml += '<p class="end">' + item.ssjjssj + '</p>';
-            propertyHtml += '<p class="department">' + item.ssbzzrbm + '</p>';
+            propertyHtml += '<p class="department">设备维护部</p>';
             propertyHtml += '<p class="find">' + item.sfxrssbmName + '</p>';
             propertyHtml += '<p class="people">' + item.sfxr + '</p>';
             propertyHtml += '</li>';
@@ -536,7 +536,7 @@ PowerPlant.showDefectInfo = function (node) {
             var rect = {
                 width: 1250,
                 height: 290
-            }
+            };
             PowerPlant.showDetailBalloon(defectData, rect);
         },
         error: function (e) {
@@ -1731,7 +1731,7 @@ PowerPlant.createWorkCameraIcon = function (obj) {
         lat: obj.lat,
         alt: obj.alt,
     };
-    var iconObj = PowerPlant.createIconLabel("camerain", "icon\\sxt.png", pos, obj);
+    var iconObj = PowerPlant.createIconLabel("camerain", "icon\\sxt2.png", pos, obj);
 };
 
 /**
@@ -2627,7 +2627,7 @@ PowerPlant.highlightSearchDevice = function (node) {
         name = node.id.toUpperCase();
     }
     var layersArr = [];
-    var allDeviceLayers = PowerPlant._getLayerByName("yuneng");
+    var allDeviceLayers = PowerPlant._getLayerByName("榆能横电");
     addLayer(allDeviceLayers);
 
     function addLayer(layer) {
