@@ -69,6 +69,13 @@
 	 color: #fff;
 	 font-size: 16px;
  }
+ @media screen and (min-width: 2000px){
+	 #header{
+		 background: url("../images/newUI/title2.jpg");
+		 background-size: 100% 100%;
+	 }
+ }
+
  #line{
 	 position: absolute;
 	 bottom: 0;
