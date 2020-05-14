@@ -7,13 +7,15 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
     <meta http-equiv="Expires" content="0" />
-    <script>
-        document.write("<link type='text/css' href='css/demo.css?version=" + new Date().getTime() + "' rel='stylesheet' />");
-    </script>
     <style>
         *{
             margin:0;
-            padding:0
+            padding:0;
+            box-sizing: content-box;
+            -moz-box-sizing: inherit;
+            -webkit-box-sizing: inherit;
+            /*解决幽灵节点*/
+            font-size: 0;
         }
 
         .content{
@@ -61,6 +63,7 @@
             color:red;
         }
         .noInfo{
+            padding-top: 10px;
             text-align: center;
             vertical-align:middle;
             font-size: 25px;
@@ -87,19 +90,31 @@
             vertical-align:middle;
         }
         .mis ul li p.detail{
-            width: 22%;
+            width: 20%;
         }
+        .mis ul li p.start{
+            width: 12%;
+        }
+        .mis ul li p.end{
+            width: 12%;
+        }
+
         .mis ul li.detailTitle{
             height: 40px;
             border-bottom: 2px solid rgb(30,138,166);
         }
+        .mis ul li.detailTitle p{
+            padding-top: 10px;
+            /*line-height: 40px;*/
+            font-size: 18px;
+        }
+
         .mis ul li.detailContent{
             padding: 10px 0 10px 20px;
             border-bottom: 1px solid rgb(30,138,166);
         }
-        .mis ul li.detailTitle p{
-            line-height: 40px;
-            font-size: 18px;
+        .mis ul li.detailContent p{
+            font-size: 16px;
         }
     </style>
 </head>
@@ -119,71 +134,62 @@
             </div>
 
             <div class="mis">
-<!--                <ul>-->
-<!--                    <li class="detailTitle">-->
-<!--                        <p class="number">缺陷编码</p>-->
-<!--                        <p class="detail">缺陷描述</p>-->
-<!--                        <p class="start">开始时间</p>-->
-<!--                        <p class="end">结束时间</p>-->
-<!--                        <p class="department">第一责任部门</p>-->
-<!--                        <p class="find">发现部门</p>-->
-<!--                        <p class="people">缺陷发现人员</p>-->
-<!--                    </li>-->
-<!--                    <li class="detailContent">-->
-<!--                        <p class="number">sadsadasdsadsad</p>-->
-<!--                        <p class="detail">sdsasadsadasdsadsadsahdgsadgsakjdgksadhkjsadsakdhksahdksahdkjsahdkjsahdksahdk</p>-->
-<!--                        <p class="start">2019-10-12 08:34</p>-->
-<!--                        <p class="end">2019-10-12 08:34</p>-->
-<!--                        <p class="department">105000160</p>-->
-<!--                        <p class="find">发电运行部</p>-->
-<!--                        <p class="people">高庆</p>-->
-<!--                    </li>-->
-<!--                    <li class="detailContent">-->
-<!--                        <p class="number">sadsadasdsadsad</p>-->
-<!--                        <p class="detail">sdsasadsadasdsadsadsahdgsadgsakjdgksadhkjsadsakdhksahdksahdkjsahdkjsahdksahdk</p>-->
-<!--                        <p class="start">2019-10-12 08:34</p>-->
-<!--                        <p class="end">2019-10-12 08:34</p>-->
-<!--                        <p class="department">105000160</p>-->
-<!--                        <p class="find">发电运行部</p>-->
-<!--                        <p class="people">高庆</p>-->
-<!--                    </li>-->
-<!--                    <li class="detailContent">-->
-<!--                        <p class="number">sadsadasdsadsad</p>-->
-<!--                        <p class="detail">sdsasadsadasdsadsadsahdgsadgsakjdgksadhkjsadsakdhksahdksahdkjsahdkjsahdksahdk</p>-->
-<!--                        <p class="start">2019-10-12 08:34</p>-->
-<!--                        <p class="end">2019-10-12 08:34</p>-->
-<!--                        <p class="department">105000160</p>-->
-<!--                        <p class="find">发电运行部</p>-->
-<!--                        <p class="people">高庆</p>-->
-<!--                    </li>-->
-<!--                    <li class="detailContent">-->
-<!--                        <p class="number">sadsadasdsadsad</p>-->
-<!--                        <p class="detail">sdsasadsadasdsadsadsahdgsadgsakjdgksadhkjsadsakdhksahdksahdkjsahdkjsahdksahdk</p>-->
-<!--                        <p class="start">2019-10-12 08:34</p>-->
-<!--                        <p class="end">2019-10-12 08:34</p>-->
-<!--                        <p class="department">105000160</p>-->
-<!--                        <p class="find">发电运行部</p>-->
-<!--                        <p class="people">高庆</p>-->
-<!--                    </li>-->
-<!--                    <li class="detailContent">-->
-<!--                        <p class="number">sadsadasdsadsad</p>-->
-<!--                        <p class="detail">sdsasadsadasdsadsadsahdgsadgsakjdgksadhkjsadsakdhksahdksahdkjsahdkjsahdksahdk</p>-->
-<!--                        <p class="start">2019-10-12 08:34</p>-->
-<!--                        <p class="end">2019-10-12 08:34</p>-->
-<!--                        <p class="department">105000160</p>-->
-<!--                        <p class="find">发电运行部</p>-->
-<!--                        <p class="people">高庆</p>-->
-<!--                    </li>-->
-<!--                    <li class="detailContent">-->
-<!--                        <p class="number">sadsadasdsadsad</p>-->
-<!--                        <p class="detail">sdsasadsadasdsadsadsahdgsadgsakjdgksadhkjsadsakdhksahdksahdkjsahdkjsahdksahdk</p>-->
-<!--                        <p class="start">2019-10-12 08:34</p>-->
-<!--                        <p class="end">2019-10-12 08:34</p>-->
-<!--                        <p class="department">105000160</p>-->
-<!--                        <p class="find">发电运行部</p>-->
-<!--                        <p class="people">高庆</p>-->
-<!--                    </li>-->
-<!--                </ul>-->
+                <ul>
+                    <li class="detailTitle">
+                        <p class="number">缺陷编码</p>
+                        <p class="detail">缺陷描述</p>
+                        <p class="start">开始时间</p>
+                        <p class="end">结束时间</p>
+                        <p class="department">第一责任部门</p>
+                        <p class="find">发现部门</p>
+                        <p class="people">缺陷发现人员</p>
+                    </li>
+                    <li class="detailContent">
+                        <p class="number">sadsadasdsadsad</p>
+                        <p class="detail">sdsasadsadasdsadsadsahdgsadgsakjdgksadhkjsadsakdhksahdksahdkjsahdkjsahdksahdk</p>
+                        <p class="start">2019-10-12 08:34</p>
+                        <p class="end">2019-10-12 08:34</p>
+                        <p class="department">105000160</p>
+                        <p class="find">发电运行部</p>
+                        <p class="people">高庆</p>
+                    </li>
+                    <li class="detailContent">
+                        <p class="number">sadsadasdsadsad</p>
+                        <p class="detail">sdsasadsadasdsadsadsahdgsadgsakjdgksadhkjsadsakdhksahdksahdkjsahdkjsahdksahdk</p>
+                        <p class="start">2019-10-12 08:34</p>
+                        <p class="end">2019-10-12 08:34</p>
+                        <p class="department">105000160</p>
+                        <p class="find">发电运行部</p>
+                        <p class="people">高庆</p>
+                    </li>
+                    <li class="detailContent">
+                        <p class="number">sadsadasdsadsad</p>
+                        <p class="detail">sdsasadsadasdsadsadsahdgsadgsakjdgksadhkjsadsakdhksahdksahdkjsahdkjsahdksahdk</p>
+                        <p class="start">2019-10-12 08:34</p>
+                        <p class="end">2019-10-12 08:34</p>
+                        <p class="department">105000160</p>
+                        <p class="find">发电运行部</p>
+                        <p class="people">高庆</p>
+                    </li>
+                    <li class="detailContent">
+                        <p class="number">sadsadasdsadsad</p>
+                        <p class="detail">sdsasadsadasdsadsadsahdgsadgsakjdgksadhkjsadsakdhksahdksahdkjsahdkjsahdksahdk</p>
+                        <p class="start">2019-10-12 08:34</p>
+                        <p class="end">2019-10-12 08:34</p>
+                        <p class="department">105000160</p>
+                        <p class="find">发电运行部</p>
+                        <p class="people">高庆</p>
+                    </li>
+                    <li class="detailContent">
+                        <p class="number">sadsadasdsadsad</p>
+                        <p class="detail">sdsasadsadasdsadsadsahdgsadgsakjdgksadhkjsadsakdhksahdksahdkjsahdkjsahdksahdk</p>
+                        <p class="start">2019-10-12 08:34</p>
+                        <p class="end">2019-10-12 08:34</p>
+                        <p class="department">105000160</p>
+                        <p class="find">发电运行部</p>
+                        <p class="people">高庆</p>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
