@@ -27,13 +27,13 @@
         }
 
         #wrap {
-            background: url("./images/newUI/access.png");
+            background: url("./images/newUI/access.jpg");
             color: #23899f;
-            width: 258px;
-            height: 236px;
+            width: 535px;
+            height: 260px;
             font-size: 14px;
             letter-spacing: 1px;
-            border: 1px solid rgba(35,137,159,0.5);
+            border: 1px solid rgba(35, 137, 159, 0.5);
         }
 
         #wrap p {
@@ -41,7 +41,7 @@
         }
 
         #wrap .head {
-            width: 260px;
+            width: 535px;
             height: 30px;
             color: #fff;
             position: relative;
@@ -76,17 +76,18 @@
         #wrap .head #close:hover {
             color: red;
         }
+
         #wrap div.title {
             width: 258px;
             height: 20px;
             /*margin-top: 2px;*/
-            border: 1px solid rgba(35,137,159,0.5);
+            border: 1px solid rgba(35, 137, 159, 0.5);
         }
 
         .title .name {
             width: 29%;
             text-align: center;
-            border-right: 1px solid rgba(35,137,159,0.5);
+            border-right: 1px solid rgba(35, 137, 159, 0.5);
         }
 
         .title .time {
@@ -94,54 +95,97 @@
             text-align: center;
         }
 
-        .hidden{
-            height: 185px;
+        .left, .right {
+            position: absolute;
+            top: 30px;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 258px;
+        }
+
+        .hidden {
+            height: 210px;
             overflow: hidden;
         }
 
         .hidden .name {
             width: 29%;
             text-align: center;
-            border-right: 1px solid rgba(35,137,159,0.5);
+            border-right: 1px solid rgba(35, 137, 159, 0.5);
         }
 
         .hidden .time {
             width: 69%;
             text-align: center;
         }
-        ul {
+
+        .hidden ul {
             width: 258px;
             /*margin-top: 2px;*/
-            border: 1px solid rgba(35,137,159,0.5);
+            border: 1px solid rgba(35, 137, 159, 0.5);
         }
 
-        ul li {
+        .hidden ul li {
             width: 100%;
             margin-top: 1px;
             cursor: pointer;
-            border-bottom: 1px solid rgba(35,137,159,0.5);
+            border-bottom: 1px solid rgba(35, 137, 159, 0.5);
         }
 
-        ul li:hover {
+        .hidden ul li:hover {
             color: #fff;
         }
 
+        .right .detail_title,.right .detail_msg,.right .detail_img{
+            position: absolute;
+        }
+
+        .right p.detail_title{
+            left: 0;
+            top: 20px;
+            width: 278px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #23b3cf;
+        }
+
+        .right .detail_img{
+            left: 180px;
+            top: 60px;
+        }
+
+        .right .detail_msg{
+            left: 16px;
+            top: 60px;
+            width: 150px;
+        }
+
+        .right .detail_msg ul li{
+            height: 24px;
+        }
     </style>
 </head>
 <body>
-    <div id="wrap">
-        <div class="head">
-            <i>
-                <img src="./images/tools/属性查询.png" alt="">
-            </i>
-            <p class="title">
-                门禁信息
-            </p>
-            <p id="close">
-                ×
-            </p>
-        </div>
-        <!--        <div class="total">今日刷卡总次数：<p class="total">211</p>次</div>-->
+<div id="wrap">
+    <div class="head">
+        <i>
+            <img src="./images/tools/属性查询.png" alt="">
+        </i>
+        <p class="title">
+            门禁信息
+        </p>
+        <p id="close">
+            ×
+        </p>
+    </div>
+    <div class="left">
         <div class="title">
             <p class="name">姓名</p>
             <p class="time">进出时间</p>
@@ -151,94 +195,156 @@
 
             </ul>
         </div>
-
+    </div>
+    <div class="right">
+        <p class="detail_title"> 详细信息</p>
+        <div class="detail_img">
+            <img id="img" src="" alt="" width="83" height="112">
+        </div>
+        <div class="detail_msg">
+            <ul>
+                <li>编号：<p class="userID"></p></li>
+                <li>姓名：<p class="userName"></p></li>
+                <li>性别：<p class="sexName"></p></li>
+                <li>民族：<p class="nation"></p></li>
+                <li>部门名称：<p class="departmentName"></p></li>
+            </ul>
+        </div>
     </div>
 
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        let powerPlant;
-        let ajaxValue;
+</div>
 
-        function setParameters(parameter) {
-            powerPlant = parameter.pp;
-            ajaxValue = powerPlant.accessMsg;
-        };
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    let powerPlant;
+    let ajaxValue;
+
+    function setParameters(parameter) {
+        powerPlant = parameter.pp;
+        ajaxValue = powerPlant.accessMsg;
+    };
+
+    //循环动画
+    // setInterval(function () {
+    //     var $self = $('#wrap ul');
+    //     var lineHeight = $self.find("li:first").height();
+    //     $self.animate({
+    //         "marginTop": -lineHeight + "px"
+    //     }, 2000, 'linear', function () {
+    //         $self.css({
+    //             marginTop: 0
+    //         }).find("li:first").appendTo($self);
+    //     })
+    // }, 2000);
 
 
-        setInterval(function () {
-            var $self = $('#wrap ul');
-            var lineHeight = $self.find("li:first").height();
-            $self.animate({
-                "marginTop": -lineHeight + "px"
-            }, 2000, 'linear', function () {
-                $self.css({
-                    marginTop: 0
-                }).find("li:first").appendTo($self);
+    $.extend({
+        updateAccess: function () {
+            let htmlStr = "";
+            $.ajax({
+                type: "GET",
+                url: "http://10.2.1.16/app/rest/mjxt?type="+ajaxValue,
+                // url: "http://10.2.1.16/app/rest/mjxt?type=BGL",
+                data: "",
+                // dataType: "json",
+                // contentType:"application/json",
+                success: function (data) {
+                    console.log(data);
+                    data.list.forEach(function (item, index) {
+                        if (item.userName == null) {
+                            item.userName = "佚名";
+                        }
+
+                        htmlStr += '<li value="' + item.userID + '"><p class="name">' + item.userName + '</p><p class="time">' + item.eventTime.split('.')[0] + '</p></li>'
+                    });
+                    $('#wrap .hidden ul').html(htmlStr);
+                    searchDetail(data.list[0].userID);
+                    addHoverListener();
+                },
+                error: function (e) {
+                    $('#wrap .hidden ul').html("服务器错误");
+                }
+
             })
-        }, 2000);
+        }
+    });
+    setTimeout('$.updateAccess()', 200);
+    setInterval('$.updateAccess()',20000);
 
 
-        $.extend({
-            updateAccess:function () {
-                let htmlStr = "";
-                $.ajax({
-                    type: "GET",
-                    url: "http://10.2.1.16/app/rest/mjxt?type="+ajaxValue,
-                    //url: "http://10.2.1.16/app/rest/mjxt?type=BGL",
-                    data: "",
-                    // dataType: "json",
-                    // contentType:"application/json",
-                    success: function (data) {
-                        //console.log(ajaxValue);
-                        console.log(data);
-                        data.list.forEach(function (item,index) {
-                            if( item.userName == null ){
-                                item.userName = "佚名";
-                            };
-                            htmlStr += '<li><p class="name">' + item.userName + '</p><p class="time">' + item.eventTime.split('.')[0] + '</p></li>'
-                        });
-                        $('#wrap ul').html(htmlStr);
-                    },
-                    error: function (e) {
-                        $('#wrap ul').html("服务器错误");
-                    }
+    $('#close').click(function () {
+        powerPlant.closeAccessHtmlBalloon();
+    });
 
-                })
+    /*
+    * 通过唯一id获取详情
+    * param userID
+    * */
+    function searchDetail(userID) {
+        $.ajax({
+            type: "GET",
+            url: "http://10.2.1.16/app/rest/mjxtByUserId?userId=" + userID,
+            data: "",
+            dataType: "json",                   //GET接收信息为JSON
+            // contentType:"application/json",  //POST发送信息为JSON
+            success: function (data) {
+                console.log(data.list[0]);
+                var msg = data.list[0];
+                var id = msg.userID ? msg.userID:'无信息';
+                var name = msg.userName ? msg.userName:'无信息';
+                var sex = msg.sexName ? msg.sexName:'无信息';
+                var nation = msg.nation ? msg.nation:'无信息';
+                var department = msg.departmentName ? msg.departmentName:'无信息';
+                $('.userID').html(id);
+                $('.userName').html(name);
+                $('.sexName').html(sex);
+                $('.nation').html(nation);
+                $('.departmentName').html(department);
+                if (msg.photo) {
+                    $('#img').attr('src', 'data:img/png;base64,' + msg.photo);
+                } else {
+                    $('#img').attr('src', './images/newUI/nophoto.jpg');
+                }
+            },
+            error: function (e) {
+                console.log(e);
             }
         });
-        setTimeout('$.updateAccess()',200);
-        setInterval('$.updateAccess()',20000);
+    }
+
+    function addHoverListener() {
+        var liArr = $('.hidden ul li');
+        console.log(liArr);
+        liArr.click(function () {
+            console.log($(this).attr('value'));
+            searchDetail($(this).attr('value'));
+        })
+    }
+
+    //websocket
+    // let websocket = null;
+    // if ('WebSocket' in window) {
+    //     websocket = new WebSocket("ws://10.2.1.16/websocketService/BGL");
+    // } else if ('MozWebSocket' in window) {
+    //     websocket = new MozWebSocket("ws://10.2.1.16/websocketService/BGL");
+    // }
+    //
+    //
+    // websocket.onopen = function (event) {
+    //     websocket.send("");
+    // };
+    //
+    // websocket.onmessage = function (event) {
+    //     //websocket.send("");
+    //     console.log(event.data);
+    // };
+    //
+    // window.onbeforeunload = function () {
+    //     websocket.close();
+    // }
 
 
-        $('#close').click(function () {
-            powerPlant.closeAccessHtmlBalloon();
-        });
-
-
-        //websocket
-        // let websocket = null;
-        // if ('WebSocket' in window) {
-        //     websocket = new WebSocket("ws://10.2.1.16/websocketService/BGL");
-        // } else if ('MozWebSocket' in window) {
-        //     websocket = new MozWebSocket("ws://10.2.1.16/websocketService/BGL");
-        // }
-        //
-        //
-        // websocket.onopen = function (event) {
-        //     websocket.send("");
-        // };
-        //
-        // websocket.onmessage = function (event) {
-        //     //websocket.send("");
-        //     console.log(event.data);
-        // };
-        //
-        // window.onbeforeunload = function () {
-        //     websocket.close();
-        // }
-
-
-    </script>
+</script>
 </body>
 </html>
 

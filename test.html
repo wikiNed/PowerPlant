@@ -2,44 +2,67 @@
 <html lang="en">
 <head>
 
-    <title>Video.js | HTML5 Video Player</title>
-    <!-- <link href="video-js-6.2.0/video-js.css" rel="stylesheet">
-    <script src="video-js-6.2.0/videojs-ie8.min.js"></script> -->
 
 </head>
 <body>
-
-<!--    <video id="example_video_1" class="video-js vjs-default-skin" controls preload="auto" width="1280" height="720" poster="http://vjs.zencdn.net/v/oceans.png" data-setup="{}">-->
-<!--        &lt;!&ndash; <source src="1.mp4" type="video/mp4"> &ndash;&gt;-->
-<!--        <source src="rtmp://47.107.54.185:11935/hls/34020000001110000001_34020000001320000001_0200000001" type="rtmp/flv">-->
-
-<!--    </video>-->
+    <div id="wrap">
+        <img id="img" src="" alt="">
+    </div>
 
     <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
     <script>
+        // $.ajax({
+        //     type: "GET",
+        //     url: "http://10.2.1.16/app/rest/pi",
+        //     data:"",
+        //     dataType: "json",                   //GET接收信息为JSON
+        //     // contentType:"application/json",  //POST发送信息为JSON
+        //     success: function(data){
+        //         console.log(data.list);
+        //         // var str = JSON.parse(data);
+        //         // console.log(str);
+        //         var arr1=[],arr2=[];
+        //         data.list.forEach(function (item,index) {
+        //             if( item.type == '1#' ){
+        //                 arr1.push(item)
+        //             }else if(item.type == '2#'){
+        //                 arr2.push(item);
+        //             }
+        //         });
+        //         console.log(arr1,arr2);
+        //     },
+        //      error:function(e){
+        //          console.log(e);
+        //      }
+        // });
         $.ajax({
             type: "GET",
-            url: "http://10.2.1.16/app/rest/pi",
+            url: "http://10.2.1.16/app/rest/mjxt?type=BGL",
             data:"",
             dataType: "json",                   //GET接收信息为JSON
             // contentType:"application/json",  //POST发送信息为JSON
             success: function(data){
-                console.log(data.list);
-                // var str = JSON.parse(data);
-                // console.log(str);
-                var arr1=[],arr2=[];
-                data.list.forEach(function (item,index) {
-                    if( item.type == '1#' ){
-                        arr1.push(item)
-                    }else if(item.type == '2#'){
-                        arr2.push(item);
-                    }
-                });
-                console.log(arr1,arr2);
+                console.log(data);
             },
-             error:function(e){
-                 console.log(e);
-             }
+            error:function(e){
+                console.log(e);
+            }
+        });
+
+        $.ajax({
+            type: "GET",
+            url: "http://10.2.1.16/app/rest/mjxtByUserId?userId=ynhd02-108",
+            data:"",
+            dataType: "json",                   //GET接收信息为JSON
+            // contentType:"application/json",  //POST发送信息为JSON
+            success: function(data){
+                console.log(data.list[0]);
+                $('img').attr('src','data:img/png;base64,' + data.list[0].photo);
+
+            },
+            error:function(e){
+                console.log(e);
+            }
         });
 
         // $.ajax({
@@ -56,6 +79,7 @@
         //         alert(textStatus);
         //     }
         // });
+
     </script>
 </body>
 </html>

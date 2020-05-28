@@ -974,7 +974,7 @@ PowerPlant.getDeviceInfoNodes = function (pickedObject, objProperties, data) {
             }
         })
     }
-    ;
+
     //PowerPlant.getCameraNodes(objProperties, treeNodes, 40);
     PowerPlant.sisTreeNodes = treeNodes;
 };
@@ -1155,7 +1155,7 @@ PowerPlant.showBuildingInfo = function (pickedObject, objProperties, value) {//b
     // PowerPlant.showFireControl(objType);
     var balloon = LayerManagement.earth.Factory.CreateHtmlBalloon(LayerManagement.earth.Factory.CreateGuid(), 'access');
     PowerPlant.accessHtmlBallon = balloon;
-    balloon.SetRectSize(280, 236);
+    balloon.SetRectSize(555, 280);
     balloon.SetSphericalLocation(position.lng, position.lat, position.alt);
     // balloon.SetScreenLocation(500, 500);
     balloon.SetTailColor(parseInt("0xff03132c"));
