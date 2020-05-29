@@ -34,6 +34,7 @@ var PowerPlant = {
     imgHeight: 415,
     widthcamera: 438,
     heightcamera: 360,
+    nowCameraIp:'',
     imgPosition: {},
     //1.属性 2.视频监控
     cameraIp: [
@@ -1658,14 +1659,15 @@ PowerPlant.showCameraIcon = function (cameraObject, index, ipIndex) {
 /**
  * 创建标注，并将标注对象以其GUID作为key进行存储
  * @argument iconPath 原始图标路径（未转换格式）
+ * @argument iconPath1 原始高亮图标路径（未转换格式）
  * @argument pos 要创建图标的位置
  * @argument obj 要标注的对象
  * @memberof PowerPlant
  *
  * @return 标注对象
  */
-PowerPlant.createIconLabel = function (type, iconPath, pos, obj, index, ipIndex) {
-    var cameraIconInfo = PowerPlant.getIconInfo(iconPath);
+PowerPlant.createIconLabel = function (type, iconPath,iconPath1, pos, obj, index, ipIndex) {
+    var cameraIconInfo = PowerPlant.getIconInfo(iconPath,iconPath1);
     var guid = earth.Factory.CreateGuid();
     var iconObject = earth.Factory.CreateElementIcon(guid, cameraIconInfo.name);
     iconObject.Visibility = false;
@@ -1721,7 +1723,7 @@ PowerPlant.createIconLabel = function (type, iconPath, pos, obj, index, ipIndex)
  */
 PowerPlant.createCameraIcon = function (obj, campProperties, index, ipIndex) {
     var pos = campProperties.position;
-    var iconObj = PowerPlant.createIconLabel("cameraout", "icon\\camera32.png", pos, obj, index, ipIndex);
+    var iconObj = PowerPlant.createIconLabel("cameraout", "icon\\camera32.png","icon\\camera32.png", pos, obj, index, ipIndex);
 };
 
 //内部摄像头
@@ -1731,7 +1733,7 @@ PowerPlant.createWorkCameraIcon = function (obj) {
         lat: obj.lat,
         alt: obj.alt,
     };
-    var iconObj = PowerPlant.createIconLabel("camerain", "icon\\sxt2.png", pos, obj);
+    var iconObj = PowerPlant.createIconLabel("camerain", "icon\\sxt32.png","icon\\sxt32.png", pos, obj);
 };
 
 /**
@@ -1766,7 +1768,7 @@ PowerPlant._getConvertedIcon = function (iconSrcPath) {
  */
 //监控图标初始化
 /*PowerPlant.initCameraIcon = function() {*/
-PowerPlant.getIconInfo = function (iconSrcPath) {
+PowerPlant.getIconInfo = function (iconSrcPath,iconSrcPath1) {
     var iconInfo = {};
     iconInfo.type = 209;
     //设置标注的默认值
@@ -1775,8 +1777,9 @@ PowerPlant.getIconInfo = function (iconSrcPath) {
     iconInfo.desc = "";
 
     var rootPath = PowerPlant._getConvertedIcon(iconSrcPath);
+    var rootPath1 = PowerPlant._getConvertedIcon(iconSrcPath1);
     iconInfo.iconNormalFileName = rootPath;
-    iconInfo.iconSelectedFileName = rootPath;
+    iconInfo.iconSelectedFileName = rootPath1;
 
     var transparency = parseInt(255).toString(16);
     var textColor = "#ffffff";
@@ -2741,9 +2744,11 @@ PowerPlant.showHikVideo = function (node) {
     var htmlBalloon = PowerPlant.createHtmlBalloon(guid, "URL气泡");
     var wW = window.innerWidth;
     var wH = window.innerHeight;
+    PowerPlant.nowCameraIp = '';
     PowerPlant.workCameraProperty = {};
     PowerPlant.workCameraProperty.ip = node.ip;
     PowerPlant.workCameraProperty.password = node.password;
+    alert('or'+node.ip+','+node.password);
     htmlBalloon.SetRectSize(700, 435);
     htmlBalloon.SetScreenLocation(wW / 2, wH / 2 + 200);
     PowerPlant.htmlBalloon = htmlBalloon;

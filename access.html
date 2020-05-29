@@ -241,15 +241,16 @@
     $.extend({
         updateAccess: function () {
             let htmlStr = "";
+            let n = Math.random();
             $.ajax({
                 type: "GET",
-                url: "http://10.2.1.16/app/rest/mjxt?type="+ajaxValue,
-                //url: "http://10.2.1.16/app/rest/mjxt?type=BGL",
+                url: "http://10.2.1.16/app/rest/mjxt?type="+ajaxValue+"&"+n,
+                //url: "http://10.2.1.16/app/rest/mjxt?type=BGL&"+n,
                 data: "",
                 // dataType: "json",
                 // contentType:"application/json",
                 success: function (data) {
-                    console.log(data);
+                    // alert(JSON.stringify(data.list));
                     data.list.forEach(function (item, index) {
                         if (item.userName == null) {
                             item.userName = "佚名";
@@ -314,7 +315,7 @@
 
     function addHoverListener() {
         var liArr = $('.hidden ul li');
-        console.log(liArr);
+        // console.log(liArr);
         liArr.click(function () {
             console.log($(this).attr('userID'));
             searchDetail($(this).attr('userID'));
