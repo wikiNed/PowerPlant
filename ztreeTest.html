@@ -117,14 +117,14 @@
         .content .head i {
             position: absolute;
             left: 10px;
-            top: 12px;
+            top: 14px;
         }
 
         .content .head p.title {
             position: absolute;
             left: 32px;
             top: 12px;
-            font-size: 16px;
+            font-size: 20px;
             letter-spacing: 3px;
         }
 
@@ -151,8 +151,9 @@
             top: 0;
             left: 0;
         }
-        #ztree li span{
-
+        .ztree *{
+            font-size: 20px;
+            font-family: "Microsoft YaHei", serif;
         }
 
         #scrollBar {
@@ -236,66 +237,66 @@
         var tree = $.fn.zTree.init($("#ztree"), powerPlant.treeSetting, nodes);
     },200);
 
-    // powerPlant.showAllDeviceTree = function (data) {
-    //     var treeNodes = {
-    //         "name": "设备总览",
-    //         "nodes": []
-    //     };
-    //     var treeRoot = {
-    //         "id": "device",
-    //         "name": "设备",
-    //         "desc": "dev1",
-    //         "children": []
-    //     };
-    //     treeNodes.nodes.push(treeRoot);
-    //     var nodeMap = {};
-    //     data.forEach(function (item) {
-    //         nodeMap[item.id] = item;
-    //     });
-    //     var deviceData = data;
-    //     if (deviceData != undefined && deviceData != null) {
-    //         for (var i = 0, l = deviceData.length; i < l; i++) {
-    //             var devInfo = deviceData[i];
-    //             var parentID = devInfo.p_id;
-    //
-    //             if (parentID != undefined && parentID != "") {
-    //                 var parentNode = nodeMap[parentID];
-    //                 if (parentNode == undefined || parentNode == null) {
-    //                     alert("设备 " + parentID + " 的父设备不存在");
-    //                 } else {
-    //                     if (parentNode.children == undefined) {
-    //                         parentNode.children = [];
-    //                     }
-    //                     parentNode.children.push(devInfo);
-    //                 }
-    //             } else {
-    //                 treeRoot.children.push(devInfo);
-    //             }
-    //         }
-    //     }
-    //     powerPlant.deviceTreeNodes = treeNodes;
-    // };
-    // setTimeout(function () {
-    //     // var nodes = powerPlant.treeNodes["nodes"];
-    //     // $('.title').html(powerPlant.treeNodes["name"]);
-    //     // var tree = $.fn.zTree.init($("#ztree"), powerPlant.treeSetting, nodes);
-    //     powerPlant.showAllDeviceTree(deviceList);
-    //     $('.title').html(powerPlant.deviceTreeNodes ["name"]);
-    //     var setting = {
-    //         check: {
-    //             enable: false, //是否显示checkbox或radio
-    //             chkStyle: "checkbox" //显示类型,可设置(checbox,radio)
-    //         },
-    //         view: {
-    //             dblClickExpand: true, //双击节点时，是否自动展开父节点的标识
-    //             expandSpeed: "", //节点展开、折叠时的动画速度, 可设置("","slow", "normal", or "fast")
-    //             selectedMulti: false, //设置是否允许同时选中多个节点
-    //             showIcon: false
-    //         },
-    //     };
-    //     console.log(powerPlant.deviceTreeNodes);
-    //     var tree = $.fn.zTree.init($("#ztree"), setting, powerPlant.deviceTreeNodes["nodes"]);
-    // }, 100);
+    powerPlant.showAllDeviceTree = function (data) {
+        var treeNodes = {
+            "name": "设备总览",
+            "nodes": []
+        };
+        var treeRoot = {
+            "id": "device",
+            "name": "设备",
+            "desc": "dev1",
+            "children": []
+        };
+        treeNodes.nodes.push(treeRoot);
+        var nodeMap = {};
+        data.forEach(function (item) {
+            nodeMap[item.id] = item;
+        });
+        var deviceData = data;
+        if (deviceData != undefined && deviceData != null) {
+            for (var i = 0, l = deviceData.length; i < l; i++) {
+                var devInfo = deviceData[i];
+                var parentID = devInfo.p_id;
+
+                if (parentID != undefined && parentID != "") {
+                    var parentNode = nodeMap[parentID];
+                    if (parentNode == undefined || parentNode == null) {
+                        alert("设备 " + parentID + " 的父设备不存在");
+                    } else {
+                        if (parentNode.children == undefined) {
+                            parentNode.children = [];
+                        }
+                        parentNode.children.push(devInfo);
+                    }
+                } else {
+                    treeRoot.children.push(devInfo);
+                }
+            }
+        }
+        powerPlant.deviceTreeNodes = treeNodes;
+    };
+    setTimeout(function () {
+        // var nodes = powerPlant.treeNodes["nodes"];
+        // $('.title').html(powerPlant.treeNodes["name"]);
+        // var tree = $.fn.zTree.init($("#ztree"), powerPlant.treeSetting, nodes);
+        powerPlant.showAllDeviceTree(deviceList);
+        $('.title').html(powerPlant.deviceTreeNodes ["name"]);
+        var setting = {
+            check: {
+                enable: false, //是否显示checkbox或radio
+                chkStyle: "checkbox" //显示类型,可设置(checbox,radio)
+            },
+            view: {
+                dblClickExpand: true, //双击节点时，是否自动展开父节点的标识
+                expandSpeed: "", //节点展开、折叠时的动画速度, 可设置("","slow", "normal", or "fast")
+                selectedMulti: false, //设置是否允许同时选中多个节点
+                showIcon: false
+            },
+        };
+        console.log(powerPlant.deviceTreeNodes);
+        var tree = $.fn.zTree.init($("#ztree"), setting, powerPlant.deviceTreeNodes["nodes"]);
+    }, 100);
 
 
     (function($, h, c) {

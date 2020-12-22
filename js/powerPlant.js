@@ -34,7 +34,7 @@ var PowerPlant = {
     imgHeight: 415,
     widthcamera: 438,
     heightcamera: 360,
-    nowCameraIp:'',
+    nowCameraIp: '',
     imgPosition: {},
     //1.属性 2.视频监控
     cameraIp: [
@@ -310,7 +310,7 @@ PowerPlant.getKeyName = function (type, key) {
 
 PowerPlant.getFullUrl = function (url) {
     return window.location.href.substring(0, window.location.href.lastIndexOf('/')) + url;
-}
+};
 
 
 /**
@@ -325,9 +325,38 @@ PowerPlant.Init = function () {
     //PowerPlant.initSearchIcon();
     PowerPlant.InitTree();
     PowerPlant.setPowerPlantQuery();
+    //设置漫游角色移动速度
+    earth.Environment.ActorWalkingVolocity = 5;
+    earth.Environment.ActorRunningVolocity = 10;
+    //阻止惯性旋转
+    earth.Environment.EnableMouseMoveMessage = true;
+    earth.Event.OnLBDown = function () {
+        earth.Event.OnMouseMove = function () {
+            setTimeout(function () {
+                earth.GlobeObserver.Stop();
+            },500)
+        }
+    };
+
+    // 109.421892,38.037032,1085.43
+    // 109.422063,38.028758,1124.90
+    // 109.405988,38.029285,1081.80
+    // 109.405943,38.037254,1079.20
+
     setTimeout(function () {
         PowerPlant.showAllCamera();
         PowerPlant.showAllWorkCamera();
+        // earth.Event.OnLBDown = function(){
+        //         earth.Event.OnMouseMove = function () {
+        //             var tPose= earth.GlobeObserver.TargetPose;
+        //             var lng = tPose.longitude.toFixed(7);
+        //             var lat = tPose.latitude.toFixed(7);
+        //             if (Number(lng) > 109.422063 || Number(lng) < 109.405943 || Number(lat) > 38.037254 || Number(lat) < 38.028758){
+        //                 alert(1);
+        //                 earth.GlobeObserver.Stop();
+        //             }
+        //         };
+        // };
     }, 10000)
 };
 
@@ -814,6 +843,7 @@ PowerPlant.objectPickedEx = function (pickedObject) {
     //alert(objType);
     if (objType == "Device") {
         PowerPlant.showDeviceInfo(pickedObject, objProperties);
+        pickedObject.SetHighlightColor(parseInt('0x33ff0000'));
         pickedObject.ShowHighLight();
     } else if (objType.type == "Building") {
         PowerPlant.showBuildingInfo(pickedObject, objProperties, objType.value);
@@ -834,6 +864,7 @@ PowerPlant.getObjectType = function (objProperties) {
 
     //alert(objInfo['ParentLayer']);  //ParentLayer
     // alert(objInfo['SE_NAME']);
+    // alert(JSON.stringify(objInfo));
     var pattern = /^[a-zA-Z0-9]{10,}/;
     if (pattern.test(objInfo['SE_NAME'])) { //设备
         return 'Device';
@@ -1342,9 +1373,10 @@ PowerPlant.highlightSearchObjects = function (searchResult) {
 }
 
 PowerPlant.highlightObject = function (obj) {
+    obj.SetHighlightColor(parseInt('0x33ff0000'));
     obj.ShowHighLight();
     PowerPlant.highLightObjects.push(obj);
-}
+};
 
 PowerPlant.stopHighlightObjects = function () {
     for (var i = 0; i < PowerPlant.highLightObjects.length; i++) {
@@ -1666,8 +1698,8 @@ PowerPlant.showCameraIcon = function (cameraObject, index, ipIndex) {
  *
  * @return 标注对象
  */
-PowerPlant.createIconLabel = function (type, iconPath,iconPath1, pos, obj, index, ipIndex) {
-    var cameraIconInfo = PowerPlant.getIconInfo(iconPath,iconPath1);
+PowerPlant.createIconLabel = function (type, iconPath, iconPath1, pos, obj, index, ipIndex) {
+    var cameraIconInfo = PowerPlant.getIconInfo(iconPath, iconPath1);
     var guid = earth.Factory.CreateGuid();
     var iconObject = earth.Factory.CreateElementIcon(guid, cameraIconInfo.name);
     iconObject.Visibility = false;
@@ -1723,7 +1755,7 @@ PowerPlant.createIconLabel = function (type, iconPath,iconPath1, pos, obj, index
  */
 PowerPlant.createCameraIcon = function (obj, campProperties, index, ipIndex) {
     var pos = campProperties.position;
-    var iconObj = PowerPlant.createIconLabel("cameraout", "icon\\camera32.png","icon\\camera32.png", pos, obj, index, ipIndex);
+    var iconObj = PowerPlant.createIconLabel("cameraout", "icon\\camera32.png", "icon\\camera32.png", pos, obj, index, ipIndex);
 };
 
 //内部摄像头
@@ -1733,7 +1765,7 @@ PowerPlant.createWorkCameraIcon = function (obj) {
         lat: obj.lat,
         alt: obj.alt,
     };
-    var iconObj = PowerPlant.createIconLabel("camerain", "icon\\sxt32.png","icon\\sxt32.png", pos, obj);
+    var iconObj = PowerPlant.createIconLabel("camerain", "icon\\sxt32.png", "icon\\sxt32.png", pos, obj);
 };
 
 /**
@@ -1768,7 +1800,7 @@ PowerPlant._getConvertedIcon = function (iconSrcPath) {
  */
 //监控图标初始化
 /*PowerPlant.initCameraIcon = function() {*/
-PowerPlant.getIconInfo = function (iconSrcPath,iconSrcPath1) {
+PowerPlant.getIconInfo = function (iconSrcPath, iconSrcPath1) {
     var iconInfo = {};
     iconInfo.type = 209;
     //设置标注的默认值
@@ -2716,8 +2748,7 @@ PowerPlant.showHighlightObj = function (searchResult, objName, node) {
         var y = Math.abs(modelLat - node.lat);
         var z = Math.abs(modelAlt - node.alt);
         // alert(x+","+y+","+z);
-        if ( z < 0.001) {
-
+        if (z < 0.001) {
             PowerPlant.highlightObject(deviceObj);
             break
         }
@@ -2748,7 +2779,7 @@ PowerPlant.showHikVideo = function (node) {
     PowerPlant.workCameraProperty = {};
     PowerPlant.workCameraProperty.ip = node.ip;
     PowerPlant.workCameraProperty.password = node.password;
-    alert('or'+node.ip+','+node.password);
+    // alert('or'+node.ip+','+node.password);
     htmlBalloon.SetRectSize(700, 435);
     htmlBalloon.SetScreenLocation(wW / 2, wH / 2 + 200);
     PowerPlant.htmlBalloon = htmlBalloon;
@@ -2765,6 +2796,7 @@ window.addEventListener('hashchange', function () {
 });
 
 //hash传入值解析并生成摄像头视窗
+//#ip&password&cameraType
 PowerPlant.hashCreat = function (hash) {
     var arr1 = hash.split('&');
     var ip = arr1[0].split('#')[1];
