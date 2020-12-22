@@ -1884,7 +1884,7 @@ PowerPlant.showPropertyTreeBallon = function (treeNodes) {
     PowerPlant.treeNodes = treeNodes;
     var balloon = LayerManagement.earth.Factory.CreateHtmlBalloon(LayerManagement.earth.Factory.CreateGuid(), PowerPlant.treeNodes.name);
     PowerPlant.deviceBalloon = balloon;
-    balloon.SetRectSize(340, 1248);
+    balloon.SetRectSize(340, 1048);
     var wW = window.innerWidth;
     var wH = window.innerHeight;
     balloon.SetScreenLocation(0, 40);
