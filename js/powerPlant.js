@@ -326,8 +326,8 @@ PowerPlant.Init = function () {
     PowerPlant.InitTree();
     PowerPlant.setPowerPlantQuery();
     //设置漫游角色移动速度
-    earth.Environment.ActorWalkingVolocity = 5;
-    earth.Environment.ActorRunningVolocity = 10;
+    earth.Environment.ActorWalkingVolocity = 8;
+    earth.Environment.ActorRunningVolocity = 15;
     //阻止惯性旋转
     earth.Environment.EnableMouseMoveMessage = true;
     earth.Event.OnLBDown = function () {
@@ -1884,7 +1884,7 @@ PowerPlant.showPropertyTreeBallon = function (treeNodes) {
     PowerPlant.treeNodes = treeNodes;
     var balloon = LayerManagement.earth.Factory.CreateHtmlBalloon(LayerManagement.earth.Factory.CreateGuid(), PowerPlant.treeNodes.name);
     PowerPlant.deviceBalloon = balloon;
-    balloon.SetRectSize(340, 1048);
+    balloon.SetRectSize(420, 908);
     var wW = window.innerWidth;
     var wH = window.innerHeight;
     balloon.SetScreenLocation(0, 40);
@@ -1916,7 +1916,7 @@ PowerPlant.showDetailTreeBallon = function (treeNodes) {
     PowerPlant.treeNodes = treeNodes;
     var balloon = LayerManagement.earth.Factory.CreateHtmlBalloon(LayerManagement.earth.Factory.CreateGuid(), PowerPlant.treeNodes.name);
     PowerPlant.deviceBalloon = balloon;
-    balloon.SetRectSize(340, 1248);
+    balloon.SetRectSize(420, 908);
     var wW = window.innerWidth;
     var wH = window.innerHeight;
     balloon.SetScreenLocation(wW, 40);

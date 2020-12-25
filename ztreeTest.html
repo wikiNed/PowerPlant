@@ -5,7 +5,6 @@
     <title>Title</title>
     <meta name="keywords" content="关键词">
     <meta name="description" content="描述">
-    <meta name="author" content="练习 加油">
     <link rel="stylesheet" type="text/css" href="js/plugins/zTreeStyle/zTreeStyle.css" type="text/css">
     <style>
         html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
@@ -88,7 +87,7 @@
 
         body {
             background: #fff;
-            height: 1028px;
+            height: 898px;
             overflow:hidden;
         }
 
@@ -97,14 +96,15 @@
         }
 
         .content {
-            width: 320px;
-            height: 1028px;
+            width: 400px;
+            height: 898px;
             background-image: url('./images/newUI/left.jpg');
+            background-size:400px 898px;
             background-attachment: fixed;
         }
 
         .content .head {
-            width: 320px;
+            width: 400px;
             height: 50px;
             color: #fff;
             position: relative;
@@ -153,8 +153,12 @@
             left: 0;
         }
         .ztree *{
-            font-size: 18px;
-            font-family: "Microsoft YaHei", serif;
+            font-size: 24px;
+            font-family: 幼圆,serif;
+        }
+
+        .ztree li ul{
+            padding: 6px 0 0 18px;
         }
 
         #scrollBar {
@@ -179,7 +183,7 @@
     </style>
 </head>
 <body>
-<div class="content" style=";min-height: 1000px">
+<div class="content" style=";min-height: 860px">
     <div class="head">
         <i>
             <img src="./images/tools/属性查询.png" alt="">
@@ -192,8 +196,8 @@
             ×
         </p>
     </div>
-    <div style="height: 998px;width: 320px;margin-top: 10px">
-        <div id="tree" style="padding-left: 10px;height: 910px">
+    <div style="height: 858px;width: 400px;margin-top: 10px">
+        <div id="tree" style="padding-left: 10px;height: 770px">
             <ul id="ztree" class="ztree" style="border:0px;">
 
             </ul>
