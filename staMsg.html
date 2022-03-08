@@ -38,7 +38,7 @@
             </ul>
         </div>
 
-        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./js/plugins/jquery1.9.0.min.js"></script>
         <script>
             var name;
             function setParameters(parameter) {
@@ -54,9 +54,11 @@
                         // contentType:"application/json",  //POST发送信息为JSON
                         success: function(data){
                             var innerHtml='';
+                            var count = 0;
                             data.list.forEach(function (item,index) {
-                                if( item.type == name ){
+                                if( item.type == name && count < 8){
                                     innerHtml += '<li>'+item.name+'：'+item.value + item.dw +'</li>';
+                                    count++;
                                 }
                             });
                             if (data.list.length == 0){
@@ -72,7 +74,7 @@
                 }
             });
             setTimeout(function () {
-                setInterval('$.staMsg(name)',1000);
+                setInterval('$.staMsg(name)',2000);
             },1000)
 
         </script>

@@ -225,17 +225,17 @@
     };
 
     //循环动画
-    // setInterval(function () {
-    //     var $self = $('#wrap ul');
-    //     var lineHeight = $self.find("li:first").height();
-    //     $self.animate({
-    //         "marginTop": -lineHeight + "px"
-    //     }, 2000, 'linear', function () {
-    //         $self.css({
-    //             marginTop: 0
-    //         }).find("li:first").appendTo($self);
-    //     })
-    // }, 2000);
+    setInterval(function () {
+        var $self = $('#wrap .left .hidden ul');
+        var lineHeight = $self.find("li:first").height();
+        $self.animate({
+            "marginTop": -lineHeight + "px"
+        }, 2000, 'linear', function () {
+            $self.css({
+                marginTop: 0
+            }).find("li:first").appendTo($self);
+        })
+    }, 2000);
 
 
     $.extend({

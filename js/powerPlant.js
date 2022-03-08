@@ -326,7 +326,7 @@ PowerPlant.Init = function () {
     PowerPlant.InitTree();
     PowerPlant.setPowerPlantQuery();
     //设置漫游角色移动速度
-    earth.Environment.ActorWalkingVolocity = 8;
+    earth.Environment.ActorWalkingVolocity = 5;
     earth.Environment.ActorRunningVolocity = 15;
     //阻止惯性旋转
     earth.Environment.EnableMouseMoveMessage = true;
@@ -334,7 +334,7 @@ PowerPlant.Init = function () {
         earth.Event.OnMouseMove = function () {
             setTimeout(function () {
                 earth.GlobeObserver.Stop();
-            },500)
+            }, 500)
         }
     };
 
@@ -357,7 +357,10 @@ PowerPlant.Init = function () {
         //             }
         //         };
         // };
-    }, 10000)
+    }, 10000);
+    // setTimeout(function () {
+    //     PowerPlant.patrolAll();
+    // }, 25000)
 };
 
 /**
@@ -2145,256 +2148,256 @@ PowerPlant.patrolAll = function () {
         resolve();
     });
     animate
-    // .then(function () {
-    //     return new Promise(function (resolve, reject) {
-    //         setTimeout(function () {//旋转
-    //             earth.GlobeObserver.FlytoLookat(109.413576, 38.034936, 1058.73, 185.442, -29.228, 220, 650, 5);
-    //             setTimeout(function () {
-    //                 earth.GlobeObserver.SurroundControlEx(1);
-    //             }, 5100);
-    //             resolve();
-    //         }, 2000);
-    //     });
-    // })
-    // .then(function () {
-    //     return new Promise(function (resolve, reject) {
-    //         setTimeout(function () {//回到初始点
-    //             PowerPlant.firestLook(5);
-    //             PowerPlant.creatTrack();
-    //             resolve();
-    //         }, 35000); //35
-    //     });
-    // })
-    // .then(function () {
-    //     return new Promise(function (resolve, reject) {
-    //         setTimeout(function () {//拉进办公楼
-    //             promiseTrack(1000, 'yn3','西装男').then(function () {
-    //                 return promiseTrack(2000, 'yn4','西装男')
-    //             }).then(function () {
-    //                 return promiseTrack(8000, 'yn1','西装男')
-    //             }).then(function () {
-    //                 return promiseTrack(1500, 'yn2','西装男')
-    //             }).catch(function (err) {
-    //                 alert('yn1d err')
-    //             });
-    //             earth.GlobeObserver.FlytoLookat(109.413819, 38.035301, 1089.000, 201.442, 23.228, 0, 128, 10);
-    //             setTimeout(function () {//展示门禁数据
-    //                 PowerPlant.closeAccessHtmlBalloon();
-    //                 PowerPlant.accessMsg = 'BGL';
-    //                 var position = {
-    //                     lng: 109.4139224,
-    //                     lat: 38.0357291,
-    //                     alt: 1115.64
-    //                 };
-    //                 var balloon = LayerManagement.earth.Factory.CreateHtmlBalloon(LayerManagement.earth.Factory.CreateGuid(), 'access');
-    //                 PowerPlant.accessHtmlBallon = balloon;
-    //                 balloon.SetRectSize(280, 236);
-    //                 balloon.SetSphericalLocation(position.lng, position.lat, position.alt);
-    //                 // balloon.SetScreenLocation(500, 500);
-    //                 balloon.SetTailColor(parseInt("0xff03132c"));
-    //                 balloon.SetIsAddCloseButton(false);
-    //                 balloon.SetIsAddMargin(false);
-    //                 balloon.SetIsAddBackgroundImage(true);
-    //                 balloon.SetIsTransparence(false);
-    //                 balloon.SetBackgroundRGB(0xEDEDED);
-    //                 balloon.SetBackgroundAlpha(255);
-    //                 //balloon.SetBackgroundRGB(0x2167A3);
-    //                 var windowUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
-    //                 var url = windowUrl + '/access.html';
-    //                 LayerManagement.earth.Event.OnDocumentReadyCompleted = function (guid) {
-    //                     if (guid == balloon.guid) {
-    //                         //resizeEarthToolWindow();
-    //                         //refreshEarthMenu();
-    //                         PowerPlant.setStaBalloonParameters(balloon);
-    //                     }
-    //                 };
-    //                 balloon.ShowNavigate(url);
-    //             }, 12100);
-    //             resolve();
-    //         }, 600);
-    //     });
-    // })
-    // .then(function () {
-    //     return new Promise(function (resolve, reject) {
-    //         setTimeout(function () {//回到初始点
-    //             PowerPlant.closeAccessHtmlBalloon();
-    //             PowerPlant.firestLook(8);
-    //             resolve();
-    //         }, 30000);
-    //     });
-    // })
-    // .then(function () {
-    //     return new Promise(function (resolve, reject) {
-    //         setTimeout(function () {//拉进集控楼
-    //             promiseTrack(1000, 'yn5','西装男').then(function () {
-    //                 return promiseTrack(2000, 'yn6','西装男')
-    //             }).then(function () {
-    //                 return promiseTrack(2000, 'yn7','西装男')
-    //             }).then(function () {
-    //                 return promiseTrack(1500, 'yn8','西装男')
-    //             }).catch(function (err) {
-    //                 alert('yn2d err')
-    //             });
-    //             earth.GlobeObserver.FlytoLookat(109.413192, 38.034407, 1088.800, 178.442, 39.228, 0, 120, 9);
-    //             setTimeout(function () {//展示门禁数据
-    //                 PowerPlant.closeAccessHtmlBalloon();
-    //                 PowerPlant.accessMsg = 'JKL';
-    //                 var position = {
-    //                     lng: 109.4134772,
-    //                     lat: 38.0345931,
-    //                     alt: 1122.55
-    //                 };
-    //                 var balloon = LayerManagement.earth.Factory.CreateHtmlBalloon(LayerManagement.earth.Factory.CreateGuid(), 'access');
-    //                 PowerPlant.accessHtmlBallon = balloon;
-    //                 balloon.SetRectSize(280, 236);
-    //                 balloon.SetSphericalLocation(position.lng, position.lat, position.alt);
-    //                 // balloon.SetScreenLocation(500, 500);
-    //                 balloon.SetTailColor(parseInt("0xff03132c"));
-    //                 balloon.SetIsAddCloseButton(false);
-    //                 balloon.SetIsAddMargin(false);
-    //                 balloon.SetIsAddBackgroundImage(true);
-    //                 balloon.SetIsTransparence(false);
-    //                 balloon.SetBackgroundRGB(0xEDEDED);
-    //                 balloon.SetBackgroundAlpha(255);
-    //                 //balloon.SetBackgroundRGB(0x2167A3);
-    //                 var windowUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
-    //                 var url = windowUrl + '/access.html';
-    //                 LayerManagement.earth.Event.OnDocumentReadyCompleted = function (guid) {
-    //                     if (guid == balloon.guid) {
-    //                         //resizeEarthToolWindow();
-    //                         //refreshEarthMenu();
-    //                         PowerPlant.setStaBalloonParameters(balloon);
-    //                     }
-    //                 };
-    //                 balloon.ShowNavigate(url);
-    //             }, 9100);
-    //             resolve();
-    //         }, 10000);
-    //     })
-    // })
-    // .then(function () {
-    //     return new Promise(function (resolve, reject) {
-    //         setTimeout(function () {//回到初始点
-    //             PowerPlant.closeAccessHtmlBalloon();
-    //             PowerPlant.firestLook(8);
-    //             resolve();
-    //         }, 30000);
-    //     });
-    // })
-    // .then(function () {
-    //     return new Promise(function (resolve, reject) {
-    //         setTimeout(function () {//拉进1#机组
-    //             earth.GlobeObserver.FlytoLookat(109.413471, 38.032872, 1089.000, 203.442, 32.228, 0, 386, 10);
-    //             setTimeout(function () {//展示数据
-    //                 PowerPlant.staBalloons.forEach(function (item) {
-    //                     item.DestroyObject();
-    //                 });
-    //                 var item = PowerPlant.staLocaltion[0];
-    //                 var balloon = LayerManagement.earth.Factory.CreateHtmlBalloon(LayerManagement.earth.Factory.CreateGuid(), item.name);
-    //                 PowerPlant.staBalloons.push(balloon);
-    //                 balloon.SetRectSize(270, 170);
-    //                 // alert(item.lng+","+item.lat+","+item.lta);
-    //                 balloon.SetSphericalLocation(item.lng, item.lat, item.lta);
-    //                 // balloon.SetScreenLocation(500, 500);
-    //                 balloon.SetTailColor(parseInt("0xff03132c"));
-    //                 balloon.SetIsAddCloseButton(false);
-    //                 balloon.SetIsAddMargin(false);
-    //                 balloon.SetIsAddBackgroundImage(true);
-    //                 balloon.SetIsTransparence(false);
-    //                 balloon.SetBackgroundRGB(0xEDEDED);
-    //                 balloon.SetBackgroundAlpha(255);
-    //                 //balloon.SetBackgroundRGB(0x2167A3);
-    //                 var windowUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
-    //                 var url = windowUrl + '/staMsg.html';
-    //                 LayerManagement.earth.Event.OnDocumentReadyCompleted = function (guid) {
-    //                     if (guid == balloon.guid) {
-    //                         //resizeEarthToolWindow();
-    //                         //refreshEarthMenu();
-    //                         PowerPlant.name = item.name;
-    //                         PowerPlant.setStaBalloonParameters(balloon);
-    //                     }
-    //                 };
-    //                 balloon.ShowNavigate(url);
-    //             }, 10100);
-    //             resolve();
-    //         }, 15000);
-    //     })
-    // })
-    // .then(function () {
-    //     return new Promise(function (resolve, reject) {
-    //         setTimeout(function () {//回到初始点
-    //             PowerPlant.staBalloons.forEach(function (item) {
-    //                 item.DestroyObject();
-    //             });
-    //             PowerPlant.firestLook(10);
-    //             resolve();
-    //         }, 25000);
-    //     });
-    // })
-    // .then(function () {
-    //     return new Promise(function (resolve, reject) {
-    //         setTimeout(function () {//拉进2#机组
-    //             earth.GlobeObserver.FlytoLookat(109.413879, 38.034228, 1125.300, 335.442, 25.228, 0, 422, 10);
-    //             setTimeout(function () {//展示数据
-    //                 PowerPlant.staBalloons.forEach(function (item) {
-    //                     item.DestroyObject();
-    //                 });
-    //                 var item = PowerPlant.staLocaltion[1];
-    //                 var balloon = LayerManagement.earth.Factory.CreateHtmlBalloon(LayerManagement.earth.Factory.CreateGuid(), item.name);
-    //                 PowerPlant.staBalloons.push(balloon);
-    //                 balloon.SetRectSize(270, 170);
-    //                 // alert(item.lng+","+item.lat+","+item.lta);
-    //                 balloon.SetSphericalLocation(item.lng, item.lat, item.lta);
-    //                 // balloon.SetScreenLocation(500, 500);
-    //                 balloon.SetTailColor(parseInt("0xff03132c"));
-    //                 balloon.SetIsAddCloseButton(false);
-    //                 balloon.SetIsAddMargin(false);
-    //                 balloon.SetIsAddBackgroundImage(true);
-    //                 balloon.SetIsTransparence(false);
-    //                 balloon.SetBackgroundRGB(0xEDEDED);
-    //                 balloon.SetBackgroundAlpha(255);
-    //                 //balloon.SetBackgroundRGB(0x2167A3);
-    //                 var windowUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
-    //                 var url = windowUrl + '/staMsg.html';
-    //                 LayerManagement.earth.Event.OnDocumentReadyCompleted = function (guid) {
-    //                     if (guid == balloon.guid) {
-    //                         //resizeEarthToolWindow();
-    //                         //refreshEarthMenu();
-    //                         PowerPlant.name = item.name;
-    //                         PowerPlant.setStaBalloonParameters(balloon);
-    //                     }
-    //                 };
-    //                 balloon.ShowNavigate(url);
-    //             }, 10100);
-    //             resolve();
-    //         }, 15000);
-    //     })
-    // })
-    // .then(function () {
-    //     return new Promise(function (resolve, reject) {
-    //         setTimeout(function () {//展示2个机组信息
-    //             PowerPlant.staBalloons.forEach(function (item) {
-    //                 item.DestroyObject();
-    //             });
-    //             earth.GlobeObserver.FlytoLookat(109.413525, 38.032967, 1089.300, 219.080, 43.228, 0, 430, 10);
-    //             setTimeout(function () {
-    //                 PowerPlant.showStatisicMsg();
-    //             },10100);
-    //             resolve();
-    //         }, 15000);
-    //     });
-    // })
-    // .then(function () {
-    //     return new Promise(function (resolve, reject) {
-    //         setTimeout(function () {//回到初始点
-    //             PowerPlant.staBalloons.forEach(function (item) {
-    //                 item.DestroyObject();
-    //             });
-    //             PowerPlant.firestLook(10);
-    //             resolve();
-    //         }, 17000);
-    //     });
-    // })
+        .then(function () {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {//旋转
+                    earth.GlobeObserver.FlytoLookat(109.413576, 38.034936, 1058.73, 185.442, -29.228, 220, 650, 5);
+                    setTimeout(function () {
+                        earth.GlobeObserver.SurroundControlEx(1);
+                    }, 5100);
+                    resolve();
+                }, 2000);
+            });
+        })
+        .then(function () {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {//回到初始点
+                    PowerPlant.firestLook(5);
+                    PowerPlant.creatTrack();
+                    resolve();
+                }, 35000); //35
+            });
+        })
+        .then(function () {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {//拉进办公楼
+                    promiseTrack(1000, 'yn3', '西装男').then(function () {
+                        return promiseTrack(2000, 'yn4', '西装男')
+                    }).then(function () {
+                        return promiseTrack(8000, 'yn1', '西装男')
+                    }).then(function () {
+                        return promiseTrack(1500, 'yn2', '西装男')
+                    }).catch(function (err) {
+                        alert('yn1d err')
+                    });
+                    earth.GlobeObserver.FlytoLookat(109.413819, 38.035301, 1089.000, 201.442, 23.228, 0, 128, 10);
+                    setTimeout(function () {//展示门禁数据
+                        PowerPlant.closeAccessHtmlBalloon();
+                        PowerPlant.accessMsg = 'BGL';
+                        var position = {
+                            lng: 109.4139224,
+                            lat: 38.0357291,
+                            alt: 1115.64
+                        };
+                        var balloon = LayerManagement.earth.Factory.CreateHtmlBalloon(LayerManagement.earth.Factory.CreateGuid(), 'access');
+                        PowerPlant.accessHtmlBallon = balloon;
+                        balloon.SetRectSize(555, 280);
+                        balloon.SetSphericalLocation(position.lng, position.lat, position.alt);
+                        // balloon.SetScreenLocation(500, 500);
+                        balloon.SetTailColor(parseInt("0xff03132c"));
+                        balloon.SetIsAddCloseButton(false);
+                        balloon.SetIsAddMargin(false);
+                        balloon.SetIsAddBackgroundImage(true);
+                        balloon.SetIsTransparence(false);
+                        balloon.SetBackgroundRGB(0xEDEDED);
+                        balloon.SetBackgroundAlpha(255);
+                        //balloon.SetBackgroundRGB(0x2167A3);
+                        var windowUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
+                        var url = windowUrl + '/access.html';
+                        LayerManagement.earth.Event.OnDocumentReadyCompleted = function (guid) {
+                            if (guid == balloon.guid) {
+                                //resizeEarthToolWindow();
+                                //refreshEarthMenu();
+                                PowerPlant.setStaBalloonParameters(balloon);
+                            }
+                        };
+                        balloon.ShowNavigate(url);
+                    }, 12100);
+                    resolve();
+                }, 600);
+            });
+        })
+        .then(function () {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {//回到初始点
+                    PowerPlant.closeAccessHtmlBalloon();
+                    PowerPlant.firestLook(8);
+                    resolve();
+                }, 30000);
+            });
+        })
+        .then(function () {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {//拉进集控楼
+                    promiseTrack(1000, 'yn5', '西装男').then(function () {
+                        return promiseTrack(2000, 'yn6', '西装男')
+                    }).then(function () {
+                        return promiseTrack(2000, 'yn7', '西装男')
+                    }).then(function () {
+                        return promiseTrack(1500, 'yn8', '西装男')
+                    }).catch(function (err) {
+                        alert('yn2d err')
+                    });
+                    earth.GlobeObserver.FlytoLookat(109.413192, 38.034407, 1088.800, 178.442, 39.228, 0, 120, 9);
+                    setTimeout(function () {//展示门禁数据
+                        PowerPlant.closeAccessHtmlBalloon();
+                        PowerPlant.accessMsg = 'JKL';
+                        var position = {
+                            lng: 109.4134772,
+                            lat: 38.0345931,
+                            alt: 1122.55
+                        };
+                        var balloon = LayerManagement.earth.Factory.CreateHtmlBalloon(LayerManagement.earth.Factory.CreateGuid(), 'access');
+                        PowerPlant.accessHtmlBallon = balloon;
+                        balloon.SetRectSize(555, 280);
+                        balloon.SetSphericalLocation(position.lng, position.lat, position.alt);
+                        // balloon.SetScreenLocation(500, 500);
+                        balloon.SetTailColor(parseInt("0xff03132c"));
+                        balloon.SetIsAddCloseButton(false);
+                        balloon.SetIsAddMargin(false);
+                        balloon.SetIsAddBackgroundImage(true);
+                        balloon.SetIsTransparence(false);
+                        balloon.SetBackgroundRGB(0xEDEDED);
+                        balloon.SetBackgroundAlpha(255);
+                        //balloon.SetBackgroundRGB(0x2167A3);
+                        var windowUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
+                        var url = windowUrl + '/access.html';
+                        LayerManagement.earth.Event.OnDocumentReadyCompleted = function (guid) {
+                            if (guid == balloon.guid) {
+                                //resizeEarthToolWindow();
+                                //refreshEarthMenu();
+                                PowerPlant.setStaBalloonParameters(balloon);
+                            }
+                        };
+                        balloon.ShowNavigate(url);
+                    }, 9100);
+                    resolve();
+                }, 10000);
+            })
+        })
+        .then(function () {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {//回到初始点
+                    PowerPlant.closeAccessHtmlBalloon();
+                    PowerPlant.firestLook(8);
+                    resolve();
+                }, 30000);
+            });
+        })
+        .then(function () {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {//拉进1#机组
+                    earth.GlobeObserver.FlytoLookat(109.413471, 38.032872, 1089.000, 203.442, 32.228, 0, 386, 10);
+                    setTimeout(function () {//展示数据
+                        PowerPlant.staBalloons.forEach(function (item) {
+                            item.DestroyObject();
+                        });
+                        var item = PowerPlant.staLocaltion[0];
+                        var balloon = LayerManagement.earth.Factory.CreateHtmlBalloon(LayerManagement.earth.Factory.CreateGuid(), item.name);
+                        PowerPlant.staBalloons.push(balloon);
+                        balloon.SetRectSize(270, 170);
+                        // alert(item.lng+","+item.lat+","+item.lta);
+                        balloon.SetSphericalLocation(item.lng, item.lat, item.lta);
+                        // balloon.SetScreenLocation(500, 500);
+                        balloon.SetTailColor(parseInt("0xff03132c"));
+                        balloon.SetIsAddCloseButton(false);
+                        balloon.SetIsAddMargin(false);
+                        balloon.SetIsAddBackgroundImage(true);
+                        balloon.SetIsTransparence(false);
+                        balloon.SetBackgroundRGB(0xEDEDED);
+                        balloon.SetBackgroundAlpha(255);
+                        //balloon.SetBackgroundRGB(0x2167A3);
+                        var windowUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
+                        var url = windowUrl + '/staMsg.html';
+                        LayerManagement.earth.Event.OnDocumentReadyCompleted = function (guid) {
+                            if (guid == balloon.guid) {
+                                //resizeEarthToolWindow();
+                                //refreshEarthMenu();
+                                PowerPlant.name = item.name;
+                                PowerPlant.setStaBalloonParameters(balloon);
+                            }
+                        };
+                        balloon.ShowNavigate(url);
+                    }, 10100);
+                    resolve();
+                }, 15000);
+            })
+        })
+        .then(function () {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {//回到初始点
+                    PowerPlant.staBalloons.forEach(function (item) {
+                        item.DestroyObject();
+                    });
+                    PowerPlant.firestLook(10);
+                    resolve();
+                }, 25000);
+            });
+        })
+        .then(function () {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {//拉进2#机组
+                    earth.GlobeObserver.FlytoLookat(109.413879, 38.034228, 1125.300, 335.442, 25.228, 0, 422, 10);
+                    setTimeout(function () {//展示数据
+                        PowerPlant.staBalloons.forEach(function (item) {
+                            item.DestroyObject();
+                        });
+                        var item = PowerPlant.staLocaltion[1];
+                        var balloon = LayerManagement.earth.Factory.CreateHtmlBalloon(LayerManagement.earth.Factory.CreateGuid(), item.name);
+                        PowerPlant.staBalloons.push(balloon);
+                        balloon.SetRectSize(270, 170);
+                        // alert(item.lng+","+item.lat+","+item.lta);
+                        balloon.SetSphericalLocation(item.lng, item.lat, item.lta);
+                        // balloon.SetScreenLocation(500, 500);
+                        balloon.SetTailColor(parseInt("0xff03132c"));
+                        balloon.SetIsAddCloseButton(false);
+                        balloon.SetIsAddMargin(false);
+                        balloon.SetIsAddBackgroundImage(true);
+                        balloon.SetIsTransparence(false);
+                        balloon.SetBackgroundRGB(0xEDEDED);
+                        balloon.SetBackgroundAlpha(255);
+                        //balloon.SetBackgroundRGB(0x2167A3);
+                        var windowUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
+                        var url = windowUrl + '/staMsg.html';
+                        LayerManagement.earth.Event.OnDocumentReadyCompleted = function (guid) {
+                            if (guid == balloon.guid) {
+                                //resizeEarthToolWindow();
+                                //refreshEarthMenu();
+                                PowerPlant.name = item.name;
+                                PowerPlant.setStaBalloonParameters(balloon);
+                            }
+                        };
+                        balloon.ShowNavigate(url);
+                    }, 10100);
+                    resolve();
+                }, 15000);
+            })
+        })
+        .then(function () {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {//展示2个机组信息
+                    PowerPlant.staBalloons.forEach(function (item) {
+                        item.DestroyObject();
+                    });
+                    earth.GlobeObserver.FlytoLookat(109.413525, 38.032967, 1089.300, 219.080, 43.228, 0, 430, 10);
+                    setTimeout(function () {
+                        PowerPlant.showStatisicMsg();
+                    }, 10100);
+                    resolve();
+                }, 15000);
+            });
+        })
+        .then(function () {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {//回到初始点
+                    PowerPlant.staBalloons.forEach(function (item) {
+                        item.DestroyObject();
+                    });
+                    PowerPlant.firestLook(10);
+                    resolve();
+                }, 17000);
+            });
+        })
         .then(function () {
             return new Promise(function (resolve, reject) {
                 setTimeout(function () {//拉进2#冷凝塔
@@ -2404,7 +2407,7 @@ PowerPlant.patrolAll = function () {
                             item.DestroyObject();
                         });
                         var item = {
-                            name: '2#',
+                            name: 'c2',
                             lng: 109.4171969,
                             lat: 38.0323189,
                             alt: 1207.96
@@ -2440,10 +2443,13 @@ PowerPlant.patrolAll = function () {
                     PowerPlant.condBalloons.forEach(function (item) {
                         item.DestroyObject();
                     });
-                    earth.GlobeObserver.FlytoLookat(109.417422, 38.032881, 1094, 21.854, 57.587, 0, 112, 8);
+                    earth.GlobeObserver.FlytoLookat(109.4172682,38.0324648,1094.00,358.5,16.0,0.0,33.3, 4);
+                    setTimeout(function () {
+                        earth.GlobeObserver.FlytoLookat(109.417422, 38.032881, 1094, 21.854, 57.587, 0, 112, 3);
+                    },9000);
                     setTimeout(function () {
                         earth.GlobeObserver.SurroundControlEx(1);
-                    }, 8100);
+                    }, 12100);
                     resolve();
                 }, 15000);
             });
@@ -2457,7 +2463,7 @@ PowerPlant.patrolAll = function () {
                             item.DestroyObject();
                         });
                         var item = {
-                            name: '1#',
+                            name: 'c1',
                             lng: 109.4174339,
                             lat: 38.0351913,
                             alt: 1217.64

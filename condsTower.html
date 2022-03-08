@@ -59,9 +59,9 @@
 <body>
 <div id="wrap">
     <ul>
-        <li><p>#1出口SO2浓度折算小时均值：</p><p class="right"><b></b>mg/Nm3</p></li>
-        <li><p>#1出口NO2浓度折算小时均值：</p><p class="right"><b></b>mg/Nm3</p></li>
-        <li><p>#1出口粉尘浓度折算小时均值：</p><p class="right"><b></b>mg/Nm3</p></li>
+<!--        <li><p>#1出口SO2浓度折算小时均值：</p><p class="right"><b></b>mg/Nm3</p></li>-->
+<!--        <li><p>#1出口NO2浓度折算小时均值：</p><p class="right"><b></b>mg/Nm3</p></li>-->
+<!--        <li><p>#1出口粉尘浓度折算小时均值：</p><p class="right"><b></b>mg/Nm3</p></li>-->
     </ul>
 </div>
 
@@ -71,12 +71,12 @@
     function setParameters(parameter) {
         name = parameter.pp.name;
     }
-    $(function () {
-        if (name == '2#'){
+    setTimeout(function () {
+        if (name == 'c2'){
             $('ul').html('<li><p>#2出口SO2浓度折算小时均值：</p><p class="right"><b>22.76</b>mg/Nm3</p></li>\n' +
                 '        <li><p>#2出口NO2浓度折算小时均值：</p><p class="right"><b>31.68</b>mg/Nm3</p></li>\n' +
                 '        <li><p>#2出口粉尘浓度折算小时均值：</p><p class="right"><b>3.66</b>mg/Nm3</p></li>')
-        }else if (name == '1#'){
+        }else if (name == 'c1'){
             $('ul').html('<li><p>#1出口SO2浓度折算小时均值：</p><p class="right"><b>21.94</b>mg/Nm3</p></li>\n' +
                 '        <li><p>#1出口NO2浓度折算小时均值：</p><p class="right"><b>31.73</b>mg/Nm3</p></li>\n' +
                 '        <li><p>#1出口粉尘浓度折算小时均值：</p><p class="right"><b>3.51</b>mg/Nm3</p></li>')
@@ -87,7 +87,7 @@
                 '        <li><p>每日进煤量：</p><p class="right"><b>6452.14</b>t</p></li>'
             )
         }
-    })
+    },500)
     // $.extend({
     //     staMsg:function(name){
     //         $.ajax({
